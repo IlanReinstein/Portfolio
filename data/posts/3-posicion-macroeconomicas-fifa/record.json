@@ -1,0 +1,180 @@
+{
+ "title": "¿En qué condición macroeconómica se encuentran los equipos del Mundial?",
+"description": "En este post queremos indagar un poco sobre cómo se encuentran los países social y económicamente mirando ciertos índices macroeconómicos.",
+"author": "ilanreinstein",
+"thumbnail": "details_files/figure-html/GDPvsFIFA.png",
+"language": "es",
+"date": "2014-07-30",
+"tags": [ "World cup", "countries", "social" ],
+"production": "true",
+"inquiries": [
+ {
+ "text": "¿Cuál es la población de los países que asisten al Mundial?" 
+},
+{
+ "text": "¿Cuál es el ingreso per cápita de cada uno?" 
+},
+{
+ "text": "¿Qué relación hay entre el ranking de ingreso y la posición final en el Mundial?" 
+},
+{
+ "text": "¿Qué relación hay entre el ranking de desarrollo humano y la posición final en el Mundial?" 
+},
+{
+ "text": "¿Qué tan corruptos son los países dado su índice de estabilidad/violencia y desarrollo?" 
+} 
+],
+"id": "3-posicion-macroeconomicas-fifa",
+"story": "<p>Después de un fantástico mundial, a todos nos queda el sabor amargo de su final. Espectaculares goles, jugadas elegantes y partidos emocionantes se vivieron en la última Copa del Mundo. En este datapost usaremos información socioeconómica para analizar a cada uno de los países participantes. Algunos resultados pueden ser impresionantes, pero esa es la realidad de nuestra sociedad. Algunas personas incluso piensan que la condición económica de un país puede verse reflejada en el campeonato. No es descabellado pensar eso, dado que algunos de los países más poderosos hoy en día mostraron resultados impecables en el Mundial, sin embargo, esta es una hipótesis nublada.</p>\n<p>Por lo tanto, nos concentraremos en mostrar algunas visualizaciones donde comparamos varios índices socioeconómicos de los países. No trataremos de establecer si en efecto hay una correlación entre el desempeño deportivo y la condición social de los estados, este post es puramente informativo.</p>\n<p>Para tener una idea clara del tamaño de cada país veamos una gráfica de población.</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/population.png\" alt=\"World Population\" /><p class=\"caption\">World Population</p>\n</div>\n<p>El país con más población es EEUU, mientras que el de menor es Uruguay. Veamos ahora el ingreso per cápita de cada país.</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/gdp.png\" alt=\"GDP by country\" /><p class=\"caption\">GDP by country</p>\n</div>\n<p>Ahora queremos analizar la relación entre el ranking del PIB y la posición final del país en la Copa Mundial. El ingreso per cápita se mide en miles de dólares y la posición de cada Estado es la posición real en el mundo.</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/GDPvsFIFA.png\" alt=\"GDP vs FIFA\" /><p class=\"caption\">GDP vs FIFA</p>\n</div>\n<p>Podemos inferir que tener un buen PIB no significa ser exitoso en el torneo. Como muestran los datos, a algunos países les fue bien sin tener el mejor PIB y viceversa.</p>\n<p>Ahora haremos lo mismo para el Índice de Desarrollo Humano (IDH, o Human Development Index, HDI en inglés). El IDH es un indicador social estadístico compuesto por tres parámetros: vida larga y saludable, acceso a educación y un estándar de vida digno. Queremos comparar el ranking del IDH con el ranking pos-mundial de cada país.</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/HDIvsFIFA.png\" alt=\"HDI vs FIFA\" /><p class=\"caption\">HDI vs FIFA</p>\n</div>\n<p>Vemos de esta última visualización que la mayoría de países están cercanos al IDH promedio; vemos también que muchos países están entre los 100 mejores según el IDH. Hay un país con un IDH promedio, pero no entra en el ranking de los top 100 del IDH ni en el top 20 de la FIFA. Notemos también que el país con el IDH más alto no está en el top 20 de la FIFA.</p>\n<p>Finalmente, queremos establecer una conexión entre la corrupción, la estabilidad y el desarrollo. Como mencionamos al comienzo, no queremos mostrar nada controversial, pero los datos hablan por sí solos y hay que reconocer la realidad tal como es.</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/corruption.png\" alt=\"Corruption given HDI and violence\" /><p class=\"caption\">Corruption given HDI and violence</p>\n</div>\n<p>Aquí el medidor de corrupción es un puntaje, lo que quiere decir que entre más alto, menos corrupto es el país. Resumiendo, esta última gráfica expone unas impactantes realidades sobre las condiciones que viven algunos países. Aún hay altos índices de corrupción y violencia, y también, buenos resultados en deporte.</p>\n<p>Como comentario final: simplemente resolvimos algunas preguntas usando estos indicadores socioeconómicos y escogimos aquellos que son más informativos. No pretendemos nada distinto a lo que presentamos, queríamos exponer gráficamente la gran brecha social que existen en algunos países que participaron en el Mundial. Aquí nadie gana y nadie pierde, solo mostramos los datos.</p>",
+"details": "<pre class=\"sourceCode r\"><code class=\"sourceCode r\"><span class=\"kw\">library</span>(ggplot2)\n<span class=\"kw\">library</span>(knitr)\n<span class=\"kw\">library</span>(scales)</code></pre>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">data_path &lt;-<span class=\"st\"> &#39;/Users/ilanreinstein/Documents/repos/datablog/content/sandbox/ilanreinstein/socialWorldCup/data/&#39;</span>\ndf &lt;-<span class=\"st\"> </span><span class=\"kw\">read.csv</span>(<span class=\"kw\">paste</span>(data_path, <span class=\"st\">&#39;data.csv&#39;</span>, <span class=\"dt\">sep =</span> <span class=\"st\">&#39;&#39;</span>),)\nhdi &lt;-<span class=\"st\"> </span><span class=\"kw\">read.csv</span>(<span class=\"kw\">paste</span>(data_path, <span class=\"st\">&#39;hdi.csv&#39;</span>, <span class=\"dt\">sep =</span> <span class=\"st\">&#39;&#39;</span>),)\ngdp &lt;-<span class=\"st\"> </span><span class=\"kw\">read.csv</span>(<span class=\"kw\">paste</span>(data_path, <span class=\"st\">&#39;gdpRank.csv&#39;</span>, <span class=\"dt\">sep =</span> <span class=\"st\">&#39;&#39;</span>),)</code></pre>\n<div id=\"what-is-the-population-in-the-participating-countries\" class=\"section level3\">\n<h3>What is the population in the participating countries?</h3>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">pop &lt;-<span class=\"st\"> </span>gdp[<span class=\"kw\">order</span>(gdp$Population), ]\ndata &lt;-<span class=\"st\"> </span><span class=\"kw\">merge</span>(pop, hdi, <span class=\"dt\">by.x =</span> <span class=\"st\">&#39;Country&#39;</span>, <span class=\"dt\">by.y =</span> <span class=\"st\">&#39;Name&#39;</span>)\ndata &lt;-<span class=\"st\"> </span><span class=\"kw\">merge</span>(data, df, <span class=\"dt\">by.x =</span> <span class=\"st\">&#39;Country&#39;</span>, <span class=\"dt\">by.y =</span> <span class=\"st\">&#39;COUNTRY&#39;</span>)\npop$Country &lt;-<span class=\"st\"> </span><span class=\"kw\">factor</span>(pop$Country, <span class=\"dt\">levels =</span> pop$Country, <span class=\"dt\">ordered =</span> <span class=\"ot\">TRUE</span>)\n<span class=\"kw\">ggplot</span>(pop, <span class=\"kw\">aes</span>(<span class=\"dt\">x =</span> Country, <span class=\"dt\">y =</span> Population)) +<span class=\"st\"> </span><span class=\"kw\">geom_bar</span>(<span class=\"dt\">stat =</span> <span class=\"st\">&#39;identity&#39;</span>, <span class=\"dt\">fill=</span><span class=\"st\">&quot;#56B4E9&quot;</span>, <span class=\"dt\">alpha =</span> <span class=\"st\">&quot;0.7&quot;</span>) +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>() +<span class=\"st\"> </span><span class=\"kw\">theme</span>(<span class=\"dt\">axis.text.x =</span> <span class=\"kw\">element_text</span>(<span class=\"dt\">angle =</span> <span class=\"dv\">90</span>))  +<span class=\"st\"> </span><span class=\"kw\">scale_y_continuous</span>(<span class=\"dt\">name=</span><span class=\"st\">&quot;Population&quot;</span>, <span class=\"dt\">labels =</span> comma)</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/population.png\" alt=\"World Population\" /><p class=\"caption\">World Population</p>\n</div>\n</div>\n<div id=\"what-is-the-income-per-capita-in-the-participating-countries\" class=\"section level3\">\n<h3>What is the income per capita in the participating countries?</h3>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">gdp &lt;-<span class=\"st\"> </span>df[<span class=\"kw\">order</span>(df$<span class=\"st\">&#39;INCOME.PER.CAPITA&#39;</span>), ]\ngdp$COUNTRY &lt;-<span class=\"st\"> </span><span class=\"kw\">factor</span>(gdp$COUNTRY, <span class=\"dt\">levels =</span> gdp$COUNTRY, <span class=\"dt\">ordered =</span> <span class=\"ot\">TRUE</span>)\n<span class=\"kw\">ggplot</span>(gdp, <span class=\"kw\">aes</span>(<span class=\"dt\">x =</span> COUNTRY, <span class=\"dt\">y =</span> INCOME.PER.CAPITA, <span class=\"dt\">fill =</span> pop$FIFA.Rank<span class=\"fl\">.2014</span>)) +<span class=\"st\"> </span><span class=\"kw\">geom_bar</span>(<span class=\"dt\">stat =</span> <span class=\"st\">&#39;identity&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>() +<span class=\"st\"> </span><span class=\"kw\">theme</span>(<span class=\"dt\">axis.text.x =</span> <span class=\"kw\">element_text</span>(<span class=\"dt\">angle =</span> <span class=\"dv\">90</span>)) +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">y =</span> <span class=\"st\">&#39;GDP per capita in USD&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">scale_fill_continuous</span>(<span class=\"dt\">name =</span> <span class=\"st\">&#39;World Cup Standings&#39;</span>, <span class=\"dt\">guide =</span> <span class=\"kw\">guide_colorbar</span>(<span class=\"dt\">reverse =</span> T))</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/gdp.png\" alt=\"GDP by country\" /><p class=\"caption\">GDP by country</p>\n</div>\n</div>\n<div id=\"what-is-the-relationship-between-the-income-rank-and-the-fifa-rank\" class=\"section level3\">\n<h3>What is the relationship between the income rank and the FIFA rank?</h3>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\"><span class=\"kw\">ggplot</span>(data, <span class=\"kw\">aes</span>(<span class=\"dt\">x =</span> FIFA.Rank<span class=\"fl\">.2014</span>, <span class=\"dt\">y =</span> GDP.cap, <span class=\"dt\">size =</span> INCOME.PER.CAPITA, <span class=\"dt\">label =</span> Country.Code, <span class=\"dt\">colour =</span> Country)) +<span class=\"st\"> </span><span class=\"kw\">geom_point</span>(<span class=\"dt\">alpha =</span> <span class=\"fl\">0.8</span>) +<span class=\"st\"> </span><span class=\"kw\">geom_text</span>(<span class=\"dt\">hjust=</span><span class=\"fl\">0.5</span>, <span class=\"dt\">vjust=</span><span class=\"fl\">1.7</span>, <span class=\"dt\">size =</span> <span class=\"dv\">4</span>) +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>() +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">x =</span> <span class=\"st\">&#39;World Cup Standings&#39;</span>, <span class=\"dt\">y =</span> <span class=\"st\">&#39;GDP Rank&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">scale_size_continuous</span>(<span class=\"dt\">name =</span> <span class=\"st\">&#39;GDP (USD)&#39;</span>, <span class=\"dt\">guide =</span> <span class=\"kw\">guide_legend</span>(<span class=\"dt\">reverse=</span><span class=\"ot\">TRUE</span>)) +<span class=\"st\"> </span><span class=\"kw\">scale_y_continuous</span>(<span class=\"dt\">trans =</span> <span class=\"st\">&quot;reverse&quot;</span>, <span class=\"dt\">breaks=</span><span class=\"kw\">seq</span>(<span class=\"dv\">1</span>, <span class=\"dv\">170</span>, <span class=\"dv\">50</span>)) +<span class=\"st\"> </span><span class=\"kw\">scale_x_continuous</span>(<span class=\"dt\">trans =</span> <span class=\"st\">&quot;reverse&quot;</span>, <span class=\"dt\">breaks=</span><span class=\"kw\">seq</span>(<span class=\"dv\">1</span>, <span class=\"dv\">32</span>, <span class=\"dv\">2</span>)) +<span class=\"st\"> </span><span class=\"kw\">guides</span>(<span class=\"dt\">colour=</span><span class=\"ot\">FALSE</span>)</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/GDPvsFIFA.png\" alt=\"GDP vs FIFA\" /><p class=\"caption\">GDP vs FIFA</p>\n</div>\n</div>\n<div id=\"what-is-the-relation-between-the-human-development-rank-and-the-fifa-rank\" class=\"section level3\">\n<h3>What is the relation between the human development rank and the FIFA rank?</h3>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\"><span class=\"kw\">ggplot</span>(data, <span class=\"kw\">aes</span>(<span class=\"dt\">x =</span> FIFA.Rank<span class=\"fl\">.2014</span>, <span class=\"dt\">y =</span> X2012.HDI.Rank, <span class=\"dt\">size =</span> HUMAN.DEVELOPMENT.INDEX, <span class=\"dt\">label =</span> Country.Code, <span class=\"dt\">colour =</span> Country)) +<span class=\"st\"> </span><span class=\"kw\">geom_point</span>(<span class=\"dt\">alpha =</span> <span class=\"fl\">0.8</span>) +<span class=\"st\"> </span><span class=\"kw\">geom_text</span>(<span class=\"dt\">hjust=</span><span class=\"fl\">0.7</span>, <span class=\"dt\">vjust=</span>-<span class=\"dv\">1</span>, <span class=\"dt\">size =</span> <span class=\"dv\">4</span>) +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>() +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">x =</span> <span class=\"st\">&#39;World Cup Standings&#39;</span>, <span class=\"dt\">y =</span> <span class=\"st\">&#39;Human Development Rank&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">scale_size_continuous</span>(<span class=\"dt\">name =</span> <span class=\"st\">&#39;HD Index&#39;</span>, <span class=\"dt\">guide =</span> <span class=\"kw\">guide_legend</span>(<span class=\"dt\">reverse=</span><span class=\"ot\">TRUE</span>)) +<span class=\"st\"> </span><span class=\"kw\">scale_y_continuous</span>(<span class=\"dt\">trans =</span> <span class=\"st\">&quot;reverse&quot;</span>, <span class=\"dt\">breaks=</span><span class=\"kw\">seq</span>(<span class=\"dv\">1</span>, <span class=\"dv\">160</span>, <span class=\"dv\">40</span>)) +<span class=\"st\"> </span><span class=\"kw\">scale_x_continuous</span>(<span class=\"dt\">trans =</span> <span class=\"st\">&quot;reverse&quot;</span>, <span class=\"dt\">breaks=</span><span class=\"kw\">seq</span>(<span class=\"dv\">1</span>, <span class=\"dv\">32</span>, <span class=\"dv\">2</span>)) +<span class=\"st\"> </span><span class=\"kw\">guides</span>(<span class=\"dt\">colour=</span><span class=\"ot\">FALSE</span>)</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/HDIvsFIFA.png\" alt=\"HDI vs FIFA\" /><p class=\"caption\">HDI vs FIFA</p>\n</div>\n</div>\n<div id=\"what-is-the-corruption-rank-in-each-country-given-the-stability-violence-and-its-development\" class=\"section level3\">\n<h3>What is the corruption rank in each country given the stability (violence) and its development?</h3>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\"><span class=\"kw\">ggplot</span>(data, <span class=\"kw\">aes</span>(STABILITY.VIOLENCE, HUMAN.DEVELOPMENT.INDEX, <span class=\"dt\">colour =</span> CORRUPTION)) +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>() +<span class=\"st\"> </span><span class=\"kw\">geom_text</span>(<span class=\"kw\">aes</span>(<span class=\"dt\">label =</span> Country.Code), <span class=\"dt\">size =</span> <span class=\"fl\">3.5</span>, <span class=\"dt\">font =</span> <span class=\"st\">&#39;bold&#39;</span>, <span class=\"dt\">alpha =</span> <span class=\"fl\">0.85</span>) +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">y =</span> <span class=\"st\">&#39;Human Development Index&#39;</span>, <span class=\"dt\">x =</span> <span class=\"st\">&#39;Stability &amp; violence index&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">scale_colour_continuous</span>(<span class=\"dt\">name =</span> <span class=\"st\">&#39;Corruption&#39;</span>)</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/corruption.png\" alt=\"Corruption given HDI and violence\" /><p class=\"caption\">Corruption given HDI and violence</p>\n</div>\n</div>",
+"datapackage": {
+    "name": "socialWorldcup",
+    "title": "Data about economic indices for the 32 countries in the World Cup",
+    "license": "PDDL-1.0",
+    "keywords": ["Companies", "Mexico"],
+    "last_updated": "2014-07-01",
+    "last_update_comment": "",
+    "sources": [{
+        "name": "Forbes",
+        "web": "http://www.forbes.com/sites/prishe/2014/06/05/2014-fifa-world-cup-how-connected-is-a-countrys-soccer-and-economic-prominence/"
+    }, {
+        "name": "Freedom House",
+        "web": "http://www.freedomhouse.org/report-types/freedom-press#.U3C26IFdVp0"
+    }, {
+        "name": "CPI",
+        "web": "http://cpi.transparency.org/cpi2013/in_detail/"
+    }, {
+        "name": "Databank",
+        "web": "http://databank.worldbank.org/data/views/reports/tableview.aspx"
+    }, {
+        "name": "Oxfam inequality-world-cup",
+        "web": "http://www.oxfam.org.uk/what-we-do/issues-we-work-on/inequality-world-cup"
+    }, {
+        "name": "income-distribution-database",
+        "web": "www.oecd.org/social/income-distribution-database.htm"
+    }, {
+        "name": "Fifa Rank",
+        "web": "http://www.fifa.com/worldcup/teams/index.html"
+    }, {
+        "name": "Cleveland datacentral",
+        "web": "http://www.cleveland.com/datacentral/index.ssf/2014/06/19_billion_reasons_why_the_201.html"
+    }],
+    "resources": [{
+        "name": "data",
+        "path": "data.csv",
+        "format": "csv",
+        "mediatype": "text/csv",
+        "schema": {
+            "fields": [{
+                "name": "Country",
+                "description": "",
+                "type": "character"
+            }, {
+                "name": "TeamInfo",
+                "description": "",
+                "type": "character"
+            }, {
+                "name": "FIFARank",
+                "description": "",
+                "type": "number"
+            }, {
+                "name": "PALMA",
+                "description": "Palma index",
+                "type": "number"
+            }, {
+                "name": "GDP",
+                "description": "Income per capita",
+                "type": "number"
+            }, {
+                "name": "HDI",
+                "description": "Human development index",
+                "type": "number"
+            }, {
+                "name": "Gender gap",
+                "description": "",
+                "type": "number"
+            }, {
+                "name": "Obesity",
+                "description": "",
+                "type": "number"
+            }, {
+                "name": "Press",
+                "description": "Freedom of press",
+                "type": "number"
+            }, {
+                "name": "Stability",
+                "description": "Stability and violence",
+                "type": "number"
+            }, {
+                "name": "Corruption",
+                "description": "corruption ranking",
+                "type": "number"
+            }]
+        }
+    }, {
+        "name": "GDP",
+        "path": "gdpRank.csv",
+        "format": "csv",
+        "mediatype": "text/csv",
+        "schema": {
+            "fields": [{
+                "name": "Country",
+                "description": "",
+                "type": "character"
+            }, {
+                "name": "FIFARank2014",
+                "description": "",
+                "type": "number"
+            }, {
+                "name": "GDP/cap",
+                "description": "Income per capita",
+                "type": "number"
+            }, {
+                "name": "GDP",
+                "description": "ranking",
+                "type": "number"
+            }, {
+                "name": "Popl",
+                "description": "ranking",
+                "type": "number"
+            }, {
+                "name": "WC Gini",
+                "description": "GINI index",
+                "type": "number"
+            }, {
+                "name": "GDP",
+                "description": "In billions of dollars",
+                "type": "number"
+            }, {
+                "name": "Population",
+                "description": "",
+                "type": "number"
+            }]
+        }
+    }, {
+        "name": "corrup",
+        "path": "corrup.csv",
+        "format": "csv",
+        "mediatype": "text/csv",
+        "schema": {
+            "fields": [{
+                "name": "Country",
+                "description": "",
+                "type": "character"
+            }, {
+                "name": "WB code",
+                "description": "Country code by world bank",
+                "type": "character"
+            }, {
+                "name": "CPI 2013 score",
+                "description": "corruption index",
+                "type": "number"
+            }, {
+                "name": "Country rank",
+                "description": "ranking",
+                "type": "number"
+            }]
+        }
+    }]
+} 
+}

@@ -1,0 +1,290 @@
+[
+ {
+ "title": "¿Cuáles son las categorías de cervezas?",
+"description": "Resumimos en este post los distintos estilos de cerveza por categoría en el mundo.",
+"author": "ilanreinstein",
+"thumbnail": "details_files/figure-html/category.png",
+"language": "es",
+"date": "2014-07-25",
+"tags": [ "Cerveza", "mundo" ],
+"production": "true",
+"inquiries": [
+ {
+ "text": "¿Cuanto es el consumo mundial de cerveza?" 
+},
+{
+ "text": "¿Cuál es la categoría más común en el mundo?" 
+},
+{
+ "text": "¿Cual es el porcentaje de alcohol por categoría?" 
+},
+{
+ "text": "¿Cuantos estilos hay por categoría?" 
+} 
+],
+"id": "0-categorias-cervezas-del-mundo" 
+},
+{
+ "title": "¿Quién es el mejor corredor de fórmula 1 en la historia?",
+"description": "Mucho siempre depende del carro, pero son los pilotos los verdaderos héroes en este deporte. Veamos quién es el mejor...",
+"author": "ilanreinstein",
+"thumbnail": "details_files/figure-html/fastdriver.png",
+"language": "es",
+"date": "2014-07-25",
+"tags": [ "deportes", "f1" ],
+"production": "true",
+"inquiries": [
+ {
+ "text": "¿Quién es el piloto con más poles?" 
+},
+{
+ "text": "¿Quién es el piloto con más victorias?" 
+},
+{
+ "text": "¿Cuál es la correlación entre victorias y poles?" 
+},
+{
+ "text": "¿Qué piloto tiene más vueltas rápidas por temporada?" 
+} 
+],
+"id": "1-el-mejor-corredor-de-formula1" 
+},
+{
+ "title": "¿Hácia dónde va la educación en Colombia?",
+"description": "Debido al debate que se lleva a cabo en el congreso, queremos exponer alguna informcaion relacionada a la educaiocn en Colombia.",
+"author": "ilanreinstein",
+"thumbnail": "details_files/figure-html/inversion.png",
+"language": "es",
+"date": "2014-09-12",
+"tags": [ "economía", "colombia", "educación" ],
+"production": "true",
+"inquiries": [
+ {
+ "text": "¿Cómo ha cambiado en Colombia la inversión en educación desde 1980?" 
+},
+{
+ "text": "¿Cuánto invierte Colombia en los distintos niveles de educación?" 
+} 
+],
+"id": "10-inversion-educacion-colombia" 
+},
+{
+ "title": "¿Cuáles son las bibliotecas públicas más importantes del mundo?",
+"description": "Las bibliotecas públicas son más que un sitio para guardar libros.",
+"author": "ilanreinstein",
+"thumbnail": "details_files/figure-html/countries.png",
+"language": "es",
+"date": "2014-09-16",
+"tags": [ "cultura", "Mundo", "educación" ],
+"production": "true",
+"inquiries": [
+ {
+ "text": "¿En qué países están las bibliotecas mas grandes?" 
+},
+{
+ "text": "¿Cuáles son las ciudades en éstos países?" 
+},
+{
+ "text": "¿Qué biblioteca tiene más ejemplares en sus bibiotecas?" 
+},
+{
+ "text": "¿Cuál es el presupuesto dirigido a las bibliotecas?" 
+},
+{
+ "text": "¿Cuál es la biblioteca más visitada al año?" 
+} 
+],
+"id": "11-librerias-publicas-del-mundo" 
+},
+{
+ "title": "¿Cuál fue el desempeño final de los equipos en el mundial?",
+"description": "Sabemos que las estadísticas en este deporte son poco importantes, aún así, veamos como les fue a los participantes ahora que se acabó el mundial.",
+"author": "ilanreinstein",
+"thumbnail": "details_files/figure-html/clean.png",
+"language": "es",
+"date": "2014-07-27",
+"tags": [ "deporte", "wikipedia" ],
+"production": "true",
+"inquiries": [
+ {
+ "text": "¿Qué equipo acumuló más puntos?" 
+},
+{
+ "text": "¿Qué equipo tiene la mayor diferencia de goles positiva?" 
+},
+{
+ "text": "¿Qué equipo tiene más partidos sin recibir goles?" 
+} 
+],
+"id": "2-mundial-2014-rankings" 
+},
+{
+ "title": "¿En qué condición macroeconómica se encuentran los equipos del Mundial?",
+"description": "En este post queremos indagar un poco sobre cómo se encuentran los países social y económicamente mirando ciertos índices macroeconómicos.",
+"author": "ilanreinstein",
+"thumbnail": "details_files/figure-html/GDPvsFIFA.png",
+"language": "es",
+"date": "2014-07-30",
+"tags": [ "World cup", "countries", "social" ],
+"production": "true",
+"inquiries": [
+ {
+ "text": "¿Cuál es la población de los países que asisten al Mundial?" 
+},
+{
+ "text": "¿Cuál es el ingreso per cápita de cada uno?" 
+},
+{
+ "text": "¿Qué relación hay entre el ranking de ingreso y la posición final en el Mundial?" 
+},
+{
+ "text": "¿Qué relación hay entre el ranking de desarrollo humano y la posición final en el Mundial?" 
+},
+{
+ "text": "¿Qué tan corruptos son los países dado su índice de estabilidad/violencia y desarrollo?" 
+} 
+],
+"id": "3-posicion-macroeconomicas-fifa" 
+},
+{
+ "title": "¿Qué tanto invierten los países en investigación?",
+"description": "En este blogpost mostramos la evolución en el tiempo de la investigación científica en un determinado grupo de países.",
+"author": "ilanreinstein",
+"thumbnail": "details_files/figure-html/thumbnail.png",
+"language": "es",
+"date": "2014-08-22",
+"tags": [ "World", "Science", "economic" ],
+"production": "true",
+"inquiries": [
+ {
+ "text": "¿Cuál es el producto interno bruto de cada país?" 
+},
+{
+ "text": "¿Cuánto es el presupuesto dirigido a I&D?" 
+} 
+],
+"id": "4-inversion-investigacion-desarrollo-es" 
+},
+{
+ "title": "¿Qué tan estable ha sido la economía de EE.UU. y el Reino Unido en la historia?",
+"description": "En este post analizamos el patrimonio, el ingreso nacional de estos dos países y otros indicadores.",
+"author": "ilanreinstein",
+"thumbnail": "details_files/figure-html/wealth2.png",
+"language": "es",
+"date": "2014-08-15",
+"tags": [ "US", "UK", "economic" ],
+"production": "true",
+"inquiries": [
+ {
+ "text": "¿Cómo ha evolucionado la población?" 
+},
+{
+ "text": "¿Cuál ha sido el ingreso nacional en la historia?" 
+},
+{
+ "text": "¿Cuál ha sido el patrimonio privado??" 
+},
+{
+ "text": "¿Cuál ha sido el ingreso per cápita?" 
+},
+{
+ "text": "¿Cuál ha sido el patrimonio per cápita?" 
+} 
+],
+"id": "5-comparacion-indicadores-macroeconomicos-USA-reino-unido-es" 
+},
+{
+ "title": "¿Qué fuentes de energía se utilizan en Latinoamérica?",
+"description": "Examinamos las distintas maneras de generar electricidad en América Latina y en el Caribe.",
+"author": "ilanreinstein",
+"thumbnail": "details_files/figure-html/fosil.png",
+"language": "es",
+"date": "2014-08-29",
+"tags": [ "latinamerica", "energy", "economic" ],
+"production": "true",
+"inquiries": [
+ {
+ "text": "¿Qué porcentaje del consumo proviene de recursos fósiles?" 
+},
+{
+ "text": "¿Qué porcentaje del consumo proviene de recursos alternativos?" 
+},
+{
+ "text": "¿Qué porcentaje del consumo proviene de recursos renovables?" 
+} 
+],
+"id": "6-fuentes-producccion-energia-es" 
+},
+{
+ "title": "¿Cómo afecta la electricidad a la economía de un país?",
+"description": "Examinamos distintas variables importantes del sector energético.",
+"author": "ilanreinstein",
+"thumbnail": "details_files/figure-html/intensVScons1.png",
+"language": "es",
+"date": "2014-09-01",
+"tags": [ "latinamerica", "energy", "economic" ],
+"production": "true",
+"inquiries": [
+ {
+ "text": "¿Cuál es la intensidad de energía en Latino Amércia y el Caribe?" 
+},
+{
+ "text": "¿Cuál es el consumo per capita?" 
+},
+{
+ "text": "¿Qué relación hay entre el consumo y la intensidad?" 
+} 
+],
+"id": "7-indicadores-economicos-energia-es" 
+},
+{
+ "title": "¿Cuál es la distribución de poder nuclear en el mundo?",
+"description": "Estudiamos los arsenales nucleares en el mundo y su relación con el sector energético.",
+"author": "ilanreinstein",
+"thumbnail": "details_files/figure-html/warheads.png",
+"language": "es",
+"date": "2014-09-08",
+"tags": [ "games", "sales" ],
+"production": "true",
+"inquiries": [
+ {
+ "text": "¿Cómo ha evolucinado el número de ojivas nucleares en el mundo?" 
+},
+{
+ "text": "¿Qué países tienen armas nucleares actualmente?" 
+},
+{
+ "text": "¿Qué países tienen plantas nucleares operando?" 
+},
+{
+ "text": "¿Cuál es la relación entre la posesión de plantas nucleares activas y el número de ojivas?" 
+},
+{
+ "text": "¿Qué relación existe entre la capacidad de producción de energía nuclear y el número de ojivas?" 
+} 
+],
+"id": "8-potencias-nuclear-mundo" 
+},
+{
+ "title": "¿Cómo están los video juegos en la historia?",
+"description": "Analizamos qué juegos de video han sido los más exitosos y vemos qué consola es la más popular.",
+"author": "ilanreinstein",
+"thumbnail": "details_files/figure-html/PSvsXBOX.png",
+"language": "es",
+"date": "2014-09-08",
+"tags": [ "games", "sales" ],
+"production": "true",
+"inquiries": [
+ {
+ "text": "¿Qué juego ha vendido más copias?" 
+},
+{
+ "text": "¿Qué consola tiene el mayor número de unidades vendidas?" 
+},
+{
+ "text": "¿Qué consola es más popular entre PS3 y XBOX 360?" 
+} 
+],
+"id": "9-historia-video-juegos" 
+} 
+]

@@ -1,0 +1,170 @@
+{
+ "title": "¿Hácia dónde va la educación en Colombia?",
+"description": "Debido al debate que se lleva a cabo en el congreso, queremos exponer alguna informcaion relacionada a la educaiocn en Colombia.",
+"author": "ilanreinstein",
+"thumbnail": "details_files/figure-html/inversion.png",
+"language": "es",
+"date": "2014-09-12",
+"tags": [ "economía", "colombia", "educación" ],
+"production": "true",
+"inquiries": [
+ {
+ "text": "¿Cómo ha cambiado en Colombia la inversión en educación desde 1980?" 
+},
+{
+ "text": "¿Cuánto invierte Colombia en los distintos niveles de educación?" 
+} 
+],
+"id": "10-inversion-educacion-colombia",
+"story": "<p>La educación es un derecho fundamental para la humanidad, el acceso a ésta es primordial para tener un estándar de vida digno. Los seres pensantes y educados son quienes cambian el curso de la historia de un país, lastimosamente, el acceso a una buena educación es cada vez más costoso y de menor calidad. Hace unos meses se presentaron protestas de parte de muchos profesores insatisfechos con sus salarios y sus beneficios, y también, creen que están siendo calificados de manera injusta. En un <a href=\"http://datablog.co/posts/4-inversion-investigacion-desarrollo-es/\">post</a> anterior, discutíamos que la inversión en investigación científica es una apuesta a un mejor futuro en el país. Lo mismo pensamos con respecto a la educación, un país que educa a su gente es uno que se preocupa por cuidar y mantener el bienestar de su población en todos los aspectos posibles.</p>\n<p>Muchos se preguntan cómo mejorar la sociedad en la que vivimos, es muy fuerte la sensación de impotencia cuando notamos lo poco que podemos hacer conociendo la condicion social de algunas personas en el mundo, además es realmente complicado percibir el cambio en tan poco tiempo.</p>\n<p>En estos momentos se discute el futuro de la educación en nuestro país, comienza un nuevo período presidencial y la expectativa del cambio nunca ha estado tan alta como ahora. Mientras en el congreso se debate y se analizan las propuestas, nosotros mencionaremos algunas cosas sobre la inversión en educación en Colombia a través de los años.</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/inversion.png\" alt=\"Inverstment Education\" /><p class=\"caption\">Inverstment Education</p>\n</div>\n<p>En la anterior gráfica, vemos como ha evolucionado la inversión en educación a lo largo de los años, quiénes han sido los presidentes en cada período. Vemos que el único período estable es entre 1990 y 2000, bajo el mandato de César Gaviria y Ernesto Samper. El punto más alto sin embargo, fue alcanzado por Alvaro Uribe, luego de una caída muy pronunciada desde que subió a la presidencia. El mismo comportamiento se observa en el período de Andrés Pastrana, comenzó bien, bajo y luego mejoró de nuevo. Solo debemos esperar que Juan Manuel Santos recupere la inversión en educación y la deje en un mejor nivel que cuando recibio el cargo.</p>\n<p>Ahora queremos ver la inversión por niveles educativos. Es importante conocer estas cifras debido a que la distribucion no es equitativa, se invierte más en algunos niveles que en otros.</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/levels.png\" alt=\"Educational levels\" /><p class=\"caption\">Educational levels</p>\n</div>\n<p>Los niveles que reciben mayor financiación son la primaria y la secundaria/bachillerato. Esto es un buen indicador, sin embargo, se puede mejorar la etapa preescolar, e idealmente el nivel terciario o universitario. Es importante reforzar estos últimos dos sectores, dado que significan la preparación básica para estudiar y la formación profesional respectivamente. El aumento en el número de profesionales financiados por el gobierno sería una excelente iniciativa para mejorar la economía del país, siempre y cuando éstos puedan conseguir empleo fácilmente.</p>\n<p>En conclusión, todo lo que podemos desear es que la inversión general aumente y que, en el actual debate que se lleva a cabo en el congreso, se adopten medidas y políticas para mejorar el sector educativo y no nos quedemos atrás otra vez en las pruebas internacionales.</p>",
+"details": "<pre class=\"sourceCode r\"><code class=\"sourceCode r\"><span class=\"kw\">library</span>(reshape2)\n<span class=\"kw\">library</span>(knitr)\n<span class=\"kw\">library</span>(plyr)\n<span class=\"kw\">library</span>(ggplot2)\n<span class=\"kw\">library</span>(scales)\n<span class=\"kw\">library</span>(zoo)\n<span class=\"kw\">options</span>(<span class=\"dt\">scipen =</span> <span class=\"dv\">10</span>)</code></pre>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">df &lt;-<span class=\"st\"> </span><span class=\"kw\">read.csv</span>(<span class=\"st\">&#39;data/table2.csv&#39;</span>, <span class=\"dt\">header =</span> T)\ndf2 &lt;-<span class=\"st\"> </span><span class=\"kw\">read.csv</span>(<span class=\"st\">&#39;data/table1.csv&#39;</span>, <span class=\"dt\">header =</span> T)\na &lt;-<span class=\"st\"> </span><span class=\"kw\">rowSums</span>(df2[,<span class=\"dv\">3</span>:<span class=\"dv\">6</span>])\ndf2$preprimary &lt;-<span class=\"st\"> </span>(df2$preprimary/a)*<span class=\"dv\">100</span>\ndf2$primary &lt;-<span class=\"st\"> </span>(df2$primary/a)*<span class=\"dv\">100</span>\ndf2$secondary &lt;-<span class=\"st\"> </span>(df2$secondary/a)*<span class=\"dv\">100</span>\ndf2$tertiary &lt;-<span class=\"st\"> </span>(df2$tertiary/a)*<span class=\"dv\">100</span>\n\ndf3 &lt;-<span class=\"st\"> </span><span class=\"kw\">melt</span>(df2, <span class=\"dt\">id =</span> <span class=\"kw\">c</span>(<span class=\"st\">&#39;country&#39;</span>,<span class=\"st\">&#39;year&#39;</span>),<span class=\"dt\">varnames =</span> <span class=\"st\">&#39;indicator&#39;</span>)</code></pre>\n<div id=\"cómo-ha-cambiado-en-colombia-la-inversión-en-educación-desde-1980\" class=\"section level3\">\n<h3>¿Cómo ha cambiado en Colombia la inversión en educación desde 1980?</h3>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\"><span class=\"kw\">ggplot</span>(df, <span class=\"kw\">aes</span>(year, eduPerc, <span class=\"dt\">group =</span> <span class=\"dv\">1</span>, <span class=\"dt\">colour =</span> presidents)) +<span class=\"st\"> </span><span class=\"kw\">geom_path</span>() +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>() +<span class=\"st\"> </span><span class=\"kw\">scale_colour_brewer</span>(<span class=\"dt\">palette =</span> <span class=\"st\">&#39;Set1&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">y =</span> <span class=\"st\">&#39;Inversion en Educacion, % PIB&#39;</span>)</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/inversion.png\" alt=\"Inverstment Education\" /><p class=\"caption\">Inverstment Education</p>\n</div>\n</div>\n<div id=\"cuánto-invierte-colombia-en-los-distintos-niveles-de-educación\" class=\"section level3\">\n<h3>¿Cuánto invierte Colombia en los distintos niveles de educación?</h3>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\"><span class=\"kw\">ggplot</span>(df3, <span class=\"kw\">aes</span>(year,value, <span class=\"dt\">fill=</span>variable)) +<span class=\"st\"> </span><span class=\"kw\">geom_area</span>(<span class=\"dt\">position =</span> <span class=\"st\">&#39;stack&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">y =</span> <span class=\"st\">&#39;Inversion por nivel educativo % de PIB&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">scale_fill_brewer</span>(<span class=\"dt\">palette =</span> <span class=\"st\">&#39;Set1&#39;</span>, <span class=\"dt\">name =</span> <span class=\"st\">&#39;Nivel Educativo&#39;</span>, <span class=\"dt\">labels =</span> <span class=\"kw\">c</span>(<span class=\"st\">&#39;Preescolar&#39;</span>, <span class=\"st\">&#39;Primaria&#39;</span>, <span class=\"st\">&#39;Secundaria&#39;</span>, <span class=\"st\">&#39;Terciaria&#39;</span>)) +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>()</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/levels.png\" alt=\"Educational levels\" /><p class=\"caption\">Educational levels</p>\n</div>\n</div>",
+"datapackage": {
+    "name": "list(d, d1)Datapackage",
+    "resources": [
+        {
+            "name": "table1",
+            "path": "table1.csv",
+            "ae_resource_info": {
+                "id": "table1",
+                "public": "true",
+                "resource_type": "tbl"
+            },
+            "mediatype": "text/csv",
+            "format": "csv",
+            "dialect": {
+                "delimiter": ","
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "country",
+                        "type": "factor",
+                        "ae_field_info": {
+                            "id": "a",
+                            "data_type": "C",
+                            "label": "country"
+                        }
+                    },
+                    {
+                        "name": "year",
+                        "type": "integer",
+                        "ae_field_info": {
+                            "id": "b",
+                            "data_type": "N",
+                            "label": "year"
+                        }
+                    },
+                    {
+                        "name": "preprimary",
+                        "type": "numeric",
+                        "ae_field_info": {
+                            "id": "c",
+                            "data_type": "N",
+                            "label": "preprimary"
+                        }
+                    },
+                    {
+                        "name": "primary",
+                        "type": "numeric",
+                        "ae_field_info": {
+                            "id": "d",
+                            "data_type": "N",
+                            "label": "primary"
+                        }
+                    },
+                    {
+                        "name": "secondary",
+                        "type": "numeric",
+                        "ae_field_info": {
+                            "id": "e",
+                            "data_type": "N",
+                            "label": "secondary"
+                        }
+                    },
+                    {
+                        "name": "tertiary",
+                        "type": "numeric",
+                        "ae_field_info": {
+                            "id": "f",
+                            "data_type": "N",
+                            "label": "tertiary"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "table2",
+            "path": "table2.csv",
+            "ae_resource_info": {
+                "id": "table2",
+                "public": "true",
+                "resource_type": "tbl"
+            },
+            "mediatype": "text/csv",
+            "format": "csv",
+            "dialect": {
+                "delimiter": ","
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "country",
+                        "type": "factor",
+                        "ae_field_info": {
+                            "id": "a",
+                            "data_type": "C",
+                            "label": "country"
+                        }
+                    },
+                    {
+                        "name": "code",
+                        "type": "factor",
+                        "ae_field_info": {
+                            "id": "b",
+                            "data_type": "C",
+                            "label": "code"
+                        }
+                    },
+                    {
+                        "name": "year",
+                        "type": "integer",
+                        "ae_field_info": {
+                            "id": "c",
+                            "data_type": "N",
+                            "label": "year"
+                        }
+                    },
+                    {
+                        "name": "GDP",
+                        "type": "numeric",
+                        "ae_field_info": {
+                            "id": "d",
+                            "data_type": "N",
+                            "label": "GDP"
+                        }
+                    },
+                    {
+                        "name": "eduPerc",
+                        "type": "numeric",
+                        "ae_field_info": {
+                            "id": "e",
+                            "data_type": "N",
+                            "label": "eduPerc"
+                        }
+                    },
+                    {
+                        "name": "presidents",
+                        "type": "factor",
+                        "ae_field_info": {
+                            "id": "f",
+                            "data_type": "C",
+                            "label": "presidents"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+} 
+}

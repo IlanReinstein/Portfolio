@@ -1,0 +1,116 @@
+{
+ "title": "¿Qué tan estable ha sido la economía de EE.UU. y el Reino Unido en la historia?",
+"description": "En este post analizamos el patrimonio, el ingreso nacional de estos dos países y otros indicadores.",
+"author": "ilanreinstein",
+"thumbnail": "details_files/figure-html/wealth2.png",
+"language": "es",
+"date": "2014-08-15",
+"tags": [ "US", "UK", "economic" ],
+"production": "true",
+"inquiries": [
+ {
+ "text": "¿Cómo ha evolucionado la población?" 
+},
+{
+ "text": "¿Cuál ha sido el ingreso nacional en la historia?" 
+},
+{
+ "text": "¿Cuál ha sido el patrimonio privado??" 
+},
+{
+ "text": "¿Cuál ha sido el ingreso per cápita?" 
+},
+{
+ "text": "¿Cuál ha sido el patrimonio per cápita?" 
+} 
+],
+"id": "5-comparacion-indicadores-macroeconomicos-USA-reino-unido-es",
+"story": "<p>En este <em>datapost</em> queremos comparar a dos de los países más poderosos del mundo a lo largo de la historia, mirando algunos aspectos de sus economías. La información que usamos tienen datos sobre el ingreso nacional y el patrimonio privado desde el siglo XIX. Datos de la población, empleo y medidas per cápita también hacen parte de la información. Veremos cómo algunas de estas variables han cambiado a través del tiempo en estos dos países.</p>\n<p>Comenzamos con la población. Desafortunadamente, los datos de EE.UU. omiten 15 años con respecto a los del Reino Unido, por lo tanto, algunas visualizaciones parecerán más cortas o incompletas para este país.</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/population.png\" alt=\"Population\" /><p class=\"caption\">Population</p>\n</div>\n<p>Como se puede ver claramente, la población de EE.UU. creció notablemente rápido durante el último siglo. Esto afecta las siguientes gráficas de nuestro <em>post</em> en el sentido que la gran diferencia en el número de personas por país influye directamente con las graficas de empleo o ingreso per cápita, etc. Entonces, este escrito tratará de definir cuál de los dos países muestra mayor estabilidad según las variables que escojamos.</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/income.png\" alt=\"National income over time\" /><p class=\"caption\">National income over time</p>\n</div>\n<p>He aquí el primer ejemplo de la gran diferencia en número de personas, sin embargo, el Reino Unido muestra una línea mas suave que EE.UU. De hecho, observamos una pequeña caída entre los años 1900 y 1950. ¿Podemos asociar este fenómeno a la crisis de 1929? Tal vez sí, tal vez no; antes de llegar a cualquier conclusión miremos las otras variables, primero la del patrimonio privado en ambos países.</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/wealth.png\" alt=\"Private Wealth\" /><p class=\"caption\">Private Wealth</p>\n</div>\n<p>Aquí no existe una línea más suave, ambas son estables en promedio, aún así existen unos saltos extraños al final de la línea de EE.UU. ¿Alguna idea de qué estará produciendo ese comportamiento? Notamos también que no hay caídas en la patrimonio privado durante el periodo 1900-1950, contrario a lo que observamos en la gráfica de ingreso nacional. Para mejorar nuestro entendimiento de qué es lo que pasa aclaremos mejor éstos últimos conceptos.</p>\n<p>El <a href=\"http://es.wikipedia.org/wiki/Patrimonio\">Patrimonio privado</a> se refiere al sector privado, los bienes bancarios y financieros que poseen las personas del país. El <a href=\"http://es.wikipedia.org/wiki/Renta_nacional\">ingreso nacional</a> se relaciona con los bienes y las ganancias del gobierno o sector público. Estas definiciones están sujetas a aclaración, en los links se encontrará mas información sobre estos términos.</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/income2.png\" alt=\"Income per capita\" /><p class=\"caption\">Income per capita</p>\n</div>\n<p>Como se puede ver ésta es una variables mucho más inestable tanto para EE.UU. como para el Reino Unido. Se puede ver un gran salto durante el periodo 1900-1950. Esta gráfica muestra un ingreso per cápita bastante fluctuante, y no solo durante 1929.</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/wealth2.png\" alt=\"Wealth per capita\" /><p class=\"caption\">Wealth per capita</p>\n</div>\n<p>De nuevo vemos un progreso cambiante en patrimonio, especialmente en el Reino Unido. No es coincidencia ahora que todo comportamiento extraño en la historia económica de estos dos países sucede durante la crisis de 1929. ¿No estamos seguros aún? Veamos la gráfica de empleo:</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/employment.png\" alt=\"Employment over time\" /><p class=\"caption\">Employment over time</p>\n</div>\n<p>Bueno, no es tan clara como las gráficas 'per cápita', sin embargo, hay un colapso en el empleo en EE.UU. ¡Eso es todo por ahora! Hemos visto el progreso de la historia en estos dos importantes países usando un pequeño grupo de índices económicos. Todos sabemos que la crisis de 1929 afectó a muchos países del planeta, pero no sabíamos de qué manera. En un futuro <em>post</em> trataremos de profundizar un poco en esto.</p>\n<p>Puedes darnos retroalimentación para mejorar las gráficas y las preguntas, incluso la información y la ortografía.</p>\n<p>Gracias por leer....</p>",
+"details": "<pre class=\"sourceCode r\"><code class=\"sourceCode r\"><span class=\"kw\">library</span>(ggplot2)\n<span class=\"kw\">library</span>(scales)</code></pre>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">data_path &lt;-<span class=\"st\"> &#39;data/&#39;</span>\ndf &lt;-<span class=\"st\"> </span><span class=\"kw\">read.csv</span>(<span class=\"kw\">paste0</span>(data_path,<span class=\"st\">&#39;clean.csv&#39;</span>), <span class=\"dt\">header =</span> T)</code></pre>\n<div id=\"cómo-ha-cambiado-la-población-en-el-tiempo\" class=\"section level3\">\n<h3>¿Cómo ha cambiado la población en el tiempo?</h3>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\"><span class=\"kw\">ggplot</span>(df, <span class=\"kw\">aes</span>(<span class=\"dt\">x =</span> year, <span class=\"dt\">colour =</span> country)) +<span class=\"st\"> </span><span class=\"kw\">geom_line</span>(<span class=\"kw\">aes</span>(<span class=\"dt\">y =</span> df$population)) +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>() +<span class=\"st\"> </span><span class=\"kw\">guides</span>(<span class=\"dt\">colour =</span> <span class=\"kw\">guide_legend</span>(<span class=\"dt\">title =</span> <span class=\"ot\">NULL</span>)) +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">y =</span> <span class=\"st\">&#39;Poblacion en millones&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">scale_colour_manual</span>(<span class=\"dt\">values =</span> <span class=\"kw\">c</span>(<span class=\"st\">&#39;#FF3333&#39;</span>,<span class=\"st\">&#39;#3399FF&#39;</span>)) +<span class=\"st\"> </span><span class=\"kw\">scale_y_continuous</span>(<span class=\"dt\">labels =</span> comma)</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/population.png\" alt=\"Population\" /><p class=\"caption\">Population</p>\n</div>\n</div>\n<div id=\"cuál-ha-sido-el-ingreso-nacional\" class=\"section level3\">\n<h3>¿Cuál ha sido el ingreso nacional?</h3>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\"><span class=\"kw\">ggplot</span>(df, <span class=\"kw\">aes</span>(<span class=\"dt\">x =</span> year, <span class=\"dt\">colour =</span> country)) +<span class=\"st\"> </span><span class=\"kw\">geom_line</span>(<span class=\"kw\">aes</span>(<span class=\"dt\">y =</span> df$natIncome2010bill)) +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>() +<span class=\"st\"> </span><span class=\"kw\">guides</span>(<span class=\"dt\">colour =</span> <span class=\"kw\">guide_legend</span>(<span class=\"dt\">title =</span> <span class=\"ot\">NULL</span>)) +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">y =</span> <span class=\"st\">&#39;Ingreso Nacional miles de millones USD&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">scale_colour_manual</span>(<span class=\"dt\">values =</span> <span class=\"kw\">c</span>(<span class=\"st\">&#39;#FF3333&#39;</span>,<span class=\"st\">&#39;#3399FF&#39;</span>))</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/income.png\" alt=\"National income over time\" /><p class=\"caption\">National income over time</p>\n</div>\n</div>\n<div id=\"cuál-ha-sido-el-patrimonio-privado\" class=\"section level3\">\n<h3>¿Cuál ha sido el patrimonio privado?</h3>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\"><span class=\"kw\">ggplot</span>(df, <span class=\"kw\">aes</span>(<span class=\"dt\">x =</span> year, <span class=\"dt\">colour =</span> country)) +<span class=\"st\"> </span><span class=\"kw\">geom_line</span>(<span class=\"kw\">aes</span>(<span class=\"dt\">y =</span> df$privWealth2010bill)) +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>() +<span class=\"st\"> </span><span class=\"kw\">guides</span>(<span class=\"dt\">colour =</span> <span class=\"kw\">guide_legend</span>(<span class=\"dt\">title =</span> <span class=\"ot\">NULL</span>)) +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">y =</span> <span class=\"st\">&#39;Patrimonio privado miles de millones USD&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">scale_colour_manual</span>(<span class=\"dt\">values =</span> <span class=\"kw\">c</span>(<span class=\"st\">&#39;#FF3333&#39;</span>,<span class=\"st\">&#39;#3399FF&#39;</span>))</code></pre>\n<pre><code>## Warning: Removed 3 rows containing missing values (geom_path).</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/wealth.png\" alt=\"Private Wealth\" /><p class=\"caption\">Private Wealth</p>\n</div>\n</div>\n<div id=\"cuál-ha-sido-el-ingreso-per-cápita\" class=\"section level3\">\n<h3>¿Cuál ha sido el ingreso per cápita?</h3>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\"><span class=\"kw\">ggplot</span>(df, <span class=\"kw\">aes</span>(<span class=\"dt\">x =</span> year, <span class=\"dt\">colour =</span> country)) +<span class=\"st\"> </span><span class=\"kw\">geom_line</span>(<span class=\"kw\">aes</span>(<span class=\"dt\">y =</span> df$perCapitaNatIncome2010)) +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>() +<span class=\"st\"> </span><span class=\"kw\">guides</span>(<span class=\"dt\">colour =</span> <span class=\"kw\">guide_legend</span>(<span class=\"dt\">title =</span> <span class=\"ot\">NULL</span>)) +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">y =</span> <span class=\"st\">&#39;Ingreso per capita, USD&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">scale_colour_manual</span>(<span class=\"dt\">values =</span> <span class=\"kw\">c</span>(<span class=\"st\">&#39;#FF3333&#39;</span>,<span class=\"st\">&#39;#3399FF&#39;</span>))</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/income2.png\" alt=\"Income per capita\" /><p class=\"caption\">Income per capita</p>\n</div>\n</div>\n<div id=\"cuál-ha-sido-el-patromonio-privado-per-cápita\" class=\"section level3\">\n<h3>¿Cuál ha sido el patromonio privado per cápita?</h3>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\"><span class=\"kw\">ggplot</span>(df, <span class=\"kw\">aes</span>(<span class=\"dt\">x =</span> year, <span class=\"dt\">colour =</span> country)) +<span class=\"st\"> </span><span class=\"kw\">geom_line</span>(<span class=\"kw\">aes</span>(<span class=\"dt\">y =</span> df$perCapitaPrivWealth2010)) +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>() +<span class=\"st\"> </span><span class=\"kw\">guides</span>(<span class=\"dt\">colour =</span> <span class=\"kw\">guide_legend</span>(<span class=\"dt\">title =</span> <span class=\"ot\">NULL</span>)) +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">y =</span> <span class=\"st\">&#39;Patrimonio privado per capita, USD&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">scale_colour_manual</span>(<span class=\"dt\">values =</span> <span class=\"kw\">c</span>(<span class=\"st\">&#39;#FF3333&#39;</span>,<span class=\"st\">&#39;#3399FF&#39;</span>))</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/wealth2.png\" alt=\"Wealth per capita\" /><p class=\"caption\">Wealth per capita</p>\n</div>\n</div>\n<div id=\"cómo-ha-cambiado-el-empleo-en-eeuu-y-en-el-reino-unido\" class=\"section level3\">\n<h3>¿Cómo ha cambiado el empleo en EEUU y en el Reino Unido?</h3>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\"><span class=\"kw\">ggplot</span>(df, <span class=\"kw\">aes</span>(<span class=\"dt\">x =</span> year, <span class=\"dt\">colour =</span> country)) +<span class=\"st\"> </span><span class=\"kw\">geom_line</span>(<span class=\"kw\">aes</span>(<span class=\"dt\">y =</span> df$employedPopulation)) +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>() +<span class=\"st\"> </span><span class=\"kw\">guides</span>(<span class=\"dt\">colour =</span> <span class=\"kw\">guide_legend</span>(<span class=\"dt\">title =</span> <span class=\"ot\">NULL</span>)) +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">y =</span> <span class=\"st\">&#39;Millones de personas con empleo&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">scale_colour_manual</span>(<span class=\"dt\">values =</span> <span class=\"kw\">c</span>(<span class=\"st\">&#39;#FF3333&#39;</span>,<span class=\"st\">&#39;#3399FF&#39;</span>))</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/employment.png\" alt=\"Employment over time\" /><p class=\"caption\">Employment over time</p>\n</div>\n</div>",
+"datapackage": {
+    "name": "dfDatapackage",
+    "resources": [
+        {
+            "name": "table1",
+            "path": "table1.csv",
+            "ae_resource_info": {
+                "id": "table1",
+                "public": "true",
+                "resource_type": "tbl"
+            },
+            "mediatype": "text/csv",
+            "format": "csv",
+            "dialect": {
+                "delimiter": ","
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "country",
+                        "type": "factor",
+                        "ae_field_info": {
+                            "id": "a",
+                            "data_type": "C",
+                            "label": "country"
+                        }
+                    },
+                    {
+                        "name": "code",
+                        "type": "factor",
+                        "ae_field_info": {
+                            "id": "b",
+                            "data_type": "C",
+                            "label": "code"
+                        }
+                    },
+                    {
+                        "name": "region",
+                        "type": "factor",
+                        "ae_field_info": {
+                            "id": "c",
+                            "data_type": "C",
+                            "label": "region"
+                        }
+                    },
+                    {
+                        "name": "year",
+                        "type": "factor",
+                        "ae_field_info": {
+                            "id": "d",
+                            "data_type": "C",
+                            "label": "year"
+                        }
+                    },
+                    {
+                        "name": "percRD",
+                        "type": "numeric",
+                        "ae_field_info": {
+                            "id": "e",
+                            "data_type": "N",
+                            "label": "percRD"
+                        }
+                    },
+                    {
+                        "name": "GDP",
+                        "type": "numeric",
+                        "ae_field_info": {
+                            "id": "f",
+                            "data_type": "N",
+                            "label": "GDP"
+                        }
+                    },
+                    {
+                        "name": "researchers",
+                        "type": "numeric",
+                        "ae_field_info": {
+                            "id": "g",
+                            "data_type": "N",
+                            "label": "researchers"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+} 
+}

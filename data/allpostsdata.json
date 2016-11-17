@@ -1,0 +1,190 @@
+[
+ {
+ "title": "What are the different types of beers in the World?",
+"description": "In this post we summarize the different categories and styles of beer.",
+"author": "ilanreinstein",
+"thumbnail": "details_files/figure-html/category.png",
+"language": "en",
+"date": "2014-07-25",
+"tags": [ "Beer", "countries" ],
+"production": "true",
+"inquiries": [
+ {
+ "text": "What is the most common category?" 
+},
+{
+ "text": "What is the mean alchohol volume by category?" 
+},
+{
+ "text": "How many styles are in each category?" 
+} 
+],
+"id": "0-world-beer-categories" 
+},
+{
+ "title": "Who is the greatest driver in the Formula One history?",
+"description": "In the end it all comes to the driver of the car, who is responsible for pushing the car to its limits in order to give a nice show, let's see how this holds with some data",
+"author": "ilanreinstein",
+"thumbnail": "details_files/figure-html/fastdriver.png",
+"language": "en",
+"date": "2014-07-22",
+"tags": [ "sports", "f1" ],
+"production": "true",
+"inquiries": [
+ {
+ "text": "Who is the driver with most poles?" 
+},
+{
+ "text": "Who is the driver with most wins?" 
+},
+{
+ "text": "What is the correlation between poles and wins by driver?" 
+},
+{
+ "text": "Who is the best driver by fastest laps?" 
+} 
+],
+"id": "1-formula1-best-driver" 
+},
+{
+ "title": "How the teams performed in the World Cup?",
+"description": "In soccer there is not much importance in this rankings because the winners already took the trophy home and nobody cares whether they played a flawless tournament or if they had several difficulties.",
+"author": "ilanreinstein",
+"thumbnail": "details_files/figure-html/clean.png",
+"language": "en",
+"date": "2014-07-27",
+"tags": [ "sports", "wikipedia" ],
+"production": "true",
+"inquiries": [
+ {
+ "text": "What team is the champion by points?" 
+},
+{
+ "text": "What team is the champion by goal difference?" 
+},
+{
+ "text": "What team is the champion by clean sheet?" 
+} 
+],
+"id": "2-fifa-world-cup-2014-rank" 
+},
+{
+ "title": "What is the social condition of the  participating countries in the World Cup?",
+"description": "In this blogpost we will be using socio-economic data to analyze a little bit further each of the competing countries in the WC.",
+"author": "ilanreinstein",
+"thumbnail": "details_files/figure-html/GDPvsFIFA.png",
+"language": "en",
+"date": "2014-07-30",
+"tags": [ "World cup", "countries", "social" ],
+"production": "true",
+"inquiries": [
+ {
+ "text": "What is the population in the participating countries?" 
+},
+{
+ "text": "What is the income per capita in the participating countries?" 
+},
+{
+ "text": "What is the relation between the income rank and the FIFA rank?" 
+},
+{
+ "text": "What is the relation between the human development rank and the FIFA rank?" 
+},
+{
+ "text": "What is the corruption rank in each country given the stability (violence) and its development?" 
+} 
+],
+"id": "3-fifa-world-cup-macroeconomic-standings" 
+},
+{
+ "title": "¿How much do countries invest in R&D?",
+"description": "In this blogpost we show the investment in science in a small set of countries.",
+"author": "ilanreinstein",
+"thumbnail": "details_files/figure-html/thumbnail.png",
+"language": "en",
+"date": "2014-08-22",
+"tags": [ "World", "Science", "economic" ],
+"production": "true",
+"inquiries": [
+ {
+ "text": "What is the GDP of each country?" 
+},
+{
+ "text": "What is the R&D budget?" 
+} 
+],
+"id": "4-research-and-development-investment-en" 
+},
+{
+ "title": "How stable has been the economy in the US and the UK?",
+"description": "In this blogpost we compare the income and wealth of these two countries over time.",
+"author": "ilanreinstein",
+"thumbnail": "details_files/figure-html/wealth2.png",
+"language": "en",
+"date": "2014-08-15",
+"tags": [ "US", "UK", "economic" ],
+"production": "true",
+"inquiries": [
+ {
+ "text": "What has been the change in population over the years?" 
+},
+{
+ "text": "What has been the national income? " 
+},
+{
+ "text": "What has been the private wealth?" 
+},
+{
+ "text": "What has been the income per capita?" 
+},
+{
+ "text": "What has been the private wealth per capita?" 
+} 
+],
+"id": "5-comparison-of-US-UK-economic-indicators-en" 
+},
+{
+ "title": "What are the main energy sources used in Latin America?",
+"description": "We explore the different ways of generating electricity in South America and the Caribbean.",
+"author": "ilanreinstein",
+"thumbnail": "details_files/figure-html/fosil.png",
+"language": "en",
+"date": "2014-08-29",
+"tags": [ "World", "Science", "economic" ],
+"production": "true",
+"inquiries": [
+ {
+ "text": "What percentage of the total energy consumption comes from fossil resources?" 
+},
+{
+ "text": "What percentage of the total energy consumption comes from alternative resources?" 
+},
+{
+ "text": "What percentage of the total energy consumption comes from renewable resources?" 
+} 
+],
+"id": "6-energy-sources-comparison-en" 
+},
+{
+ "title": "What role does electricity plays in the economy?",
+"description": "We explore variables that relate energy consumption to a country's economy",
+"author": "ilanreinstein",
+"thumbnail": "details_files/figure-html/intensVScons1.png",
+"language": "en",
+"date": "2014-09-01",
+"tags": [ "World", "energy", "economic" ],
+"production": "true",
+"inquiries": [
+ {
+ "text": "What is the energy intensity?" 
+},
+{
+ "text": "What is the consumption per capita?" 
+},
+{
+ "text": "What is the relation between the consumption and the intensity?" 
+} 
+],
+"id": "7-energy-economic-indicators-en" 
+} 
+]

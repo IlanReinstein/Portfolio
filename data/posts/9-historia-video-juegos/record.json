@@ -1,0 +1,304 @@
+{
+ "title": "¿Cómo están los video juegos en la historia?",
+"description": "Analizamos qué juegos de video han sido los más exitosos y vemos qué consola es la más popular.",
+"author": "ilanreinstein",
+"thumbnail": "details_files/figure-html/PSvsXBOX.png",
+"language": "es",
+"date": "2014-09-08",
+"tags": [ "games", "sales" ],
+"production": "true",
+"inquiries": [
+ {
+ "text": "¿Qué juego ha vendido más copias?" 
+},
+{
+ "text": "¿Qué consola tiene el mayor número de unidades vendidas?" 
+},
+{
+ "text": "¿Qué consola es más popular entre PS3 y XBOX 360?" 
+} 
+],
+"id": "9-historia-video-juegos",
+"story": "<p>El momento es el indicado para hacer un recuento de la historia de los videojuegos. Las nuevas tecnologías han evolcionado de manera acelerada, y la competencia entre éstas es cada vez más intensa. Desde hace ya casi 30 años, la popularidad de los video juegos se ha expandido rápidamente, tal es la magnitud de ésta expansión, que las nuevas generaciones no conciben la idea de una vida sin las consolas y consideran el pasado de éstas obsoleto. En este post hacemos un breve análisis de los juegos y las consolas más populares en la historia, y finalemente comparamos dos de las consolas del presente.</p>\n<p>Comenzamos con una tabla de los juegos más vendidos de todos los años. Esta tabla tiene en cuenta aquellos juegos que fueron pioneros en su momento y que fuéron los detonantes de una industria que hoy en día parece no tener fin.</p>\n<p><br></p>\n<table>\n<thead>\n<tr class=\"header\">\n<th align=\"right\">rank</th>\n<th align=\"left\">Juego</th>\n<th align=\"right\">Año</th>\n<th align=\"right\">Millones de Copias</th>\n</tr>\n</thead>\n<tbody>\n<tr class=\"odd\">\n<td align=\"right\">1</td>\n<td align=\"left\">Tetris</td>\n<td align=\"right\">1984</td>\n<td align=\"right\">143.00</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">2</td>\n<td align=\"left\">Wii Sports</td>\n<td align=\"right\">2006</td>\n<td align=\"right\">82.54</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">3</td>\n<td align=\"left\">Minecraft</td>\n<td align=\"right\">2009</td>\n<td align=\"right\">54.00</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">4</td>\n<td align=\"left\">Super Mario Bros.</td>\n<td align=\"right\">1985</td>\n<td align=\"right\">40.24</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">5</td>\n<td align=\"left\">Mario Kart Wii</td>\n<td align=\"right\">2008</td>\n<td align=\"right\">35.53</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">6</td>\n<td align=\"left\">Grand Theft Auto V</td>\n<td align=\"right\">2013</td>\n<td align=\"right\">34.00</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">7</td>\n<td align=\"left\">Wii Sports Resort</td>\n<td align=\"right\">2009</td>\n<td align=\"right\">32.58</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">8</td>\n<td align=\"left\">New Super Mario Bros.</td>\n<td align=\"right\">2006</td>\n<td align=\"right\">30.75</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">9</td>\n<td align=\"left\">Call of Duty: Modern Warfare 2</td>\n<td align=\"right\">2009</td>\n<td align=\"right\">28.50</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">10</td>\n<td align=\"left\">Wii Play</td>\n<td align=\"right\">2006</td>\n<td align=\"right\">28.02</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">11</td>\n<td align=\"left\">New Super Mario Bros. Wii</td>\n<td align=\"right\">2009</td>\n<td align=\"right\">27.88</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">12</td>\n<td align=\"left\">Grand Theft Auto: San Andreas</td>\n<td align=\"right\">2004</td>\n<td align=\"right\">27.50</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">13</td>\n<td align=\"left\">Call of Duty: Modern Warfare 3</td>\n<td align=\"right\">2011</td>\n<td align=\"right\">26.50</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">14</td>\n<td align=\"left\">Grand Theft Auto IV</td>\n<td align=\"right\">2008</td>\n<td align=\"right\">25.00</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">15</td>\n<td align=\"left\">Call of Duty: Black Ops</td>\n<td align=\"right\">2010</td>\n<td align=\"right\">26.20</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">16</td>\n<td align=\"left\">Call of Duty: Black Ops II</td>\n<td align=\"right\">2012</td>\n<td align=\"right\">24.20</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">17</td>\n<td align=\"left\">Kinect Adventures!</td>\n<td align=\"right\">2010</td>\n<td align=\"right\">24.00</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">18</td>\n<td align=\"left\">Nintendogs</td>\n<td align=\"right\">2005</td>\n<td align=\"right\">23.94</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">19</td>\n<td align=\"left\">Pokemon Red, Blue, and Green</td>\n<td align=\"right\">1996</td>\n<td align=\"right\">23.64</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">20</td>\n<td align=\"left\">Mario Kart DS</td>\n<td align=\"right\">2005</td>\n<td align=\"right\">23.56</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">21</td>\n<td align=\"left\">Pokemon Gold andSilver</td>\n<td align=\"right\">1999</td>\n<td align=\"right\">23.00</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">22</td>\n<td align=\"left\">Wii Fit</td>\n<td align=\"right\">2007</td>\n<td align=\"right\">22.67</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">23</td>\n<td align=\"left\">Wii Fit Plus</td>\n<td align=\"right\">2009</td>\n<td align=\"right\">21.03</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">24</td>\n<td align=\"left\">Super Mario World</td>\n<td align=\"right\">1990</td>\n<td align=\"right\">20.60</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">25</td>\n<td align=\"left\">Grand Theft Auto: Vice City</td>\n<td align=\"right\">2002</td>\n<td align=\"right\">20.00</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">26</td>\n<td align=\"left\">The Sims 2</td>\n<td align=\"right\">2004</td>\n<td align=\"right\">20.00</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">27</td>\n<td align=\"left\">The Elder Scrolls V: Skyrim</td>\n<td align=\"right\">2011</td>\n<td align=\"right\">20.00</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">28</td>\n<td align=\"left\">Battlefield 3</td>\n<td align=\"right\">2011</td>\n<td align=\"right\">20.00</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">29</td>\n<td align=\"left\">Brain Age</td>\n<td align=\"right\">2005</td>\n<td align=\"right\">19.01</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">30</td>\n<td align=\"left\">Call of Duty: Ghosts</td>\n<td align=\"right\">2013</td>\n<td align=\"right\">19.00</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">31</td>\n<td align=\"left\">Super Mario Land</td>\n<td align=\"right\">1989</td>\n<td align=\"right\">18.06</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">32</td>\n<td align=\"left\">Super Mario Bros. 3</td>\n<td align=\"right\">1988</td>\n<td align=\"right\">18.00</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">33</td>\n<td align=\"left\">Pokemon Diamond andPearl</td>\n<td align=\"right\">2006</td>\n<td align=\"right\">17.63</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">34</td>\n<td align=\"left\">The Sims</td>\n<td align=\"right\">2000</td>\n<td align=\"right\">16.00</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">35</td>\n<td align=\"left\">Pokemon Ruby andSapphire</td>\n<td align=\"right\">2002</td>\n<td align=\"right\">16.00</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">36</td>\n<td align=\"left\">Call of Duty 4: Modern Warfare</td>\n<td align=\"right\">2007</td>\n<td align=\"right\">15.70</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">37</td>\n<td align=\"left\">Call of Duty: World at War</td>\n<td align=\"right\">2008</td>\n<td align=\"right\">15.70</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">38</td>\n<td align=\"left\">Pokemon Black andWhite</td>\n<td align=\"right\">2010</td>\n<td align=\"right\">15.42</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">39</td>\n<td align=\"left\">Sonic the Hedgehog</td>\n<td align=\"right\">1991</td>\n<td align=\"right\">15.00</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">40</td>\n<td align=\"left\">Diablo III</td>\n<td align=\"right\">2012</td>\n<td align=\"right\">15.00</td>\n</tr>\n</tbody>\n</table>\n<p>Es imposible que nuestra generación no haya jugado Tetris al menos una vez, ha sido un juego conocido por mucha gente en el mundo y todavía hay quienes lo juegan en los dispositivos modernos como las tabletas y los celulares. Es curioso ver que los primeros 5 juegos no pertenecen a esta década - incluso dos de ellos son de los años '80 - y se pueden considerar ya juegos antiguos, dado el rápido avance de la tecnología y la alta variedad de consolas y juegos.</p>\n<p>Ahora pasamos a ver las consolas más vendidas de todos los tiempos.</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/conosoles.png\" alt=\"Top Consoles\" /><p class=\"caption\">Top Consoles</p>\n</div>\n<p>De nuevo las top 5 del ranking tienen ocho o más años de antigüedad. Es obvio que las consolas de última generación tienden a estar más abajo en el ranking dado que llevan muy poco tiempo en el mercado. Sin embargo, las pertenecientes a la última ola de consolas (años 2005/6), no superan en ventas a los aparatos de los años '80. Podemos ver también que entre las consolas lanzadas el último año, el Play Station 4 supera al resto en ventas (XBOX One, WiiU). De las más populares hasta el año pasado, el PS3 y el XBOX 360, el segundo supera por muy poco al primero. Eso es en número de unidades, pero ¿cómo están en cuanto a la cantidad de juegos vendidos para cada una?</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/PSvsXBOX.png\" alt=\"PS3 vs Xbox\" /><p class=\"caption\">PS3 vs Xbox</p>\n</div>\n<p>Este resultado es consistente con el anterior, entre más unidades se venden, mayor es la venta de juegos para esa consola, además, el XBOX 360 supera por bastante al PS3; claramente Microsoft supera a Sony en ésta ronda. La siguiente batalla entre el PS4 y el XBOX One acaba de comenzar, ya vimos que Sony va liderando en ventas hasta ahora, pero no debe subestimar la popularidad del XBOX One.</p>\n<p>Es curioso ver en qué punto estamos en el uso de las consolas después de ver algunos datos sobre la historia de los videojuegos. A algunos les podrá dar nostalgía de aquellos días en los que apenas se utilizaba un botón y una pequeña palanca, incluso desprecian los juegos de hoy en día y no los encuentran divertidos dada su complejidad. Otros piensas que hasta ahora está comenzando el verdadero momento y consideran los juegos de video indispensables para la diversión.</p>",
+"details": "<pre class=\"sourceCode r\"><code class=\"sourceCode r\"><span class=\"kw\">library</span>(ggplot2)\n<span class=\"kw\">library</span>(reshape)\n<span class=\"kw\">library</span>(plyr)</code></pre>\n<pre><code>## \n## Attaching package: &#39;plyr&#39;\n## \n## The following objects are masked from &#39;package:reshape&#39;:\n## \n##     rename, round_any</code></pre>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\"><span class=\"kw\">library</span>(knitr)</code></pre>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">datapath &lt;-<span class=\"st\"> &#39;data/&#39;</span>\nconsoles &lt;-<span class=\"st\"> </span><span class=\"kw\">read.csv</span>(<span class=\"kw\">paste0</span>(datapath,<span class=\"st\">&#39;consoles.csv&#39;</span>), <span class=\"dt\">header =</span> T)\nps &lt;-<span class=\"st\"> </span><span class=\"kw\">read.csv</span>(<span class=\"kw\">paste0</span>(datapath,<span class=\"st\">&#39;ps3.csv&#39;</span>), <span class=\"dt\">header =</span> T)\nxb &lt;-<span class=\"st\"> </span><span class=\"kw\">read.csv</span>(<span class=\"kw\">paste0</span>(datapath,<span class=\"st\">&#39;xbox360.csv&#39;</span>), <span class=\"dt\">header =</span> T)\ngames &lt;-<span class=\"st\"> </span><span class=\"kw\">read.csv</span>(<span class=\"kw\">paste0</span>(datapath,<span class=\"st\">&#39;games.csv&#39;</span>), <span class=\"dt\">header =</span> T)\n\n<span class=\"kw\">names</span>(consoles)[<span class=\"dv\">3</span>] &lt;-<span class=\"st\"> &#39;year&#39;</span></code></pre>\n<div id=\"qué-juego-ha-vendido-más-copias\" class=\"section level3\">\n<h3>¿Qué juego ha vendido más copias?</h3>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\"><span class=\"kw\">kable</span>(games)</code></pre>\n<table>\n<thead>\n<tr class=\"header\">\n<th align=\"right\">rank</th>\n<th align=\"left\">game</th>\n<th align=\"right\">year</th>\n<th align=\"right\">millionCopies</th>\n</tr>\n</thead>\n<tbody>\n<tr class=\"odd\">\n<td align=\"right\">1</td>\n<td align=\"left\">Tetris</td>\n<td align=\"right\">1984</td>\n<td align=\"right\">143.00</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">2</td>\n<td align=\"left\">Wii Sports</td>\n<td align=\"right\">2006</td>\n<td align=\"right\">82.54</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">3</td>\n<td align=\"left\">Minecraft</td>\n<td align=\"right\">2009</td>\n<td align=\"right\">54.00</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">4</td>\n<td align=\"left\">Super Mario Bros.</td>\n<td align=\"right\">1985</td>\n<td align=\"right\">40.24</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">5</td>\n<td align=\"left\">Mario Kart Wii</td>\n<td align=\"right\">2008</td>\n<td align=\"right\">35.53</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">6</td>\n<td align=\"left\">Grand Theft Auto V</td>\n<td align=\"right\">2013</td>\n<td align=\"right\">34.00</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">7</td>\n<td align=\"left\">Wii Sports Resort</td>\n<td align=\"right\">2009</td>\n<td align=\"right\">32.58</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">8</td>\n<td align=\"left\">New Super Mario Bros.</td>\n<td align=\"right\">2006</td>\n<td align=\"right\">30.75</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">9</td>\n<td align=\"left\">Call of Duty: Modern Warfare 2</td>\n<td align=\"right\">2009</td>\n<td align=\"right\">28.50</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">10</td>\n<td align=\"left\">Wii Play</td>\n<td align=\"right\">2006</td>\n<td align=\"right\">28.02</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">11</td>\n<td align=\"left\">New Super Mario Bros. Wii</td>\n<td align=\"right\">2009</td>\n<td align=\"right\">27.88</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">12</td>\n<td align=\"left\">Grand Theft Auto: San Andreas</td>\n<td align=\"right\">2004</td>\n<td align=\"right\">27.50</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">13</td>\n<td align=\"left\">Call of Duty: Modern Warfare 3</td>\n<td align=\"right\">2011</td>\n<td align=\"right\">26.50</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">14</td>\n<td align=\"left\">Grand Theft Auto IV</td>\n<td align=\"right\">2008</td>\n<td align=\"right\">25.00</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">15</td>\n<td align=\"left\">Call of Duty: Black Ops</td>\n<td align=\"right\">2010</td>\n<td align=\"right\">26.20</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">16</td>\n<td align=\"left\">Call of Duty: Black Ops II</td>\n<td align=\"right\">2012</td>\n<td align=\"right\">24.20</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">17</td>\n<td align=\"left\">Kinect Adventures!</td>\n<td align=\"right\">2010</td>\n<td align=\"right\">24.00</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">18</td>\n<td align=\"left\">Nintendogs</td>\n<td align=\"right\">2005</td>\n<td align=\"right\">23.94</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">19</td>\n<td align=\"left\">Pokemon Red, Blue, and Green</td>\n<td align=\"right\">1996</td>\n<td align=\"right\">23.64</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">20</td>\n<td align=\"left\">Mario Kart DS</td>\n<td align=\"right\">2005</td>\n<td align=\"right\">23.56</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">21</td>\n<td align=\"left\">Pokemon Gold andSilver</td>\n<td align=\"right\">1999</td>\n<td align=\"right\">23.00</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">22</td>\n<td align=\"left\">Wii Fit</td>\n<td align=\"right\">2007</td>\n<td align=\"right\">22.67</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">23</td>\n<td align=\"left\">Wii Fit Plus</td>\n<td align=\"right\">2009</td>\n<td align=\"right\">21.03</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">24</td>\n<td align=\"left\">Super Mario World</td>\n<td align=\"right\">1990</td>\n<td align=\"right\">20.60</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">25</td>\n<td align=\"left\">Grand Theft Auto: Vice City</td>\n<td align=\"right\">2002</td>\n<td align=\"right\">20.00</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">26</td>\n<td align=\"left\">The Sims 2</td>\n<td align=\"right\">2004</td>\n<td align=\"right\">20.00</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">27</td>\n<td align=\"left\">The Elder Scrolls V: Skyrim</td>\n<td align=\"right\">2011</td>\n<td align=\"right\">20.00</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">28</td>\n<td align=\"left\">Battlefield 3</td>\n<td align=\"right\">2011</td>\n<td align=\"right\">20.00</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">29</td>\n<td align=\"left\">Brain Age</td>\n<td align=\"right\">2005</td>\n<td align=\"right\">19.01</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">30</td>\n<td align=\"left\">Call of Duty: Ghosts</td>\n<td align=\"right\">2013</td>\n<td align=\"right\">19.00</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">31</td>\n<td align=\"left\">Super Mario Land</td>\n<td align=\"right\">1989</td>\n<td align=\"right\">18.06</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">32</td>\n<td align=\"left\">Super Mario Bros. 3</td>\n<td align=\"right\">1988</td>\n<td align=\"right\">18.00</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">33</td>\n<td align=\"left\">Pokemon Diamond andPearl</td>\n<td align=\"right\">2006</td>\n<td align=\"right\">17.63</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">34</td>\n<td align=\"left\">The Sims</td>\n<td align=\"right\">2000</td>\n<td align=\"right\">16.00</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">35</td>\n<td align=\"left\">Pokemon Ruby andSapphire</td>\n<td align=\"right\">2002</td>\n<td align=\"right\">16.00</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">36</td>\n<td align=\"left\">Call of Duty 4: Modern Warfare</td>\n<td align=\"right\">2007</td>\n<td align=\"right\">15.70</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">37</td>\n<td align=\"left\">Call of Duty: World at War</td>\n<td align=\"right\">2008</td>\n<td align=\"right\">15.70</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">38</td>\n<td align=\"left\">Pokemon Black andWhite</td>\n<td align=\"right\">2010</td>\n<td align=\"right\">15.42</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"right\">39</td>\n<td align=\"left\">Sonic the Hedgehog</td>\n<td align=\"right\">1991</td>\n<td align=\"right\">15.00</td>\n</tr>\n<tr class=\"even\">\n<td align=\"right\">40</td>\n<td align=\"left\">Diablo III</td>\n<td align=\"right\">2012</td>\n<td align=\"right\">15.00</td>\n</tr>\n</tbody>\n</table>\n</div>\n<div id=\"qué-consola-tiene-el-mayor-número-de-unidades-vendidas\" class=\"section level3\">\n<h3>¿Qué consola tiene el mayor número de unidades vendidas?</h3>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">consoles &lt;-<span class=\"st\"> </span>consoles[<span class=\"kw\">order</span>(consoles$mlnUnits, <span class=\"dt\">decreasing =</span> T),]\nconsoles$Platform &lt;-<span class=\"st\"> </span><span class=\"kw\">factor</span>(consoles$Platform, <span class=\"dt\">levels =</span> consoles$Platform, <span class=\"dt\">ordered =</span> T)\n\n<span class=\"kw\">ggplot</span>(consoles, <span class=\"kw\">aes</span>(Platform, mlnUnits, <span class=\"dt\">label =</span> year)) +<span class=\"st\"> </span><span class=\"kw\">geom_bar</span>(<span class=\"dt\">stat =</span> <span class=\"st\">&#39;identity&#39;</span>, <span class=\"dt\">fill =</span> <span class=\"st\">&#39;#0066CC&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>() +<span class=\"st\"> </span><span class=\"kw\">theme</span>(<span class=\"dt\">axis.text.x =</span> <span class=\"kw\">element_text</span>(<span class=\"dt\">angle =</span> <span class=\"dv\">90</span>)) +<span class=\"st\"> </span><span class=\"kw\">geom_text</span>(<span class=\"dt\">size =</span> <span class=\"dv\">4</span>, <span class=\"dt\">alpha =</span> <span class=\"fl\">0.8</span>, <span class=\"dt\">angle =</span> <span class=\"dv\">70</span>, <span class=\"dt\">position =</span> <span class=\"st\">&#39;dodge&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">y =</span> <span class=\"st\">&#39;Millones de copias&#39;</span>, <span class=\"dt\">x =</span> <span class=\"st\">&#39;Consola&#39;</span>)</code></pre>\n<pre><code>## ymax not defined: adjusting position using y instead</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/conosoles.png\" alt=\"Top Consoles\" /><p class=\"caption\">Top Consoles</p>\n</div>\n</div>\n<div id=\"qué-consola-es-más-popular-entre-el-ps3-y-xbox-360\" class=\"section level3\">\n<h3>¿Qué consola es más popular entre el PS3 y XBOX 360?</h3>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">ps$console &lt;-<span class=\"st\"> </span><span class=\"kw\">rep</span>(<span class=\"st\">&#39;PS3&#39;</span>, <span class=\"kw\">nrow</span>(ps))\nxb$console &lt;-<span class=\"st\"> </span><span class=\"kw\">rep</span>(<span class=\"st\">&#39;XBOX360&#39;</span>, <span class=\"kw\">nrow</span>(xb))\n<span class=\"kw\">names</span>(ps)[<span class=\"dv\">2</span>] &lt;-<span class=\"st\"> &#39;mlnCopies&#39;</span>\n\nA &lt;-<span class=\"st\"> </span><span class=\"kw\">rbind</span>(ps,xb)\n\nA &lt;-<span class=\"st\"> </span><span class=\"kw\">ddply</span>(A, .(console), summarize, <span class=\"dt\">TotalCopies =</span> <span class=\"kw\">sum</span>(mlnCopies))\n\n<span class=\"kw\">ggplot</span>(A, <span class=\"kw\">aes</span>(console, TotalCopies)) +<span class=\"st\"> </span><span class=\"kw\">geom_bar</span>(<span class=\"dt\">stat =</span> <span class=\"st\">&#39;identity&#39;</span>, <span class=\"dt\">fill =</span> <span class=\"st\">&#39;#3399FF&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>() +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">x =</span> <span class=\"st\">&#39;Consola&#39;</span>, <span class=\"dt\">y =</span> <span class=\"st\">&#39;Total de juegos vendidos&#39;</span>)</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/PSvsXBOX.png\" alt=\"PS3 vs Xbox\" /><p class=\"caption\">PS3 vs Xbox</p>\n</div>\n</div>",
+"datapackage": 
+{
+"name": "list(consoles, games, ps, xb)Datapackage",
+"resources": 
+[ 
+{
+"name": "consoles",
+"path": "consoles.csv",
+"ae_resource_info": 
+{
+"id": "table1",
+"public": "true",
+"resource_type": "tbl"
+}
+,
+"mediatype": "text/csv",
+"format": "csv",
+"dialect": 
+{
+"delimiter": ","
+}
+,
+"schema": 
+{
+"fields": 
+[ 
+{
+"name": "Platform",
+"type": "ordered",
+"ae_field_info": 
+{
+"id": "a",
+"data_type": "C",
+"label": "Platform"
+}
+
+}
+, 
+{
+"name": "company",
+"type": "factor",
+"ae_field_info": 
+{
+"id": "b",
+"data_type": "C",
+"label": "company"
+}
+
+}
+, 
+{
+"name": "year",
+"type": "factor",
+"ae_field_info": 
+{
+"id": "c",
+"data_type": "C",
+"label": "year"
+}
+
+}
+, 
+{
+"name": "mlnUnits",
+"type": "integer",
+"ae_field_info": 
+{
+"id": "d",
+"data_type": "N",
+"label": "mlnUnits"
+}
+
+}
+]
+
+}
+
+}
+, 
+{
+"name": "games",
+"path": "games.csv",
+"ae_resource_info": 
+{
+"id": "table2",
+"public": "true",
+"resource_type": "tbl"
+}
+,
+"mediatype": "text/csv",
+"format": "csv",
+"dialect": 
+{
+"delimiter": ","
+}
+,
+"schema": 
+{
+"fields": 
+[ 
+{
+"name": "rank",
+"type": "integer",
+"ae_field_info": 
+{
+"id": "a",
+"data_type": "N",
+"label": "rank"
+}
+
+}
+, 
+{
+"name": "game",
+"type": "factor",
+"ae_field_info": 
+{
+"id": "b",
+"data_type": "C",
+"label": "game"
+}
+
+}
+, 
+{
+"name": "year",
+"type": "integer",
+"ae_field_info": 
+{
+"id": "c",
+"data_type": "N",
+"label": "year"
+}
+
+}
+, 
+{
+"name": "millionCopies",
+"type": "numeric",
+"ae_field_info": 
+{
+"id": "d",
+"data_type": "N",
+"label": "millionCopies"
+}
+
+}
+]
+
+}
+
+}
+, 
+{
+"name": "ps3",
+"path": "ps3.csv",
+"ae_resource_info": 
+{
+"id": "table3",
+"public": "true",
+"resource_type": "tbl"
+}
+,
+"mediatype": "text/csv",
+"format": "csv",
+"dialect": 
+{
+"delimiter": ","
+}
+,
+"schema": 
+{
+"fields": 
+[ 
+{
+"name": "game",
+"type": "factor",
+"ae_field_info": 
+{
+"id": "a",
+"data_type": "C",
+"label": "game"
+}
+
+}
+, 
+{
+"name": "mlnCopies",
+"type": "numeric",
+"ae_field_info": 
+{
+"id": "b",
+"data_type": "N",
+"label": "mlnCopies"
+}
+
+}
+, 
+{
+"name": "console",
+"type": "character",
+"ae_field_info": 
+{
+"id": "c",
+"data_type": "C",
+"label": "console"
+}
+
+}
+]
+
+}
+
+}
+, 
+{
+"name": "xb",
+"path": "xbox360.csv",
+"ae_resource_info": 
+{
+"id": "table4",
+"public": "true",
+"resource_type": "tbl"
+}
+,
+"mediatype": "text/csv",
+"format": "csv",
+"dialect": 
+{
+"delimiter": ","
+}
+,
+"schema": 
+{
+"fields": 
+[ 
+{
+"name": "game",
+"type": "factor",
+"ae_field_info": 
+{
+"id": "a",
+"data_type": "C",
+"label": "game"
+}
+
+}
+, 
+{
+"name": "mlnCopies",
+"type": "numeric",
+"ae_field_info": 
+{
+"id": "b",
+"data_type": "N",
+"label": "mlnCopies"
+}
+
+}
+, 
+{
+"name": "console",
+"type": "character",
+"ae_field_info": 
+{
+"id": "c",
+"data_type": "C",
+"label": "console"
+}
+
+}
+]
+
+}
+
+}
+]
+
+}
+ 
+}

@@ -1,0 +1,310 @@
+{
+ "title": "¿Cuál es la distribución de poder nuclear en el mundo?",
+"description": "Estudiamos los arsenales nucleares en el mundo y su relación con el sector energético.",
+"author": "ilanreinstein",
+"thumbnail": "details_files/figure-html/warheads.png",
+"language": "es",
+"date": "2014-09-08",
+"tags": [ "games", "sales" ],
+"production": "true",
+"inquiries": [
+ {
+ "text": "¿Cómo ha evolucinado el número de ojivas nucleares en el mundo?" 
+},
+{
+ "text": "¿Qué países tienen armas nucleares actualmente?" 
+},
+{
+ "text": "¿Qué países tienen plantas nucleares operando?" 
+},
+{
+ "text": "¿Cuál es la relación entre la posesión de plantas nucleares activas y el número de ojivas?" 
+},
+{
+ "text": "¿Qué relación existe entre la capacidad de producción de energía nuclear y el número de ojivas?" 
+} 
+],
+"id": "8-potencias-nuclear-mundo",
+"story": "<p>Con el fin de la Segunda Guerra Mundial, marcado por los bombardeos de Hiroshima y Nagasaki, comienza la Guerra Fría, con el miedo como motor de este conflicto, los países poseedores de poder nuclear vivieron un largo período de tensiones, impulsando así la construcción de ojivas nucleares para su repertorio armamentista. Con el pasar de los años, varios países se sumaron a la carrera nuclear, otros decidieron implementar los reactores nucleares para generar electricidad, ¿existirá alguna relación entre estas dos políticas? En este <em>post</em> miramos qué países tienen armas nucleares, cuáles cuentan con plantas y finalmente de los que tienen ambas, cómo se relaciona el número de armas con ciertas variables de energía nuclear.</p>\n<p>Comenzamos estudiando las potencias nucleares a través de la historia, nos interesa ver cómo cambiaron los armamentos nucleares en el tiempo y que ha desatado tales cambios.</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/warheads.png\" alt=\"History of warheads\" /><p class=\"caption\">History of warheads</p>\n</div>\n<p>Es evidente que los países protagonistas de la Guerra Fría son los que más armas nucleares tienen. El declive en el número de ojivas se debe al <a href=\"http://en.wikipedia.org/wiki/Treaty_on_the_Non-Proliferation_of_Nuclear_Weapons\">NPT</a>(Non-Proliferation Treaty), Tratado de No-Proliferación Nuclear, firmado en 1968 con el fin del desarmar y restringir el uso de materiales nucleares como armas. Este tratado fué inicialmente constituido por EEUU, el Reino Unido, Francia, Rusia y China, y son los únicos que tienen derecho, por decreto de este tratado, a poseer ojivas nucleares; este &quot;privilegio&quot; lo tienen debido a que fueron los únicos en llevar a cabo pruebas nucleares antes de 1967, y aún así, éstos países han sido miembros permanentes en este tratado.</p>\n<p>En los datos de EEUU es claro ver la reducción en el número de armas, sin embargo en Rusia, aumentó mucho la cantidad de armas nucleares hasta la caída del muro de Berlín, lo que marcó el fin de la USSR. Las otras naciones entraron más tarde al tratado y otros aún no han reportado la posesión de armas nucleares debido a que se rigen bajo una política de 'ambigüedad estratégica'. Esto significa que llevan a cabo un programa ultrasecreto de armas nucleares y no reportan su actividad, con el fin de no disuadir a sus enemigos regionales y tampoco desatar una carrera armamentista en la región. Cabe aclarar que para países como Pakistan, India e Israel, no firmaron el NPT de manera que la información puede no ser la más confiable.</p>\n<p>Concretemos entonces el número de ojivas nucleares en este momento.</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/warheads2.png\" alt=\"Number of warheads\" /><p class=\"caption\">Number of warheads</p>\n</div>\n<p>De nuevo, son los actores de la Guerra Fría, EEUU y USSR, los que más armas poseen en este momento. Como ya mencionamos, la información para algunos países puede estar comprometida dado que las fuentes no son muy confiables, aún así, existen estimaciones sobre la posesión de armas nucleares y esto es lo que exponemos.</p>\n<p>Aunque ya vimos qué países tienen armas nucleares, ahora nos disponemos a ver cuáles producen energía a partir de fuentes nucleares. Comenzamos contando las plantas generadoras por país:</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/plants.png\" alt=\"Nuclear power plants\" /><p class=\"caption\">Nuclear power plants</p>\n</div>\n<p>La gráfica habla por sí sola, EEUU tiene la red de plantas nucleares más grande del mundo, seguido de Francia, Rusia y Japón. Desde los años '50, se ha implementado el uso de fuentes nucleares para la producción de electricidad. En Francia, Bélgica y Eslovaquia la energía nuclear es la fuente principal de electricidad. Poco a poco se esta introduciendo el uso de energía nuclear en las matrices energéticas de cada país. China por ejemplo, lo está haciendo fuertemente y pretende crecer de los 80 GW (gigavatio, mil millones) que produce hoy en día, a 400 GW en 2050. Coréa del Sur también quiere aumentar de 20.7 GW a 27.3 GW; India quiere subir a 14.6 GW en 2020 y 63 GW en 2032.</p>\n<p>Ahora queremos analizar la relación entre las plantas en operación de cada país con el número de ojivas nucleares que tienen. Esta información se reduce a aquellos países que producen energía y que tienen armas nucleares.</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/plantsVSwar.png\" alt=\"operating vs Warheads\" /><p class=\"caption\">operating vs Warheads</p>\n</div>\n<p>El número que aparece al lado de cada punto corresponde al número de plantas en operación, mientras que el eje <em>x</em> indica la cantidad de energía producida por estas plantas. No podemos decir que hay una clara relación entre tener plantas nucleares operacionales y poseer armas nucleares, los puntos están débilmente correlacionados de manera que no hay forma de inferir algo correcto sobre estas dos variables en observación.</p>\n<p>Ahora queremos ver la capacidad de producción y el número de ojivas nucleares.</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/capacity.png\" alt=\"Nuclear Energy Capacity\" /><p class=\"caption\">Nuclear Energy Capacity</p>\n</div>\n<p>De nuevo, el número que aparece con cada punto equivale al porcentaje del total de energía que proviene de fuentes nucleares. Otra vez es poco clara la relación entre estas dos variables, y la única inferencia que podemos hacer es que tener energía nuclear como fuente de electricidad no implica tener armas nucleares.</p>\n<p>Hemos visto en este <em>post</em> algunas variables como la energía y el arsenal nuclear de cada país, los comparamos y realizamos inferencias. Algunos países están empezando a introducir la energía nuclear en su repertorio de producción de electricidad, y también están desarrollando armas, aunque de forma ultrasecreta.</p>\n<p>La energía nuclear ha sido una de la grandes revoluciones de la ciencia, lamentablemente, las guerras y los conflictos mundiales han hecho de ésta un tema delicado y polémico. Producir electricidad a partir de fuentes nucleares no es algo nuevo, se viene haciendo desde hace más de 60 años. Como todas las formas de producción de energía, siempre existen riesgos en la implementación y también existe la posibilidad de contaminar si los residuos radiactivos que dejan los materiales no son correctamente tratados. Hoy en día, existen muchas políticas contra el uso de fuentes nucleares para la producción de energía, y así como muchos países restringen y prohíben las fuentes nucleares, otros continúan en crecimiento, como es el caso de India, Pakistan y China entre otros. La conclusión es muy similar a la de un post anterior sobre las distintas fuentes de energía, se debe implementar diversas formas de producción en los planes de los países, dados los costos y las dificultades que implica tener una sola fuente de generación.</p>",
+"details": "<pre class=\"sourceCode r\"><code class=\"sourceCode r\"><span class=\"kw\">library</span>(ggplot2)\n<span class=\"kw\">library</span>(reshape2)\n<span class=\"kw\">library</span>(plyr)\n<span class=\"kw\">library</span>(knitr)</code></pre>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">datapath &lt;-<span class=\"st\"> &#39;data/&#39;</span>\nd &lt;-<span class=\"st\"> </span><span class=\"kw\">read.csv</span>(<span class=\"kw\">paste0</span>(datapath, <span class=\"st\">&#39;table1.csv&#39;</span>), <span class=\"dt\">header =</span> T)\nd1 &lt;-<span class=\"st\"> </span><span class=\"kw\">read.csv</span>(<span class=\"kw\">paste0</span>(datapath, <span class=\"st\">&#39;table2.csv&#39;</span>), <span class=\"dt\">header =</span> T)\nd2 &lt;-<span class=\"st\"> </span><span class=\"kw\">read.csv</span>(<span class=\"kw\">paste0</span>(datapath, <span class=\"st\">&#39;table3.csv&#39;</span>), <span class=\"dt\">header =</span> T)\nd3 &lt;-<span class=\"st\"> </span><span class=\"kw\">read.csv</span>(<span class=\"kw\">paste0</span>(datapath, <span class=\"st\">&#39;table4.csv&#39;</span>), <span class=\"dt\">header =</span> T)\nA &lt;-<span class=\"st\"> </span><span class=\"kw\">merge</span>(d,d2, <span class=\"dt\">by =</span> <span class=\"st\">&#39;country&#39;</span>)</code></pre>\n<div id=\"cómo-ha-evolucinado-el-número-de-ojivas-nucleares-en-el-mundo\" class=\"section level3\">\n<h3>¿Cómo ha evolucinado el número de ojivas nucleares en el mundo?</h3>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\"><span class=\"kw\">ggplot</span>(d1, <span class=\"kw\">aes</span>(year, value, <span class=\"dt\">colour =</span> country)) +<span class=\"st\"> </span><span class=\"kw\">geom_line</span>() +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>() +<span class=\"st\"> </span><span class=\"kw\">scale_colour_brewer</span>(<span class=\"dt\">palette =</span> <span class=\"st\">&#39;Spectral&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">y =</span> <span class=\"st\">&#39;Numero de ojivas&#39;</span>)</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/warheads.png\" alt=\"History of warheads\" /><p class=\"caption\">History of warheads</p>\n</div>\n</div>\n<div id=\"qué-paises-tienen-armas-nucleares-actualmente\" class=\"section level3\">\n<h3>¿Qué pai?ses tienen armas nucleares actualmente?</h3>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">d3 &lt;-<span class=\"st\"> </span>d3[<span class=\"kw\">order</span>(d3$nuclear_weapons, <span class=\"dt\">decreasing =</span> T),]\nd3$country &lt;-<span class=\"st\"> </span><span class=\"kw\">factor</span>(d3$country, <span class=\"dt\">levels =</span> d3$country, <span class=\"dt\">ordered =</span> T)\n<span class=\"kw\">ggplot</span>(d3, <span class=\"kw\">aes</span>(country, nuclear_weapons, <span class=\"dt\">fill =</span> country)) +<span class=\"st\"> </span><span class=\"kw\">geom_bar</span>(<span class=\"dt\">stat =</span> <span class=\"st\">&#39;identity&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">scale_fill_brewer</span>(<span class=\"dt\">palette =</span> <span class=\"st\">&#39;Spectral&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">x =</span> <span class=\"st\">&#39;Pais&#39;</span>, <span class=\"dt\">y =</span> <span class=\"st\">&#39;Actual numero de ojivas&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>() +<span class=\"st\"> </span><span class=\"kw\">theme</span>(<span class=\"dt\">axis.text.x =</span> <span class=\"kw\">element_text</span>(<span class=\"dt\">angle=</span> <span class=\"dv\">90</span>))</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/warheads2.png\" alt=\"Number of warheads\" /><p class=\"caption\">Number of warheads</p>\n</div>\n</div>\n<div id=\"qué-paises-tienen-plantas-nucleares-operando\" class=\"section level3\">\n<h3>¿Qué pai?ses tienen plantas nucleares operando?</h3>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">A &lt;-<span class=\"st\"> </span>A[<span class=\"kw\">order</span>(A$operNum, <span class=\"dt\">decreasing =</span> F),]\nA$country &lt;-<span class=\"st\"> </span><span class=\"kw\">factor</span>(A$country, <span class=\"dt\">levels =</span> A$country, <span class=\"dt\">ordered =</span> T)\n\n<span class=\"kw\">ggplot</span>(A, <span class=\"kw\">aes</span>(country, operNum)) +<span class=\"st\"> </span><span class=\"kw\">geom_bar</span>(<span class=\"dt\">stat =</span> <span class=\"st\">&#39;identity&#39;</span>, <span class=\"dt\">fill =</span> <span class=\"st\">&#39;#CC0033&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>()  +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">y =</span> <span class=\"st\">&#39;Plantas Nucleares Operacionales&#39;</span>, <span class=\"dt\">x =</span> <span class=\"st\">&#39;Pais&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">coord_flip</span>()</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/plants.png\" alt=\"Nuclear power plants\" /><p class=\"caption\">Nuclear power plants</p>\n</div>\n</div>\n<div id=\"cuál-es-la-relación-entre-la-posesión-de-plantas-nucleares-activas-y-el-número-de-ojivas\" class=\"section level3\">\n<h3>¿Cuál es la relación entre la posesión de plantas nucleares activas y el número de ojivas?</h3>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">B &lt;-<span class=\"st\"> </span><span class=\"kw\">merge</span>(A, d3, <span class=\"dt\">by =</span> <span class=\"st\">&#39;country&#39;</span>)\n<span class=\"kw\">ggplot</span>(B, <span class=\"kw\">aes</span>(nuclear_weapons, operEnr_MW, <span class=\"dt\">colour =</span> country, <span class=\"dt\">label =</span> operNum)) +<span class=\"st\"> </span><span class=\"kw\">geom_point</span>() +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>() +<span class=\"st\"> </span><span class=\"kw\">scale_colour_brewer</span>(<span class=\"dt\">palette =</span> <span class=\"st\">&#39;Set1&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">x =</span> <span class=\"st\">&#39;Energia operacional en Megavatios&#39;</span>, <span class=\"dt\">y =</span> <span class=\"st\">&#39;Ojivas Nucleares&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">geom_text</span>(<span class=\"dt\">hjust =</span> <span class=\"fl\">0.3</span>, <span class=\"dt\">vjust =</span> <span class=\"fl\">0.85</span>, <span class=\"dt\">colour =</span> <span class=\"st\">&#39;black&#39;</span>, <span class=\"dt\">size =</span> <span class=\"dv\">4</span>, <span class=\"dt\">alpha =</span> <span class=\"fl\">0.7</span>)</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/plantsVSwar.png\" alt=\"operating vs Warheads\" /><p class=\"caption\">operating vs Warheads</p>\n</div>\n</div>\n<div id=\"qué-relación-existe-entre-la-capacidad-de-producción-y-el-número-de-ojivas-nucleares\" class=\"section level3\">\n<h3>¿Qué relación existe entre la capacidad de producción y el número de ojivas nucleares?</h3>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\"><span class=\"kw\">ggplot</span>(B, <span class=\"kw\">aes</span>(nuclear_weapons, capacity_MW_2012, <span class=\"dt\">colour =</span> country, <span class=\"dt\">label =</span> nuclearPercEnr_2011)) +<span class=\"st\"> </span><span class=\"kw\">geom_point</span>() +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>() +<span class=\"st\"> </span><span class=\"kw\">scale_colour_brewer</span>(<span class=\"dt\">palette =</span> <span class=\"st\">&#39;Set1&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">y =</span> <span class=\"st\">&#39;Capacidad producida en MW por energia nuclear&#39;</span>, <span class=\"dt\">x =</span> <span class=\"st\">&#39;Ojivas Nucleares&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">geom_text</span>(<span class=\"dt\">hjust =</span> <span class=\"fl\">0.3</span>, <span class=\"dt\">vjust =</span> <span class=\"fl\">0.85</span>, <span class=\"dt\">colour =</span> <span class=\"st\">&#39;black&#39;</span>, <span class=\"dt\">size =</span> <span class=\"dv\">4</span>, <span class=\"dt\">alpha =</span> <span class=\"fl\">0.7</span>)</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/capacity.png\" alt=\"Nuclear Energy Capacity\" /><p class=\"caption\">Nuclear Energy Capacity</p>\n</div>\n</div>",
+"datapackage": 
+{
+"name": "list(d, d1, d2, d3)Datapackage",
+"resources": 
+[ 
+{
+"name": "table1",
+"path": "table1.csv",
+"ae_resource_info": 
+{
+"id": "table1",
+"public": "true",
+"resource_type": "tbl"
+}
+,
+"mediatype": "text/csv",
+"format": "csv",
+"dialect": 
+{
+"delimiter": ","
+}
+,
+"schema": 
+{
+"fields": 
+[ 
+{
+"name": "country",
+"type": "factor",
+"ae_field_info": 
+{
+"id": "a",
+"data_type": "C",
+"label": "country"
+}
+
+}
+, 
+{
+"name": "operNum",
+"type": "integer",
+"ae_field_info": 
+{
+"id": "b",
+"data_type": "N",
+"label": "operNum"
+}
+
+}
+, 
+{
+"name": "operEnr_MW",
+"type": "integer",
+"ae_field_info": 
+{
+"id": "c",
+"data_type": "N",
+"label": "operEnr_MW"
+}
+
+}
+, 
+{
+"name": "consNum",
+"type": "numeric",
+"ae_field_info": 
+{
+"id": "d",
+"data_type": "N",
+"label": "consNum"
+}
+
+}
+, 
+{
+"name": "consEnr_MW",
+"type": "numeric",
+"ae_field_info": 
+{
+"id": "e",
+"data_type": "N",
+"label": "consEnr_MW"
+}
+
+}
+]
+
+}
+
+}
+, 
+{
+"name": "table2",
+"path": "table2.csv",
+"ae_resource_info": 
+{
+"id": "table2",
+"public": "true",
+"resource_type": "tbl"
+}
+,
+"mediatype": "text/csv",
+"format": "csv",
+"dialect": 
+{
+"delimiter": ","
+}
+,
+"schema": 
+{
+"fields": 
+[ 
+{
+"name": "year",
+"type": "integer",
+"ae_field_info": 
+{
+"id": "a",
+"data_type": "N",
+"label": "year"
+}
+
+}
+, 
+{
+"name": "country",
+"type": "factor",
+"ae_field_info": 
+{
+"id": "b",
+"data_type": "C",
+"label": "country"
+}
+
+}
+, 
+{
+"name": "value",
+"type": "integer",
+"ae_field_info": 
+{
+"id": "c",
+"data_type": "N",
+"label": "value"
+}
+
+}
+]
+
+}
+
+}
+, 
+{
+"name": "table3",
+"path": "table3.csv",
+"ae_resource_info": 
+{
+"id": "table3",
+"public": "true",
+"resource_type": "tbl"
+}
+,
+"mediatype": "text/csv",
+"format": "csv",
+"dialect": 
+{
+"delimiter": ","
+}
+,
+"schema": 
+{
+"fields": 
+[ 
+{
+"name": "rank",
+"type": "integer",
+"ae_field_info": 
+{
+"id": "a",
+"data_type": "N",
+"label": "rank"
+}
+
+}
+, 
+{
+"name": "country",
+"type": "factor",
+"ae_field_info": 
+{
+"id": "b",
+"data_type": "C",
+"label": "country"
+}
+
+}
+, 
+{
+"name": "capacity_MW_2012",
+"type": "factor",
+"ae_field_info": 
+{
+"id": "c",
+"data_type": "C",
+"label": "capacity_MW_2012"
+}
+
+}
+, 
+{
+"name": "nuclearPercEnr_2011",
+"type": "numeric",
+"ae_field_info": 
+{
+"id": "d",
+"data_type": "N",
+"label": "nuclearPercEnr_2011"
+}
+
+}
+]
+
+}
+
+}
+, 
+{
+"name": "table4",
+"path": "table4.csv",
+"ae_resource_info": 
+{
+"id": "table4",
+"public": "true",
+"resource_type": "tbl"
+}
+,
+"mediatype": "text/csv",
+"format": "csv",
+"dialect": 
+{
+"delimiter": ","
+}
+,
+"schema": 
+{
+"fields": 
+[ 
+{
+"name": "country",
+"type": "ordered",
+"ae_field_info": 
+{
+"id": "a",
+"data_type": "C",
+"label": "country"
+}
+
+}
+, 
+{
+"name": "nuclear_weapons",
+"type": "factor",
+"ae_field_info": 
+{
+"id": "b",
+"data_type": "C",
+"label": "nuclear_weapons"
+}
+
+}
+]
+
+}
+
+}
+]
+
+}
+ 
+}

@@ -1,0 +1,93 @@
+{
+ "content/posts/7-energy-economic-indicators-en": {
+ "title": "What role does electricity plays in the economy?",
+"description": "We explore variables that relate energy consumption to a country's economy",
+"author": "ilanreinstein",
+"thumbnail": "details_files/figure-html/intensVScons1.png",
+"language": "en",
+"date": "2014-09-01",
+"tags": [ "World", "energy", "economic" ],
+"production": "true",
+"inquiries": [
+ {
+ "text": "What is the energy intensity?" 
+},
+{
+ "text": "What is the consumption per capita?" 
+},
+{
+ "text": "What is the relation between the consumption and the intensity?" 
+} 
+],
+"id": "7-energy-economic-indicators-en" 
+},
+"content/posts/6-energy-sources-comparison-en": {
+ "title": "What are the main energy sources used in Latin America?",
+"description": "We explore the different ways of generating electricity in South America and the Caribbean.",
+"author": "ilanreinstein",
+"thumbnail": "details_files/figure-html/fosil.png",
+"language": "en",
+"date": "2014-08-29",
+"tags": [ "World", "Science", "economic" ],
+"production": "true",
+"inquiries": [
+ {
+ "text": "What percentage of the total energy consumption comes from fossil resources?" 
+},
+{
+ "text": "What percentage of the total energy consumption comes from alternative resources?" 
+},
+{
+ "text": "What percentage of the total energy consumption comes from renewable resources?" 
+} 
+],
+"id": "6-energy-sources-comparison-en" 
+},
+"content/posts/4-research-and-development-investment-en": {
+ "title": "¿How much do countries invest in R&D?",
+"description": "In this blogpost we show the investment in science in a small set of countries.",
+"author": "ilanreinstein",
+"thumbnail": "details_files/figure-html/thumbnail.png",
+"language": "en",
+"date": "2014-08-22",
+"tags": [ "World", "Science", "economic" ],
+"production": "true",
+"inquiries": [
+ {
+ "text": "What is the GDP of each country?" 
+},
+{
+ "text": "What is the R&D budget?" 
+} 
+],
+"id": "4-research-and-development-investment-en" 
+},
+"content/posts/5-comparison-of-US-UK-economic-indicators-en": {
+ "title": "How stable has been the economy in the US and the UK?",
+"description": "In this blogpost we compare the income and wealth of these two countries over time.",
+"author": "ilanreinstein",
+"thumbnail": "details_files/figure-html/wealth2.png",
+"language": "en",
+"date": "2014-08-15",
+"tags": [ "US", "UK", "economic" ],
+"production": "true",
+"inquiries": [
+ {
+ "text": "What has been the change in population over the years?" 
+},
+{
+ "text": "What has been the national income? " 
+},
+{
+ "text": "What has been the private wealth?" 
+},
+{
+ "text": "What has been the income per capita?" 
+},
+{
+ "text": "What has been the private wealth per capita?" 
+} 
+],
+"id": "5-comparison-of-US-UK-economic-indicators-en" 
+} 
+}

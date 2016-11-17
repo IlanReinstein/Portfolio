@@ -1,0 +1,111 @@
+{
+ "title": "What are the different types of beers in the World?",
+"description": "In this post we summarize the different categories and styles of beer.",
+"author": "ilanreinstein",
+"thumbnail": "details_files/figure-html/category.png",
+"language": "en",
+"date": "2014-07-25",
+"tags": [ "Beer", "countries" ],
+"production": "true",
+"inquiries": [
+ {
+ "text": "What is the most common category?" 
+},
+{
+ "text": "What is the mean alchohol volume by category?" 
+},
+{
+ "text": "How many styles are in each category?" 
+} 
+],
+"id": "0-world-beer-categories",
+"story": "<p>Everybody loves beer, it's a fact. We all drink it and we all adore it, no matter if it is lager, ale, stout, whatever. However not everyone is familiar with the styles of beer. People often refer to their favourite kind as red, clear, dark, sweet, strong, etc. In this post we will mainly educate you about the different types of beer in the world. We will let you find out what style is your favourite in a later post, but for now let us just concentrate on understanding the wide variety of beers in the world.</p>\n<p>We begin with the consumption of beer in the world. The following plot is created with data taken from 2012 about the consumption per capita. This only shows the top 50 countries, but we all know that beer is consumed everywhere, some countries just drink a little bit more.</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/consum.png\" alt=\"Consumption per capita\" /><p class=\"caption\">Consumption per capita</p>\n</div>\n<p>As you can see the country that consumes the most is the Czech Republic, followed by Austria and Germany. So far we do not know which style they drink in each country, we just wanted to show you the vast amount of beer that is drinked in the world.</p>\n<p>Yes, there is a high consumption of beer in this planet, however most of the times we don't realize about the wide variety of beers. Even in those countries where beer is not a traditional beverage, the supply of different styles is quite complete. We now show you some graphs about the different categories and styles of beer that you can find.</p>\n<p>We begin by showing you the most common category:</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/category.png\" alt=\"Common category\" /><p class=\"caption\">Common category</p>\n</div>\n<p>Well as you see the most popular category is the North American Ale followed by the British Ale. Note that there is a huge difference between these first two and the following, however this does not account for the most drinked but for the most produced. Now let us take a look at the alcohol volume in each of these categories:</p>\n<table>\n<thead>\n<tr class=\"header\">\n<th align=\"left\">Category</th>\n<th align=\"right\">MeanABV</th>\n</tr>\n</thead>\n<tbody>\n<tr class=\"odd\">\n<td align=\"left\">Belgian and French Ale</td>\n<td align=\"right\">7.389</td>\n</tr>\n<tr class=\"even\">\n<td align=\"left\">British Ale</td>\n<td align=\"right\">6.862</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"left\">North American Ale</td>\n<td align=\"right\">6.788</td>\n</tr>\n<tr class=\"even\">\n<td align=\"left\">German Lager</td>\n<td align=\"right\">6.220</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"left\">Irish Ale</td>\n<td align=\"right\">5.936</td>\n</tr>\n<tr class=\"even\">\n<td align=\"left\">Other Style</td>\n<td align=\"right\">5.827</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"left\">German Ale</td>\n<td align=\"right\">5.662</td>\n</tr>\n<tr class=\"even\">\n<td align=\"left\">North American Lager</td>\n<td align=\"right\">4.968</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"left\">Other Lager</td>\n<td align=\"right\">4.550</td>\n</tr>\n</tbody>\n</table>\n<p>Well now we know which style is the strongest. The Belgian and French Ale keeps a siginificant difference with the rest of the categories. Let us now look at the distribution of alcohol percentages by category. Each point is the ABV (alcohol volume) of a particular brand, and here we plot all the brands by category.</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/abv.png\" alt=\"Alcohol Volume by category\" /><p class=\"caption\">Alcohol Volume by category</p>\n</div>\n<p>Now we want to show the various styles that are in each category. We will not name each of the styles, we will only show you the variety in quantity.</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/styles.png\" alt=\"Styles by category\" /><p class=\"caption\">Styles by category</p>\n</div>\n<p>Clearly there are a lot of unclassified styles, these might be original beers made with different ingredients, therefore they do not apply as any of the other categories. But note that indeed there are a lot of different styles by category, so it is no surprise that one is ignorant about the favourite type of beer one drinks.</p>\n<p>We conclude by stating that there is a lot to learn about beer and its different flavors, colours and origins. If you love beer wouldn't you like to know what style it is? Some might just drink it whatever the style, but some curious people find that information quite valuable. In a later opst we will show you what style is your favourite by just asking for your special brand.</p>",
+"details": "<pre class=\"sourceCode r\"><code class=\"sourceCode r\"><span class=\"kw\">library</span>(ggplot2)\n<span class=\"kw\">library</span>(plyr)\n<span class=\"kw\">library</span>(knitr)</code></pre>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">data_path &lt;-<span class=\"st\"> &#39;/Users/ilanreinstein/Documents/beer/&#39;</span>\nstyles &lt;-<span class=\"st\"> </span><span class=\"kw\">read.csv</span>(<span class=\"kw\">paste</span>(data_path, <span class=\"st\">&#39;styles.csv&#39;</span>, <span class=\"dt\">sep =</span> <span class=\"st\">&#39;&#39;</span>),)\ncats &lt;-<span class=\"st\"> </span><span class=\"kw\">read.csv</span>(<span class=\"kw\">paste</span>(data_path, <span class=\"st\">&#39;categories.csv&#39;</span>, <span class=\"dt\">sep =</span> <span class=\"st\">&#39;&#39;</span>),)\nbrew &lt;-<span class=\"st\"> </span><span class=\"kw\">read.csv</span>(<span class=\"kw\">paste</span>(data_path, <span class=\"st\">&#39;breweries.csv&#39;</span>, <span class=\"dt\">sep =</span> <span class=\"st\">&#39;&#39;</span>),)\nbeer &lt;-<span class=\"st\"> </span><span class=\"kw\">read.csv</span>(<span class=\"kw\">paste</span>(data_path, <span class=\"st\">&#39;beers.csv&#39;</span>, <span class=\"dt\">sep =</span> <span class=\"st\">&#39;&#39;</span>),)\ncons &lt;-<span class=\"st\"> </span><span class=\"kw\">read.csv</span>(<span class=\"kw\">paste</span>(data_path, <span class=\"st\">&#39;consum.csv&#39;</span>, <span class=\"dt\">sep =</span> <span class=\"st\">&#39;&#39;</span>),)</code></pre>\n<div id=\"which-countries-consume-more-beer-per-capita\" class=\"section level3\">\n<h3>Which countries consume more beer per capita?</h3>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">cons$country &lt;-<span class=\"st\"> </span><span class=\"kw\">factor</span>(cons$country, <span class=\"dt\">levels =</span> cons$country, <span class=\"dt\">ordered =</span> T)\ncons &lt;-<span class=\"st\"> </span>cons[<span class=\"kw\">order</span>(cons$cons_lts),]\n<span class=\"kw\">ggplot</span>(cons, <span class=\"kw\">aes</span>(country, cons_lts, <span class=\"dt\">fill =</span> country)) +<span class=\"st\"> </span><span class=\"kw\">geom_bar</span>(<span class=\"dt\">stat =</span> <span class=\"st\">&#39;identity&#39;</span>, <span class=\"dt\">fill =</span> <span class=\"st\">&#39;skyblue&#39;</span>, <span class=\"dt\">alpha =</span>  <span class=\"fl\">0.8</span>) +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>() +<span class=\"st\"> </span><span class=\"kw\">theme</span>(<span class=\"dt\">axis.text.x =</span> <span class=\"kw\">element_text</span>(<span class=\"dt\">angle =</span> <span class=\"dv\">90</span>)) +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">y =</span> <span class=\"st\">&#39;Consumption per capita (lts)&#39;</span>)</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/consum.png\" alt=\"Consumption per capita\" /><p class=\"caption\">Consumption per capita</p>\n</div>\n</div>\n<div id=\"what-is-the-most-common-category\" class=\"section level3\">\n<h3>What is the most common category?</h3>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">A &lt;-<span class=\"st\"> </span><span class=\"kw\">merge</span>(beer, cats, <span class=\"dt\">by.x =</span> <span class=\"st\">&#39;cat_id&#39;</span>, <span class=\"dt\">by.y =</span> <span class=\"st\">&#39;id&#39;</span>)\nA &lt;-<span class=\"st\"> </span><span class=\"kw\">transform</span>(A, <span class=\"dt\">cat_name =</span> <span class=\"kw\">ordered</span>(cat_name, <span class=\"dt\">levels =</span> <span class=\"kw\">names</span>(<span class=\"kw\">sort</span>(-<span class=\"kw\">table</span>(cat_name)))))\n<span class=\"kw\">ggplot</span>(A, <span class=\"kw\">aes</span>(<span class=\"dt\">x =</span> cat_name, <span class=\"dt\">fill =</span> cat_name)) +<span class=\"st\"> </span><span class=\"kw\">geom_histogram</span>() +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>() +<span class=\"st\"> </span><span class=\"kw\">theme</span>(<span class=\"dt\">axis.text.x =</span> <span class=\"kw\">element_text</span>(<span class=\"dt\">angle =</span> <span class=\"dv\">90</span>), <span class=\"dt\">legend.title =</span> <span class=\"kw\">element_blank</span>()) +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">x =</span> <span class=\"st\">&#39;Category&#39;</span>, <span class=\"dt\">y =</span> <span class=\"st\">&#39;No. of brands&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">scale_fill_brewer</span>(<span class=\"dt\">palette =</span> <span class=\"st\">&#39;Spectral&#39;</span>)</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/category.png\" alt=\"Common category\" /><p class=\"caption\">Common category</p>\n</div>\n</div>\n<div id=\"what-is-the-mean-abv-alcohol-volume-by-category\" class=\"section level3\">\n<h3>What is the mean abv (alcohol volume) by category?</h3>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">A$abv[A$abv==<span class=\"dv\">0</span>] &lt;-<span class=\"st\"> </span><span class=\"ot\">NA</span>\nA$abv[A$abv &gt;<span class=\"st\"> </span><span class=\"dv\">50</span>] &lt;-<span class=\"st\"> </span><span class=\"ot\">NA</span>\nABV &lt;-<span class=\"st\"> </span><span class=\"kw\">ddply</span>(A, .(cat_name), summarise, <span class=\"dt\">MeanABV =</span> <span class=\"kw\">mean</span>(abv,<span class=\"dt\">na.rm =</span> T))\nABV1 &lt;-<span class=\"st\"> </span>ABV[<span class=\"kw\">order</span>(ABV$MeanABV, <span class=\"dt\">decreasing =</span> T),] \n<span class=\"kw\">colnames</span>(ABV1)[<span class=\"dv\">1</span>] &lt;-<span class=\"st\"> &#39;Category&#39;</span>\n<span class=\"kw\">kable</span>(ABV1,<span class=\"dt\">row.names =</span> F)</code></pre>\n<table>\n<thead>\n<tr class=\"header\">\n<th align=\"left\">Category</th>\n<th align=\"right\">MeanABV</th>\n</tr>\n</thead>\n<tbody>\n<tr class=\"odd\">\n<td align=\"left\">Belgian and French Ale</td>\n<td align=\"right\">7.389</td>\n</tr>\n<tr class=\"even\">\n<td align=\"left\">British Ale</td>\n<td align=\"right\">6.862</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"left\">North American Ale</td>\n<td align=\"right\">6.788</td>\n</tr>\n<tr class=\"even\">\n<td align=\"left\">German Lager</td>\n<td align=\"right\">6.220</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"left\">Irish Ale</td>\n<td align=\"right\">5.936</td>\n</tr>\n<tr class=\"even\">\n<td align=\"left\">Other Style</td>\n<td align=\"right\">5.827</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"left\">German Ale</td>\n<td align=\"right\">5.662</td>\n</tr>\n<tr class=\"even\">\n<td align=\"left\">North American Lager</td>\n<td align=\"right\">4.968</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"left\">Other Lager</td>\n<td align=\"right\">4.550</td>\n</tr>\n</tbody>\n</table>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\"><span class=\"kw\">ggplot</span>(A, <span class=\"kw\">aes</span>(<span class=\"dt\">x =</span> cat_name, <span class=\"dt\">y =</span> abv, <span class=\"dt\">fill =</span> cat_name)) +<span class=\"st\"> </span><span class=\"kw\">geom_boxplot</span>() +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>() +<span class=\"st\"> </span><span class=\"kw\">theme</span>(<span class=\"dt\">axis.text.x =</span> <span class=\"kw\">element_text</span>(<span class=\"dt\">angle =</span> <span class=\"dv\">90</span>), <span class=\"dt\">legend.title =</span> <span class=\"kw\">element_blank</span>()) +<span class=\"st\"> </span><span class=\"kw\">scale_fill_brewer</span>(<span class=\"dt\">palette =</span> <span class=\"st\">&#39;Spectral&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">x =</span> <span class=\"st\">&#39;Category&#39;</span>, <span class=\"dt\">y =</span> <span class=\"st\">&#39;Alcohol Volume&#39;</span>)</code></pre>\n<pre><code>## Warning: Removed 2858 rows containing non-finite values (stat_boxplot).</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/abv.png\" alt=\"Alcohol Volume by category\" /><p class=\"caption\">Alcohol Volume by category</p>\n</div>\n</div>\n<div id=\"how-many-styles-are-held-by-category\" class=\"section level3\">\n<h3>How many styles are held by category?</h3>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">B &lt;-<span class=\"st\"> </span><span class=\"kw\">merge</span>(cats, styles, <span class=\"dt\">by.x =</span> <span class=\"st\">&#39;id&#39;</span>, <span class=\"dt\">by.y =</span> <span class=\"st\">&#39;cat_id&#39;</span>)</code></pre>\n<pre><code>## Warning: column name &#39;id&#39; is duplicated in the result</code></pre>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">B &lt;-<span class=\"st\"> </span><span class=\"kw\">transform</span>(B, <span class=\"dt\">cat_name =</span> <span class=\"kw\">ordered</span>(cat_name, <span class=\"dt\">levels =</span> <span class=\"kw\">names</span>(<span class=\"kw\">sort</span>(-<span class=\"kw\">table</span>(cat_name)))))\nq &lt;-<span class=\"st\"> </span><span class=\"kw\">ggplot</span>(B, <span class=\"kw\">aes</span>(<span class=\"dt\">x =</span> cat_name, <span class=\"dt\">fill =</span> cat_name)) +<span class=\"st\"> </span><span class=\"kw\">geom_histogram</span>() +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>() +<span class=\"st\"> </span><span class=\"kw\">theme</span>(<span class=\"dt\">legend.title =</span> <span class=\"kw\">element_blank</span>()) +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">y =</span> <span class=\"st\">&#39;No. of styles&#39;</span>, <span class=\"dt\">x =</span> <span class=\"st\">&#39;Category&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">scale_fill_brewer</span>(<span class=\"dt\">palette =</span> <span class=\"st\">&#39;Spectral&#39;</span>)\nq &lt;-<span class=\"st\"> </span>q +<span class=\"st\"> </span><span class=\"kw\">coord_polar</span>()\nq &lt;-<span class=\"st\"> </span>q +<span class=\"st\"> </span><span class=\"kw\">theme</span>(\n              <span class=\"dt\">axis.line=</span><span class=\"kw\">element_blank</span>()\n              ,<span class=\"dt\">axis.ticks=</span><span class=\"kw\">element_blank</span>()\n              ,<span class=\"dt\">axis.title.x=</span><span class=\"kw\">element_blank</span>()\n              ,<span class=\"dt\">axis.title.y=</span><span class=\"kw\">element_blank</span>()\n              ,<span class=\"dt\">panel.border=</span><span class=\"kw\">element_blank</span>()\n  )  \nq</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/styles.png\" alt=\"Styles by category\" /><p class=\"caption\">Styles by category</p>\n</div>\n</div>",
+"datapackage": {
+    "name": "world-beers",
+    "title": "Data about breweries and beers of the world. Data manipulation can be found here https://gist.github.com/IlanReinstein/2a6684eab329ee60eb74. ",
+    "license": "PDDL-1.0",
+    "keywords": ["Companies", "Beer", "Breweries"],
+    "last_updated": "2014-08-06",
+    "last_update_comment": "",
+    "sources": [{
+        "name": "Open Beer Database",
+        "web": "http://www.openbeerdb.com"
+    }],
+    "resources": [{
+        "name": "beer",
+        "path": "beers.csv",
+        "format": "csv",
+        "mediatype": "text/csv",
+        "schema": {
+            "fields": [{
+                "name": "id",
+                "description": ""
+            }, {
+                "name": "brewery_id",
+                "description": ""
+            }, {
+                "name": "name",
+                "description": ""
+            }, {
+                "name": "cat_id",
+                "description": "Category"
+            }, {
+                "name": "style_id",
+                "description": "style"
+            }, {
+                "name": "abv",
+                "description": "alcohol volume"
+            }]
+        }
+    }, {
+        "name": "breweries",
+        "path": "brew.csv",
+        "format": "csv",
+        "mediatype": "text/csv",
+        "schema": {
+            "fields": [{
+                "name": "id",
+                "description": ""
+            }, {
+                "name": "name",
+                "description": ""
+            }, {
+                "name": "country",
+                "description": ""
+            }]
+        }
+    }, {
+        "name": "styles",
+        "path": "styles.csv",
+        "format": "csv",
+        "mediatype": "text/csv",
+        "schema": {
+            "fields": [{
+                "name": "id",
+                "description": ""
+            }, {
+                "name": "cat_id",
+                "description": ""
+            }, {
+                "name": "style_name",
+                "description": ""
+            }]
+        }
+    }, {
+        "name": "categories",
+        "path": "cats.csv",
+        "format": "csv",
+        "mediatype": "text/csv",
+        "schema": {
+            "fields": [{
+                "name": "id",
+                "description": ""
+            }, {
+                "name": "cat_name",
+                "description": ""
+            }]
+        }
+    }]
+} 
+}

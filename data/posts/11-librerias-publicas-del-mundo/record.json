@@ -1,0 +1,116 @@
+{
+ "title": "¿Cuáles son las bibliotecas públicas más importantes del mundo?",
+"description": "Las bibliotecas públicas son más que un sitio para guardar libros.",
+"author": "ilanreinstein",
+"thumbnail": "details_files/figure-html/countries.png",
+"language": "es",
+"date": "2014-09-16",
+"tags": [ "cultura", "Mundo", "educación" ],
+"production": "true",
+"inquiries": [
+ {
+ "text": "¿En qué países están las bibliotecas mas grandes?" 
+},
+{
+ "text": "¿Cuáles son las ciudades en éstos países?" 
+},
+{
+ "text": "¿Qué biblioteca tiene más ejemplares en sus bibiotecas?" 
+},
+{
+ "text": "¿Cuál es el presupuesto dirigido a las bibliotecas?" 
+},
+{
+ "text": "¿Cuál es la biblioteca más visitada al año?" 
+} 
+],
+"id": "11-librerias-publicas-del-mundo",
+"story": "<p>Las bibliotecas públicas son lugares de fácil acceso a la cultura y a los libros. Los precios de los libros y de las boletas a eventos culturales tienden a ser muy altos y por eso no todos tienen el privilegio de asistir a actividades ni de disfrutar un buen libro. Todas las personas tienen derecho al conocimiento y a la cultura, y la mejor manera de ejercer estos derechos es estando en establecimientos que lo permitan, en este caso, las bibliotecas publicas. Cada país cuenta con colecciones de arte, historia y literatura, repartidas en las distintas bibliotecas del territorio; pero más que un lugar en el que se almacenan libros, las bibliotecas públicas cuentan con artículos académicos, colecciones de arte, presentan conciertos e incluso tienen espacios al aire libre para leer y descansar. Por eso estos lugares, más que promover la lectura, educan a la gente por medio de distintas actividades, son espacios públicos y como tales tienen el fin de servir a la sociedad.</p>\n<p>En este breve <em>post</em> queremos hablar sobre las bibliotecas públicas más grandes del mundo. Haremos un ranking de acuerdo al número de ejemplares que hay en cada una, al presupesto que reciben éstas y a las visitas que reciben anualmente.</p>\n<p>Comenzamos viendo en que países se encuentran las bibliotecas más grandes del mundo. Éstas se encuentran repartidas en tan solo 12 países al rededor del mundo, veamos:</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/countries.png\" alt=\"Countries Largest Libraries\" /><p class=\"caption\">Countries Largest Libraries</p>\n</div>\n<p>Es claro ver que EEUU es el primero con cinco de las bibliotecas públicas más grandes del mundo, seguido de Rusia con cuatro y Alemania con dos, el resto de países en el ranking tiene una sola biblioteca. Ahora, ¿en dónde exactamente están estas bibliotecas?</p>\n<table>\n<thead>\n<tr class=\"header\">\n<th align=\"left\">País</th>\n<th align=\"left\">Ciudad</th>\n<th align=\"left\">Biblioteca</th>\n</tr>\n</thead>\n<tbody>\n<tr class=\"odd\">\n<td align=\"left\">Canada</td>\n<td align=\"left\">Ottawa</td>\n<td align=\"left\">Library and Archives Canada</td>\n</tr>\n<tr class=\"even\">\n<td align=\"left\">China</td>\n<td align=\"left\">Beijing</td>\n<td align=\"left\">National Library of China</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"left\">Denmark</td>\n<td align=\"left\">Copenhagen</td>\n<td align=\"left\">Royal Danish Library</td>\n</tr>\n<tr class=\"even\">\n<td align=\"left\">France</td>\n<td align=\"left\">Paris</td>\n<td align=\"left\">Bibliothèque nationale de France</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"left\">Germany</td>\n<td align=\"left\">Berlin</td>\n<td align=\"left\">Berlin State Library</td>\n</tr>\n<tr class=\"even\">\n<td align=\"left\">Germany</td>\n<td align=\"left\">Frankfurt</td>\n<td align=\"left\">German National Library</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"left\">Japan</td>\n<td align=\"left\">Tokyo</td>\n<td align=\"left\">National Diet Library</td>\n</tr>\n<tr class=\"even\">\n<td align=\"left\">Russia</td>\n<td align=\"left\">St. Petersburg</td>\n<td align=\"left\">Library of the Russian Academy of Sciences</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"left\">Russia</td>\n<td align=\"left\">St. Petersburg</td>\n<td align=\"left\">National Library of Russia</td>\n</tr>\n<tr class=\"even\">\n<td align=\"left\">Russia</td>\n<td align=\"left\">Moscow</td>\n<td align=\"left\">Russian Academy of Sciences Library of Natural Sciences</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"left\">Russia</td>\n<td align=\"left\">Moscow</td>\n<td align=\"left\">Russian State Library</td>\n</tr>\n<tr class=\"even\">\n<td align=\"left\">Spain</td>\n<td align=\"left\">Madrid</td>\n<td align=\"left\">Biblioteca Nacional de España</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"left\">Sweden</td>\n<td align=\"left\">Stockholm</td>\n<td align=\"left\">National Library of Sweden</td>\n</tr>\n<tr class=\"even\">\n<td align=\"left\">UK</td>\n<td align=\"left\">London</td>\n<td align=\"left\">British Library</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"left\">USA</td>\n<td align=\"left\">Boston</td>\n<td align=\"left\">Boston Public Library</td>\n</tr>\n<tr class=\"even\">\n<td align=\"left\">USA</td>\n<td align=\"left\">Cambridge, MA</td>\n<td align=\"left\">Harvard University Library</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"left\">USA</td>\n<td align=\"left\">Washington DC</td>\n<td align=\"left\">Library of Congress</td>\n</tr>\n<tr class=\"even\">\n<td align=\"left\">USA</td>\n<td align=\"left\">New York</td>\n<td align=\"left\">New York Public Library</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"left\">USA</td>\n<td align=\"left\">Albany</td>\n<td align=\"left\">New York State Library</td>\n</tr>\n<tr class=\"even\">\n<td align=\"left\">Ukraine</td>\n<td align=\"left\">Kiev</td>\n<td align=\"left\">Vernadsky National Library of Ukraine</td>\n</tr>\n</tbody>\n</table>\n<p>Analicemos ahora cuantos ejemplares hay en cada bibliteca. Aunque ya vimos cual es el país con más bibliotecas, queremos ver cuál es la biblioteca más grande de acuerdo con el número de ítems.</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/items.png\" alt=\"Number of items\" /><p class=\"caption\">Number of items</p>\n</div>\n<p>En este caso la British Library de Londres se lleva el premio con más de 150 millones de ítems, ¿será también la más visitada?</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/visit.png\" alt=\"Visitas anuales\" /><p class=\"caption\">Visitas anuales</p>\n</div>\n<p>La más visitada es la Biblioteca Pública de Nueva York, en la Cuidad de Nueva York con casi 20 millones de visitas al año. Luego está Biblioteca Nacional de China con cinco millones. Algunas desaparecieron del ranking, esto se debe a que no se conoce o no se reportó el dato.</p>\n<p>Finalmente nos gustaría conocer cuanto invierte cada uno de estos países en sus bibliotecas.</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/budget.png\" alt=\"Budget Million USD\" /><p class=\"caption\">Budget Million USD</p>\n</div>\n<p>Dado que es el país con más bibliotecas públicas de gran tamaño, es el que más invierte en éstas. Es importante que los países inviertan en este tipo de bibliotecas, la gente necesita de espacios públicos para la recreación y sobretodo, para la educación. Es bueno que existan estos espacios, no solo es importante generar empleo y mejorar la economía, es fundamental que la gente tenga acceso al descanso y a la cultura, sin importar el estrato ni los ingresos.</p>",
+"details": "<pre class=\"sourceCode r\"><code class=\"sourceCode r\"><span class=\"kw\">library</span>(dplyr)\n<span class=\"kw\">library</span>(knitr)\n<span class=\"kw\">library</span>(ggplot2)</code></pre>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">df &lt;-<span class=\"st\"> </span><span class=\"kw\">read.csv</span>(<span class=\"st\">&#39;data/table1.csv&#39;</span>,<span class=\"dt\">header =</span> T)</code></pre>\n<div id=\"en-qué-países-están-las-bibliotecas-mas-grandes\" class=\"section level3\">\n<h3>¿En qué países están las bibliotecas mas grandes?</h3>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">B &lt;-<span class=\"st\"> </span>df %&gt;%<span class=\"st\"> </span><span class=\"kw\">group_by</span>(Location) %&gt;%<span class=\"st\"> </span><span class=\"kw\">summarise</span>(<span class=\"dt\">count =</span> <span class=\"kw\">n</span>()) %&gt;%<span class=\"st\"> </span><span class=\"kw\">arrange</span>(<span class=\"kw\">desc</span>(count))\nB$Location &lt;-<span class=\"st\"> </span><span class=\"kw\">factor</span>(B$Location, <span class=\"dt\">levels =</span> B$Location, <span class=\"dt\">ordered =</span> T)\n<span class=\"kw\">ggplot</span>(B, <span class=\"kw\">aes</span>(Location,count, <span class=\"dt\">fill =</span> Location)) +<span class=\"st\"> </span><span class=\"kw\">geom_bar</span>(<span class=\"dt\">stat =</span> <span class=\"st\">&#39;identity&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>() +<span class=\"st\"> </span><span class=\"kw\">scale_fill_brewer</span>(<span class=\"dt\">palette =</span> <span class=\"st\">&#39;Paired&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">theme</span>(<span class=\"dt\">axis.text.x =</span> <span class=\"kw\">element_text</span>(<span class=\"dt\">angle =</span> <span class=\"dv\">90</span>), <span class=\"dt\">legend.position =</span> <span class=\"st\">&#39;none&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">x =</span> <span class=\"st\">&#39;Pais&#39;</span>, <span class=\"dt\">y =</span> <span class=\"st\">&#39;No. de Bibliotecas&#39;</span>)</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/countries.png\" alt=\"Countries Largest Libraries\" /><p class=\"caption\">Countries Largest Libraries</p>\n</div>\n</div>\n<div id=\"cuáles-son-las-ciudades-en-éstos-países\" class=\"section level3\">\n<h3>¿Cuáles son las ciudades en éstos países?</h3>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">D &lt;-<span class=\"st\"> </span>df %&gt;%<span class=\"st\"> </span><span class=\"kw\">select</span>(Location,City,Name) %&gt;%<span class=\"st\"> </span><span class=\"kw\">arrange</span>(Location)\n\n<span class=\"kw\">kable</span>(D)</code></pre>\n<table>\n<thead>\n<tr class=\"header\">\n<th align=\"left\">Location</th>\n<th align=\"left\">City</th>\n<th align=\"left\">Name</th>\n</tr>\n</thead>\n<tbody>\n<tr class=\"odd\">\n<td align=\"left\">Canada</td>\n<td align=\"left\">Ottawa</td>\n<td align=\"left\">Library and Archives Canada</td>\n</tr>\n<tr class=\"even\">\n<td align=\"left\">China</td>\n<td align=\"left\">Beijing</td>\n<td align=\"left\">National Library of China</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"left\">Denmark</td>\n<td align=\"left\">Copenhagen</td>\n<td align=\"left\">Royal Danish Library</td>\n</tr>\n<tr class=\"even\">\n<td align=\"left\">France</td>\n<td align=\"left\">Paris</td>\n<td align=\"left\">Biblioth<c3><a8>que nationale de France</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"left\">Germany</td>\n<td align=\"left\">Berlin</td>\n<td align=\"left\">Berlin State Library</td>\n</tr>\n<tr class=\"even\">\n<td align=\"left\">Germany</td>\n<td align=\"left\">Frankfurt</td>\n<td align=\"left\">German National Library</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"left\">Japan</td>\n<td align=\"left\">Tokyo</td>\n<td align=\"left\">National Diet Library</td>\n</tr>\n<tr class=\"even\">\n<td align=\"left\">Russia</td>\n<td align=\"left\">St. Petersburg</td>\n<td align=\"left\">Library of the Russian Academy of Sciences</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"left\">Russia</td>\n<td align=\"left\">St. Petersburg</td>\n<td align=\"left\">National Library of Russia</td>\n</tr>\n<tr class=\"even\">\n<td align=\"left\">Russia</td>\n<td align=\"left\">Moscow</td>\n<td align=\"left\">Russian Academy of Sciences Library of Natural Sciences</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"left\">Russia</td>\n<td align=\"left\">Moscow</td>\n<td align=\"left\">Russian State Library</td>\n</tr>\n<tr class=\"even\">\n<td align=\"left\">Spain</td>\n<td align=\"left\">Madrid</td>\n<td align=\"left\">Biblioteca Nacional de Espa<c3><b1>a</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"left\">Sweden</td>\n<td align=\"left\">Stockholm</td>\n<td align=\"left\">National Library of Sweden</td>\n</tr>\n<tr class=\"even\">\n<td align=\"left\">UK</td>\n<td align=\"left\">London</td>\n<td align=\"left\">British Library</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"left\">USA</td>\n<td align=\"left\">Boston</td>\n<td align=\"left\">Boston Public Library</td>\n</tr>\n<tr class=\"even\">\n<td align=\"left\">USA</td>\n<td align=\"left\">Cambridge, MA</td>\n<td align=\"left\">Harvard University Library</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"left\">USA</td>\n<td align=\"left\">Washington DC</td>\n<td align=\"left\">Library of Congress</td>\n</tr>\n<tr class=\"even\">\n<td align=\"left\">USA</td>\n<td align=\"left\">New York</td>\n<td align=\"left\">New York Public Library</td>\n</tr>\n<tr class=\"odd\">\n<td align=\"left\">USA</td>\n<td align=\"left\">Albany</td>\n<td align=\"left\">New York State Library</td>\n</tr>\n<tr class=\"even\">\n<td align=\"left\">Ukraine</td>\n<td align=\"left\">Kiev</td>\n<td align=\"left\">Vernadsky National Library of Ukraine</td>\n</tr>\n</tbody>\n</table>\n</div>\n<div id=\"que-biblioteca-tiene-más-ejemplares-en-sus-bibiotecas\" class=\"section level3\">\n<h3>¿Que biblioteca tiene más ejemplares en sus bibiotecas?</h3>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">A &lt;-<span class=\"st\"> </span>df %&gt;%<span class=\"st\"> </span><span class=\"kw\">select</span>(Location, Name, MillNumItems) %&gt;%<span class=\"st\"> </span><span class=\"kw\">arrange</span>(MillNumItems)\nA$Name &lt;-<span class=\"st\"> </span><span class=\"kw\">factor</span>(A$Name, <span class=\"dt\">levels =</span> A$Name, <span class=\"dt\">ordered =</span> T)\n<span class=\"kw\">ggplot</span>(A, <span class=\"kw\">aes</span>(Name, MillNumItems)) +<span class=\"st\"> </span><span class=\"kw\">geom_bar</span>(<span class=\"dt\">stat =</span> <span class=\"st\">&#39;identity&#39;</span>, <span class=\"dt\">fill =</span> <span class=\"st\">&#39;#0066CC&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>() +<span class=\"st\"> </span><span class=\"kw\">theme</span>(<span class=\"dt\">legend.position =</span> <span class=\"st\">&#39;none&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">x =</span> <span class=\"st\">&#39;Biblioteca&#39;</span>, <span class=\"dt\">y =</span> <span class=\"st\">&#39;Millones de items&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">coord_flip</span>()</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/items.png\" alt=\"Number of items\" /><p class=\"caption\">Number of items</p>\n</div>\n</div>\n<div id=\"cuál-es-el-presupuesto-dirigido-a-las-bibliotecas\" class=\"section level3\">\n<h3>¿Cuál es el presupuesto dirigido a las bibliotecas?</h3>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">C &lt;-<span class=\"st\"> </span>df %&gt;%<span class=\"st\"> </span><span class=\"kw\">group_by</span>(Location) %&gt;%<span class=\"st\"> </span><span class=\"kw\">summarise</span>(<span class=\"dt\">Budget =</span> <span class=\"kw\">sum</span>(BudgetMillUSD,<span class=\"dt\">na.rm =</span> T)) %&gt;%<span class=\"st\"> </span><span class=\"kw\">arrange</span>(<span class=\"kw\">desc</span>(Budget))\nC$Location &lt;-<span class=\"st\"> </span><span class=\"kw\">factor</span>(C$Location, <span class=\"dt\">levels =</span> C$Location, <span class=\"dt\">ordered =</span> T)\n<span class=\"kw\">ggplot</span>(C, <span class=\"kw\">aes</span>(Location, Budget, <span class=\"dt\">fill =</span> Location)) +<span class=\"st\"> </span><span class=\"kw\">geom_bar</span>(<span class=\"dt\">stat =</span> <span class=\"st\">&#39;identity&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>() +<span class=\"st\"> </span><span class=\"kw\">scale_fill_brewer</span>(<span class=\"dt\">palette =</span> <span class=\"st\">&#39;Paired&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">theme</span>(<span class=\"dt\">axis.text.x =</span> <span class=\"kw\">element_text</span>(<span class=\"dt\">angle =</span> <span class=\"dv\">90</span>), <span class=\"dt\">legend.position =</span> <span class=\"st\">&#39;none&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">x =</span> <span class=\"st\">&#39;Pais&#39;</span>, <span class=\"dt\">y =</span> <span class=\"st\">&#39;Presupuesto, millones USD&#39;</span>)</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/budget.png\" alt=\"Budget Million USD\" /><p class=\"caption\">Budget Million USD</p>\n</div>\n</div>\n<div id=\"cuál-es-la-biblioteca-más-visitada-al-año\" class=\"section level3\">\n<h3>¿Cuál es la biblioteca más visitada al año?</h3>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">E &lt;-<span class=\"st\"> </span>df %&gt;%<span class=\"st\"> </span><span class=\"kw\">select</span>(Name, visitorYearMill) %&gt;%<span class=\"st\"> </span><span class=\"kw\">arrange</span>(visitorYearMill)\nE &lt;-<span class=\"st\"> </span><span class=\"kw\">na.omit</span>(E)\nE$Name &lt;-<span class=\"st\"> </span><span class=\"kw\">factor</span>(E$Name, <span class=\"dt\">levels =</span> E$Name, <span class=\"dt\">ordered =</span> T)\n<span class=\"kw\">ggplot</span>(E, <span class=\"kw\">aes</span>(Name, visitorYearMill)) +<span class=\"st\"> </span><span class=\"kw\">geom_bar</span>(<span class=\"dt\">stat =</span> <span class=\"st\">&#39;identity&#39;</span>, <span class=\"dt\">fill =</span> <span class=\"st\">&#39;#0066CC&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>() +<span class=\"st\"> </span><span class=\"kw\">theme</span>(<span class=\"dt\">legend.position =</span> <span class=\"st\">&#39;none&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">x =</span> <span class=\"st\">&#39;Biblioteca&#39;</span>, <span class=\"dt\">y =</span> <span class=\"st\">&#39;Millones de visitas anuales&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">coord_flip</span>()</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/visit.png\" alt=\"Visitas anuales\" /><p class=\"caption\">Visitas anuales</p>\n</div>\n</div>",
+"datapackage": {
+    "name": "dDatapackage",
+    "resources": [
+        {
+            "name": "table1",
+            "path": "table1.csv",
+            "ae_resource_info": {
+                "id": "table1",
+                "public": "true",
+                "resource_type": "tbl"
+            },
+            "mediatype": "text/csv",
+            "format": "csv",
+            "dialect": {
+                "delimiter": ","
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "Name",
+                        "type": "factor",
+                        "ae_field_info": {
+                            "id": "a",
+                            "data_type": "C",
+                            "label": "Name"
+                        }
+                    },
+                    {
+                        "name": "Location",
+                        "type": "factor",
+                        "ae_field_info": {
+                            "id": "b",
+                            "data_type": "C",
+                            "label": "Location"
+                        }
+                    },
+                    {
+                        "name": "MillNumItems",
+                        "type": "numeric",
+                        "ae_field_info": {
+                            "id": "c",
+                            "data_type": "N",
+                            "label": "MillNumItems"
+                        }
+                    },
+                    {
+                        "name": "visitorYearMill",
+                        "type": "numeric",
+                        "ae_field_info": {
+                            "id": "d",
+                            "data_type": "N",
+                            "label": "visitorYearMill"
+                        }
+                    },
+                    {
+                        "name": "BudgetMillUSD",
+                        "type": "numeric",
+                        "ae_field_info": {
+                            "id": "e",
+                            "data_type": "N",
+                            "label": "BudgetMillUSD"
+                        }
+                    },
+                    {
+                        "name": "Staff",
+                        "type": "integer",
+                        "ae_field_info": {
+                            "id": "f",
+                            "data_type": "N",
+                            "label": "Staff"
+                        }
+                    },
+                    {
+                        "name": "City",
+                        "type": "factor",
+                        "ae_field_info": {
+                            "id": "g",
+                            "data_type": "C",
+                            "label": "City"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+} 
+}

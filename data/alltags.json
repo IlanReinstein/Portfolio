@@ -1,0 +1,335 @@
+[
+ {
+ "label": "Cerveza",
+"posts": [
+ {
+ "id": "0-categorias-cervezas-del-mundo",
+"title": "¿Cuáles son las categorías de cervezas?" 
+} 
+] 
+},
+{
+ "label": "mundo",
+"posts": [
+ {
+ "id": "0-categorias-cervezas-del-mundo",
+"title": "¿Cuáles son las categorías de cervezas?" 
+} 
+] 
+},
+{
+ "label": "Beer",
+"posts": [
+ {
+ "id": "0-world-beer-categories",
+"title": "What are the different types of beers in the World?" 
+} 
+] 
+},
+{
+ "label": "countries",
+"posts": [
+ {
+ "id": "0-world-beer-categories",
+"title": "What are the different types of beers in the World?" 
+},
+{
+ "id": "3-fifa-world-cup-macroeconomic-standings",
+"title": "What is the social condition of the  participating countries in the World Cup?" 
+},
+{
+ "id": "3-posicion-macroeconomicas-fifa",
+"title": "¿En qué condición macroeconómica se encuentran los equipos del Mundial?" 
+} 
+] 
+},
+{
+ "label": "deportes",
+"posts": [
+ {
+ "id": "1-el-mejor-corredor-de-formula1",
+"title": "¿Quién es el mejor corredor de fórmula 1 en la historia?" 
+} 
+] 
+},
+{
+ "label": "f1",
+"posts": [
+ {
+ "id": "1-el-mejor-corredor-de-formula1",
+"title": "¿Quién es el mejor corredor de fórmula 1 en la historia?" 
+},
+{
+ "id": "1-formula1-best-driver",
+"title": "Who is the greatest driver in the Formula One history?" 
+} 
+] 
+},
+{
+ "label": "sports",
+"posts": [
+ {
+ "id": "1-formula1-best-driver",
+"title": "Who is the greatest driver in the Formula One history?" 
+},
+{
+ "id": "2-fifa-world-cup-2014-rank",
+"title": "How the teams performed in the World Cup?" 
+} 
+] 
+},
+{
+ "label": "economía",
+"posts": [
+ {
+ "id": "10-inversion-educacion-colombia",
+"title": "¿Hácia dónde va la educación en Colombia?" 
+} 
+] 
+},
+{
+ "label": "colombia",
+"posts": [
+ {
+ "id": "10-inversion-educacion-colombia",
+"title": "¿Hácia dónde va la educación en Colombia?" 
+} 
+] 
+},
+{
+ "label": "educación",
+"posts": [
+ {
+ "id": "10-inversion-educacion-colombia",
+"title": "¿Hácia dónde va la educación en Colombia?" 
+},
+{
+ "id": "11-librerias-publicas-del-mundo",
+"title": "¿Cuáles son las bibliotecas públicas más importantes del mundo?" 
+} 
+] 
+},
+{
+ "label": "cultura",
+"posts": [
+ {
+ "id": "11-librerias-publicas-del-mundo",
+"title": "¿Cuáles son las bibliotecas públicas más importantes del mundo?" 
+} 
+] 
+},
+{
+ "label": "Mundo",
+"posts": [
+ {
+ "id": "11-librerias-publicas-del-mundo",
+"title": "¿Cuáles son las bibliotecas públicas más importantes del mundo?" 
+} 
+] 
+},
+{
+ "label": "wikipedia",
+"posts": [
+ {
+ "id": "2-fifa-world-cup-2014-rank",
+"title": "How the teams performed in the World Cup?" 
+},
+{
+ "id": "2-mundial-2014-rankings",
+"title": "¿Cuál fue el desempeño final de los equipos en el mundial?" 
+} 
+] 
+},
+{
+ "label": "deporte",
+"posts": [
+ {
+ "id": "2-mundial-2014-rankings",
+"title": "¿Cuál fue el desempeño final de los equipos en el mundial?" 
+} 
+] 
+},
+{
+ "label": "World cup",
+"posts": [
+ {
+ "id": "3-fifa-world-cup-macroeconomic-standings",
+"title": "What is the social condition of the  participating countries in the World Cup?" 
+},
+{
+ "id": "3-posicion-macroeconomicas-fifa",
+"title": "¿En qué condición macroeconómica se encuentran los equipos del Mundial?" 
+} 
+] 
+},
+{
+ "label": "social",
+"posts": [
+ {
+ "id": "3-fifa-world-cup-macroeconomic-standings",
+"title": "What is the social condition of the  participating countries in the World Cup?" 
+},
+{
+ "id": "3-posicion-macroeconomicas-fifa",
+"title": "¿En qué condición macroeconómica se encuentran los equipos del Mundial?" 
+} 
+] 
+},
+{
+ "label": "World",
+"posts": [
+ {
+ "id": "4-inversion-investigacion-desarrollo-es",
+"title": "¿Qué tanto invierten los países en investigación?" 
+},
+{
+ "id": "4-research-and-development-investment-en",
+"title": "¿How much do countries invest in R&D?" 
+},
+{
+ "id": "6-energy-sources-comparison-en",
+"title": "What are the main energy sources used in Latin America?" 
+},
+{
+ "id": "7-energy-economic-indicators-en",
+"title": "What role does electricity plays in the economy?" 
+} 
+] 
+},
+{
+ "label": "Science",
+"posts": [
+ {
+ "id": "4-inversion-investigacion-desarrollo-es",
+"title": "¿Qué tanto invierten los países en investigación?" 
+},
+{
+ "id": "4-research-and-development-investment-en",
+"title": "¿How much do countries invest in R&D?" 
+},
+{
+ "id": "6-energy-sources-comparison-en",
+"title": "What are the main energy sources used in Latin America?" 
+} 
+] 
+},
+{
+ "label": "economic",
+"posts": [
+ {
+ "id": "4-inversion-investigacion-desarrollo-es",
+"title": "¿Qué tanto invierten los países en investigación?" 
+},
+{
+ "id": "4-research-and-development-investment-en",
+"title": "¿How much do countries invest in R&D?" 
+},
+{
+ "id": "5-comparacion-indicadores-macroeconomicos-USA-reino-unido-es",
+"title": "¿Qué tan estable ha sido la economía de EE.UU. y el Reino Unido en la historia?" 
+},
+{
+ "id": "5-comparison-of-US-UK-economic-indicators-en",
+"title": "How stable has been the economy in the US and the UK?" 
+},
+{
+ "id": "6-energy-sources-comparison-en",
+"title": "What are the main energy sources used in Latin America?" 
+},
+{
+ "id": "6-fuentes-producccion-energia-es",
+"title": "¿Qué fuentes de energía se utilizan en Latinoamérica?" 
+},
+{
+ "id": "7-energy-economic-indicators-en",
+"title": "What role does electricity plays in the economy?" 
+},
+{
+ "id": "7-indicadores-economicos-energia-es",
+"title": "¿Cómo afecta la electricidad a la economía de un país?" 
+} 
+] 
+},
+{
+ "label": "US",
+"posts": [
+ {
+ "id": "5-comparacion-indicadores-macroeconomicos-USA-reino-unido-es",
+"title": "¿Qué tan estable ha sido la economía de EE.UU. y el Reino Unido en la historia?" 
+},
+{
+ "id": "5-comparison-of-US-UK-economic-indicators-en",
+"title": "How stable has been the economy in the US and the UK?" 
+} 
+] 
+},
+{
+ "label": "UK",
+"posts": [
+ {
+ "id": "5-comparacion-indicadores-macroeconomicos-USA-reino-unido-es",
+"title": "¿Qué tan estable ha sido la economía de EE.UU. y el Reino Unido en la historia?" 
+},
+{
+ "id": "5-comparison-of-US-UK-economic-indicators-en",
+"title": "How stable has been the economy in the US and the UK?" 
+} 
+] 
+},
+{
+ "label": "latinamerica",
+"posts": [
+ {
+ "id": "6-fuentes-producccion-energia-es",
+"title": "¿Qué fuentes de energía se utilizan en Latinoamérica?" 
+},
+{
+ "id": "7-indicadores-economicos-energia-es",
+"title": "¿Cómo afecta la electricidad a la economía de un país?" 
+} 
+] 
+},
+{
+ "label": "energy",
+"posts": [
+ {
+ "id": "6-fuentes-producccion-energia-es",
+"title": "¿Qué fuentes de energía se utilizan en Latinoamérica?" 
+},
+{
+ "id": "7-energy-economic-indicators-en",
+"title": "What role does electricity plays in the economy?" 
+},
+{
+ "id": "7-indicadores-economicos-energia-es",
+"title": "¿Cómo afecta la electricidad a la economía de un país?" 
+} 
+] 
+},
+{
+ "label": "games",
+"posts": [
+ {
+ "id": "8-potencias-nuclear-mundo",
+"title": "¿Cuál es la distribución de poder nuclear en el mundo?" 
+},
+{
+ "id": "9-historia-video-juegos",
+"title": "¿Cómo están los video juegos en la historia?" 
+} 
+] 
+},
+{
+ "label": "sales",
+"posts": [
+ {
+ "id": "8-potencias-nuclear-mundo",
+"title": "¿Cuál es la distribución de poder nuclear en el mundo?" 
+},
+{
+ "id": "9-historia-video-juegos",
+"title": "¿Cómo están los video juegos en la historia?" 
+} 
+] 
+} 
+]

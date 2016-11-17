@@ -1,0 +1,128 @@
+{
+ "title": "What role does electricity plays in the economy?",
+"description": "We explore variables that relate energy consumption to a country's economy",
+"author": "ilanreinstein",
+"thumbnail": "details_files/figure-html/intensVScons1.png",
+"language": "en",
+"date": "2014-09-01",
+"tags": [ "World", "energy", "economic" ],
+"production": "true",
+"inquiries": [
+ {
+ "text": "What is the energy intensity?" 
+},
+{
+ "text": "What is the consumption per capita?" 
+},
+{
+ "text": "What is the relation between the consumption and the intensity?" 
+} 
+],
+"id": "7-energy-economic-indicators-en",
+"story": "<p>Unlike a previous <em>post</em> about energy, in which we analyzed the different sources of electricity generation in Latin America, here we present some information on the consumption of energy during the last 40 years. Using variables such as GDP and population we want to mention some things about the access to electricity in some countries. Studying these indices can inform us about the economic conditions of each country, particularly on matters of electricity and access to it. Maintaining good social indexes involves meeting the basic needs of the population, such as electricity.</p>\n<p>We start by looking at the fraction between the total consumption in megajoules (MJ) and the GDP in dollars. This indicator says a lot about a country's economy, actually, it measures the energy efficiency of a nation's economy. It is calculated as units of energy per unit of GDP. If this fraction is very high it means the country's income is not high enough to satisfy energy consumption. On the other hand, low values ​​of this indicator mean high income, therefore it is generating enough energy to create wealth in the country.</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/intensity1.png\" alt=\"Intensity\" /><p class=\"caption\">Intensity</p>\n</div>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/intensity2.png\" alt=\"Intensity\" /><p class=\"caption\">Intensity</p>\n</div>\n<p>We see that countries have gradually decreased energy intensity, which tells us that most improved their income and managed to meet the demand of its inhabitants. In Colombia, for example, there was a time of rationing during the 90's. This was because the infrastructure needed to provide electricity was not the best and demand was very high, so the goal of bringing electric power to households was not successfully accomplished.</p>\n<p>Many factors affect this indicator, such as the country’s geographic location, its climate, and the distinct methods of internal transportation.Those countries where climatic conditions are extreme, the intensity increases due to the high fuel quantities used to maintain an ideal temperature, however is not the case in many Latin American countries since climatic conditions are very stable throughout the year. Countries in which the distances are very large, also show a high intensity because big amounts of energy are needed to move all the means of transportation.</p>\n<p>We now continue to analyze the consumption per capita, we must clarify that this is different to what we used to calculate the energy intensity. In the following figures we see the consumption per capita, while the intensity is calculated using the total consumption of the country.</p>\n<p>country. <img src=\"./details_files/figure-html/cons_capita1.png\" alt=\"Consumption per capita\" /></p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/cons_capita2.png\" alt=\"Consumption per capita\" /><p class=\"caption\">Consumption per capita</p>\n</div>\n<p>Clearly, the consumption per capita remains constant, some increase and others decrease, but the generality is that it does not vary much. The case of Venezuela is interesting, it is above the average consumption in LA. We know that there is a strong relationship between consumption and energy demand, so there might be a high demand as well as a high consumption in Venezuela. Whatever the reason, the important thing is for people to have electricity 24 hours a day. Yet another explanation in the case of this country could be the high level of subsidies applied to different energy.</p>\n<p>Finally, we see the relationship between intensity and consumption per capita. While access to electricity is not an indicator of interest in this post, the latter can be used to make inferences about the distribution of wealth. Keep in mind that the consumption per capita is not uniform, some consume more because they have better access and the ability to pay. The same applies to the GDP, wealth unfortunately is not evenly distributed and that is reflected in the access or lack of it, to resources and basic subsistence goods.</p>\n<p>For this case we will only compare countries in group 1 (Argentina, Brazil, Colombia and Mexico), which are the most populated.</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/intensVScons1.png\" alt=\"Intensity vs Consumption\" /><p class=\"caption\">Intensity vs Consumption</p>\n</div>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/intensVScons2.png\" alt=\"Intensity vs Consumption\" /><p class=\"caption\">Intensity vs Consumption</p>\n</div>\n<p>As mentioned at the beginning of this post, we wanted to analyze certain variables of each country, especially in the energy sector. Our purpose was to report some indexes related to this important subject, and open questions about the correlations between them. Also, we wanted to present information related to our country and to better understand under what conditions we are, in terms of this important goog as electricity.</p>",
+"details": "<pre class=\"sourceCode r\"><code class=\"sourceCode r\"><span class=\"kw\">library</span>(ggplot2)\n<span class=\"kw\">library</span>(plyr)\n<span class=\"kw\">library</span>(reshape2)\n<span class=\"kw\">library</span>(scales)\n<span class=\"kw\">library</span>(gridExtra)</code></pre>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">df &lt;-<span class=\"st\"> </span><span class=\"kw\">read.csv</span>(<span class=\"st\">&#39;data/datosEnergia2.csv&#39;</span>, <span class=\"dt\">header =</span> T, <span class=\"dt\">encoding =</span> <span class=\"st\">&#39;UTF-8&#39;</span>)\n<span class=\"kw\">levels</span>(df$country) &lt;-<span class=\"st\"> </span><span class=\"kw\">c</span>( <span class=\"st\">&quot;Argentina&quot;</span>,<span class=\"st\">&quot;Bolivia&quot;</span>,<span class=\"st\">&quot;Brasil&quot;</span>,<span class=\"st\">&quot;Colombia&quot;</span>,<span class=\"st\">&quot;Costa Rica&quot;</span>,<span class=\"st\">&quot;Cuba&quot;</span>,<span class=\"st\">&quot;Ecuador&quot;</span>,<span class=\"st\">&quot;El Salvador&quot;</span>,<span class=\"st\">&quot;Guatemala&quot;</span>,                 <span class=\"st\">&quot;Haiti&quot;</span>,<span class=\"st\">&quot;Honduras&quot;</span>,<span class=\"st\">&quot;Jamaica&quot;</span>,<span class=\"st\">&quot;Mexico&quot;</span>,<span class=\"st\">&quot;Nicaragua&quot;</span>,<span class=\"st\">&quot;Panama&quot;</span>,<span class=\"st\">&quot;Paraguay&quot;</span>,<span class=\"st\">&quot;Peru&quot;</span>,<span class=\"st\">&quot;Rep. Dominicana&quot;</span>,<span class=\"st\">&quot;Venezuela&quot;</span>)\nmelt.df &lt;-<span class=\"st\"> </span><span class=\"kw\">melt</span>(df, <span class=\"dt\">id.vars =</span> <span class=\"kw\">c</span>(<span class=\"st\">&#39;country&#39;</span>,<span class=\"st\">&#39;code&#39;</span>,<span class=\"st\">&#39;year&#39;</span>))\nmelt.df &lt;-<span class=\"st\"> </span><span class=\"kw\">arrange</span>(melt.df, year)\ndf$facet &lt;-<span class=\"st\"> </span><span class=\"dv\">1</span> *<span class=\"st\"> </span>df$country %in%<span class=\"st\"> </span><span class=\"kw\">c</span>(<span class=\"st\">&#39;Argentina&#39;</span>,<span class=\"st\">&#39;Brasil&#39;</span>,<span class=\"st\">&#39;Colombia&#39;</span>,<span class=\"st\">&#39;Mexico&#39;</span>) +\n<span class=\"dv\">2</span> *<span class=\"st\"> </span>df$country %in%<span class=\"st\"> </span><span class=\"kw\">c</span>(<span class=\"st\">&#39;Bolivia&#39;</span>,<span class=\"st\">&#39;Venezuela&#39;</span>,<span class=\"st\">&#39;Peru&#39;</span>, <span class=\"st\">&#39;Ecuador&#39;</span>, <span class=\"st\">&#39;Paraguay&#39;</span>) +\n<span class=\"dv\">3</span> *<span class=\"st\"> </span>df$country %in%<span class=\"st\"> </span><span class=\"kw\">c</span>(<span class=\"st\">&#39;Guatemala&#39;</span>,<span class=\"st\">&#39;Honduras&#39;</span>,<span class=\"st\">&#39;El Salvador&#39;</span>, <span class=\"st\">&#39;Panama&#39;</span>, <span class=\"st\">&#39;Nicaragua&#39;</span>) +\n<span class=\"dv\">4</span> *<span class=\"st\"> </span>df$country %in%<span class=\"st\"> </span><span class=\"kw\">c</span>(<span class=\"st\">&#39;Jamaica&#39;</span>,<span class=\"st\">&#39;Haiti&#39;</span>,<span class=\"st\">&#39;Rep. Dominicana&#39;</span>, <span class=\"st\">&#39;Costa Rica&#39;</span>, <span class=\"st\">&#39;Cuba&#39;</span>)\ndf$prod_kWh &lt;-<span class=\"st\"> </span>(df$prod_ktOil*<span class=\"fl\">2.9e13</span>)/<span class=\"fl\">3.6e6</span>\ndf$use_kWh &lt;-<span class=\"st\"> </span>(df$use_ktOil*<span class=\"fl\">2.9e13</span>)/<span class=\"fl\">3.6e6</span>\ndf$intensity &lt;-<span class=\"st\"> </span>df$use_kWh/df$GDP\ndf$cons_capita &lt;-<span class=\"st\"> </span>df$use_kWh/df$population\ncolor &lt;-<span class=\"st\"> </span><span class=\"kw\">c</span>(<span class=\"st\">&#39;#9933FF&#39;</span>, <span class=\"st\">&#39;#00CC66&#39;</span>, <span class=\"st\">&#39;#FF3333&#39;</span>, <span class=\"st\">&#39;#3399FF&#39;</span>, <span class=\"st\">&#39;#FF6633&#39;</span>)</code></pre>\n<div id=\"what-is-the-energy-intensity-in-latam\" class=\"section level3\">\n<h3>What is the energy intensity in LatAm?</h3>\n<p>intensity = energy consumption/GDP. x units of energy are needed to produce 1 unit of wealth/money. A high intensiy indicates high costs in converting energy into wealth. This means a high consumption and low income. Low intensity: low costs of conversion. Low consumption, high GDP</p>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">d &lt;-<span class=\"st\"> </span><span class=\"kw\">split</span>(df,<span class=\"dt\">f =</span> df$facet)\np1 &lt;-<span class=\"st\"> </span><span class=\"kw\">ggplot</span>(d$<span class=\"st\">&#39;1&#39;</span>, <span class=\"kw\">aes</span>(<span class=\"dt\">x =</span> year, <span class=\"dt\">y =</span> intensity, <span class=\"dt\">colour =</span> country)) +<span class=\"st\"> </span><span class=\"kw\">geom_smooth</span>() +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>()+<span class=\"st\"> </span><span class=\"kw\">scale_colour_brewer</span>(<span class=\"dt\">palette =</span> <span class=\"st\">&#39;Set1&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">scale_y_continuous</span>(<span class=\"dt\">labels =</span> comma, <span class=\"dt\">breaks =</span> <span class=\"kw\">c</span>(<span class=\"dv\">0</span>,<span class=\"dv\">5</span>,<span class=\"dv\">10</span>,<span class=\"dv\">15</span>)) +<span class=\"st\"> </span><span class=\"kw\">facet_wrap</span>(~<span class=\"st\"> </span>facet) +<span class=\"st\"> </span><span class=\"kw\">theme</span>(<span class=\"dt\">axis.text.x =</span> <span class=\"kw\">element_text</span>(<span class=\"dt\">angle =</span> <span class=\"dv\">45</span>), <span class=\"dt\">legend.key.size =</span> <span class=\"kw\">unit</span>(<span class=\"fl\">0.6</span>, <span class=\"st\">&quot;cm&quot;</span>), <span class=\"dt\">legend.text =</span> <span class=\"kw\">element_text</span>(<span class=\"dt\">size =</span> <span class=\"dv\">7</span>))\np2 &lt;-<span class=\"st\"> </span>p1 %+%<span class=\"st\"> </span>d$<span class=\"st\">&#39;2&#39;</span>\np3 &lt;-<span class=\"st\"> </span>p1 %+%<span class=\"st\"> </span>d$<span class=\"st\">&#39;3&#39;</span>\np4 &lt;-<span class=\"st\"> </span>p1 %+%<span class=\"st\"> </span>d$<span class=\"st\">&#39;4&#39;</span>\n<span class=\"kw\">grid.arrange</span>(p1,p2)</code></pre>\n<pre><code>## geom_smooth: method=&quot;auto&quot; and size of largest group is &lt;1000, so using loess. Use &#39;method = x&#39; to change the smoothing method.\n## geom_smooth: method=&quot;auto&quot; and size of largest group is &lt;1000, so using loess. Use &#39;method = x&#39; to change the smoothing method.</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/intensity1.png\" alt=\"Intensity\" /><p class=\"caption\">Intensity</p>\n</div>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\"><span class=\"kw\">grid.arrange</span>(p3,p4)</code></pre>\n<pre><code>## geom_smooth: method=&quot;auto&quot; and size of largest group is &lt;1000, so using loess. Use &#39;method = x&#39; to change the smoothing method.\n## geom_smooth: method=&quot;auto&quot; and size of largest group is &lt;1000, so using loess. Use &#39;method = x&#39; to change the smoothing method.</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/intensity2.png\" alt=\"Intensity\" /><p class=\"caption\">Intensity</p>\n</div>\n</div>\n<div id=\"what-is-the-consumption-per-capita-in-latam-countries\" class=\"section level3\">\n<h3>What is the consumption per capita in LatAm countries?</h3>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">p1 &lt;-<span class=\"st\"> </span><span class=\"kw\">ggplot</span>(d$<span class=\"st\">&#39;1&#39;</span>, <span class=\"kw\">aes</span>(<span class=\"dt\">x =</span> year, <span class=\"dt\">y =</span> cons_capita, <span class=\"dt\">colour =</span> country)) +<span class=\"st\"> </span><span class=\"kw\">geom_line</span>() +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>()+<span class=\"st\"> </span><span class=\"kw\">scale_colour_brewer</span>(<span class=\"dt\">palette =</span> <span class=\"st\">&#39;Set1&#39;</span>) +<span class=\"st\"> </span><span class=\"kw\">scale_y_continuous</span>(<span class=\"dt\">labels =</span> comma) +<span class=\"st\"> </span><span class=\"kw\">facet_wrap</span>(~<span class=\"st\"> </span>facet) +<span class=\"st\"> </span><span class=\"kw\">theme</span>(<span class=\"dt\">axis.text.x =</span> <span class=\"kw\">element_text</span>(<span class=\"dt\">angle =</span> <span class=\"dv\">45</span>), <span class=\"dt\">legend.key.size =</span> <span class=\"kw\">unit</span>(<span class=\"fl\">0.6</span>, <span class=\"st\">&quot;cm&quot;</span>), <span class=\"dt\">legend.text =</span> <span class=\"kw\">element_text</span>(<span class=\"dt\">size =</span> <span class=\"dv\">7</span>))\np2 &lt;-<span class=\"st\"> </span>p1 %+%<span class=\"st\"> </span>d$<span class=\"st\">&#39;2&#39;</span>\np3 &lt;-<span class=\"st\"> </span>p1 %+%<span class=\"st\"> </span>d$<span class=\"st\">&#39;3&#39;</span>\np4 &lt;-<span class=\"st\"> </span>p1 %+%<span class=\"st\"> </span>d$<span class=\"st\">&#39;4&#39;</span>\n<span class=\"kw\">grid.arrange</span>(p1,p2)</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/cons_capita1.png\" alt=\"Consumption per capita\" /><p class=\"caption\">Consumption per capita</p>\n</div>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\"><span class=\"kw\">grid.arrange</span>(p3,p4)</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/cons_capita2.png\" alt=\"Consumption per capita\" /><p class=\"caption\">Consumption per capita</p>\n</div>\n</div>\n<div id=\"what-is-the-correlation-between-the-intensity-and-the-consupmtion-per-capita\" class=\"section level3\">\n<h3>What is the correlation between the intensity and the consupmtion per capita?</h3>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">col &lt;-<span class=\"st\"> </span>df[<span class=\"kw\">which</span>(df$country ==<span class=\"st\"> &#39;Colombia&#39;</span>),]\nbrs &lt;-<span class=\"st\"> </span>df[<span class=\"kw\">which</span>(df$country ==<span class=\"st\"> &#39;Brasil&#39;</span>),]\narg &lt;-<span class=\"st\"> </span>df[<span class=\"kw\">which</span>(df$country ==<span class=\"st\"> &#39;Argentina&#39;</span>),]\nmex &lt;-<span class=\"st\"> </span>df[<span class=\"kw\">which</span>(df$country ==<span class=\"st\"> &#39;Mexico&#39;</span>),]\n\np1 &lt;-<span class=\"st\"> </span><span class=\"kw\">ggplot</span>(col, <span class=\"kw\">aes</span>(<span class=\"dt\">x =</span> year, <span class=\"dt\">y =</span> cons_capita, <span class=\"dt\">colour =</span> intensity)) +<span class=\"st\"> </span><span class=\"kw\">geom_path</span>() +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>() +<span class=\"st\"> </span><span class=\"kw\">theme</span>(<span class=\"dt\">axis.text.x =</span> <span class=\"kw\">element_text</span>(<span class=\"dt\">angle =</span> <span class=\"dv\">45</span>), <span class=\"dt\">legend.key.size =</span> <span class=\"kw\">unit</span>(<span class=\"fl\">0.6</span>, <span class=\"st\">&quot;cm&quot;</span>), <span class=\"dt\">legend.text =</span> <span class=\"kw\">element_text</span>(<span class=\"dt\">size =</span> <span class=\"dv\">7</span>)) +<span class=\"st\"> </span><span class=\"kw\">scale_colour_gradientn</span>(<span class=\"dt\">colours =</span> <span class=\"kw\">rainbow</span>(<span class=\"dv\">3</span>), <span class=\"kw\">guide_legend</span>(<span class=\"dt\">reverse =</span> T,<span class=\"dt\">title =</span> <span class=\"st\">&#39;Intensity&#39;</span>)) +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">title =</span> <span class=\"st\">&#39;Colombia&#39;</span>)\n\np2 &lt;-<span class=\"st\"> </span>p1 %+%<span class=\"st\"> </span>brs +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">title =</span> <span class=\"st\">&#39;Brasil&#39;</span>)\np3 &lt;-<span class=\"st\"> </span>p1 %+%<span class=\"st\"> </span>arg +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">title =</span> <span class=\"st\">&#39;Argentina&#39;</span>) \np4 &lt;-<span class=\"st\"> </span>p1 %+%<span class=\"st\"> </span>mex +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">title =</span> <span class=\"st\">&#39;Mexico&#39;</span>)\n\n<span class=\"kw\">grid.arrange</span>(p1,p2)</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/intensVScons1.png\" alt=\"Intensity vs Consumption\" /><p class=\"caption\">Intensity vs Consumption</p>\n</div>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\"><span class=\"kw\">grid.arrange</span>(p3,p4)</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/intensVScons2.png\" alt=\"Intensity vs Consumption\" /><p class=\"caption\">Intensity vs Consumption</p>\n</div>\n</div>",
+"datapackage": {
+    "name": "dfDatapackage",
+    "resources": [
+        {
+            "name": "table1",
+            "path": "table1.csv",
+            "ae_resource_info": {
+                "id": "table1",
+                "public": "true",
+                "resource_type": "tbl"
+            },
+            "mediatype": "text/csv",
+            "format": "csv",
+            "dialect": {
+                "delimiter": ","
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "country",
+                        "type": "factor",
+                        "ae_field_info": {
+                            "id": "a",
+                            "data_type": "C",
+                            "label": "country"
+                        }
+                    },
+                    {
+                        "name": "code",
+                        "type": "factor",
+                        "ae_field_info": {
+                            "id": "b",
+                            "data_type": "C",
+                            "label": "code"
+                        }
+                    },
+                    {
+                        "name": "year",
+                        "type": "integer",
+                        "ae_field_info": {
+                            "id": "c",
+                            "data_type": "N",
+                            "label": "year"
+                        }
+                    },
+                    {
+                        "name": "prod_ktOil",
+                        "type": "numeric",
+                        "ae_field_info": {
+                            "id": "d",
+                            "data_type": "N",
+                            "label": "prod_ktOil"
+                        }
+                    },
+                    {
+                        "name": "use_ktOil",
+                        "type": "numeric",
+                        "ae_field_info": {
+                            "id": "e",
+                            "data_type": "N",
+                            "label": "use_ktOil"
+                        }
+                    },
+                    {
+                        "name": "nuclearPerc",
+                        "type": "numeric",
+                        "ae_field_info": {
+                            "id": "f",
+                            "data_type": "N",
+                            "label": "nuclearPerc"
+                        }
+                    },
+                    {
+                        "name": "importPerc",
+                        "type": "numeric",
+                        "ae_field_info": {
+                            "id": "g",
+                            "data_type": "N",
+                            "label": "importPerc"
+                        }
+                    },
+                    {
+                        "name": "renewPerc",
+                        "type": "numeric",
+                        "ae_field_info": {
+                            "id": "h",
+                            "data_type": "N",
+                            "label": "renewPerc"
+                        }
+                    },
+                    {
+                        "name": "fosilPerc",
+                        "type": "numeric",
+                        "ae_field_info": {
+                            "id": "i",
+                            "data_type": "N",
+                            "label": "fosilPerc"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+} 
+}

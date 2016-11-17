@@ -1,0 +1,98 @@
+{
+ "title": "How the teams performed in the World Cup?",
+"description": "In soccer there is not much importance in this rankings because the winners already took the trophy home and nobody cares whether they played a flawless tournament or if they had several difficulties.",
+"author": "ilanreinstein",
+"thumbnail": "details_files/figure-html/clean.png",
+"language": "en",
+"date": "2014-07-27",
+"tags": [ "sports", "wikipedia" ],
+"production": "true",
+"inquiries": [
+ {
+ "text": "What team is the champion by points?" 
+},
+{
+ "text": "What team is the champion by goal difference?" 
+},
+{
+ "text": "What team is the champion by clean sheet?" 
+} 
+],
+"id": "2-fifa-world-cup-2014-rank",
+"story": "<p>In this post we want to determine who is the champion according to the statistics taken from the World Cup. In soccer there is not much importance in this rankings because the winners already took the trophy home and nobody cares whether they played a flawless tournament or if they had several difficulties. Unlike most sports played in the U.S., where statistics play an important role, in soccer they are often ignored by the fans and the players. However, data can be obtained, and we are very interested in it. That is the reason for this post, to look how the teams performed in the WC, no matter the outcome.</p>\n<p>The first item to analyze is what is known as the Clean Sheets. This statistic can be atributed to the goalkeepers, because they are responsible for keeping the score in zero. For example, if the final result of a match is 3-0, the clean sheet goes for the winning team, the team that did not allow any goals.</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/clean.png\" alt=\"Clean sheets\" /><p class=\"caption\">Clean sheets</p>\n</div>\n<p>As we can see there is a tie between Argentina, Germany and Netherlands with 4 clean sheets. Or as I prefer, Romero, Neuer and Cillesen. Now let us take a look at the goal difference. This is quite related to the clean sheets, however it is atributed to the goals that were scored minus the goals received. We will see if those teams that had the most clean sheets have the largest positive goal difference.</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/goalDif.png\" alt=\"Goal Difference\" /><p class=\"caption\">Goal Difference</p>\n</div>\n<p>Brasil, that is painful, -3?!?! Well, the answer is clear, the champion in goal difference is Germany. Interesting fact: After Mezut Özil failed to score the 8th goal against Brasil, Oscar saved the brasilian honor. After, some journalists noted that most of the players in Germany were a little stressed about it and ran to keep playing and scoring. In the end, the journalists refered to the germans as 'machines' and 'beasts'. No wonder they have the largest positive goal difference.</p>\n<p>Finally, let's count the points earned by each of the teams and define a ranking by points.</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/points.png\" alt=\"Points\" /><p class=\"caption\">Points</p>\n</div>\n<p>As we saw from the last plots, Germany is a complete winner. They deserved to win, their victory was not a coincidence. After the WC 2002, in which Germany lost 2-0 against Brasil, they changed their football philosophy and started the new german football era. With lots of money invested in technology, the german teams started a revolution in soccer. Technology focused on passes and precision made the german clubs and their league increase their quality. German clubs are encouraged, and even forced to train their players to certain level, that of the national team. Only the best players are called to play for the National Team, and it is also not a coincidence that most of them play in the local league, the Bundesliga.</p>",
+"details": "<p>In this post we used the libraries:</p>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\"><span class=\"kw\">library</span>(ggplot2)\n<span class=\"kw\">library</span>(plyr)\n<span class=\"kw\">library</span>(knitr)</code></pre>\n<p>We loaded the following datasets:</p>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">data_path &lt;-<span class=\"st\"> &quot;data/&quot;</span>\ndf &lt;-<span class=\"st\"> </span><span class=\"kw\">read.csv</span>(<span class=\"kw\">paste</span>(data_path, <span class=\"st\">&#39;fifa-rank.csv&#39;</span>, <span class=\"dt\">sep =</span> <span class=\"st\">&#39;&#39;</span>),)\ndf2 &lt;-<span class=\"st\"> </span><span class=\"kw\">read.csv</span>(<span class=\"kw\">paste</span>(data_path, <span class=\"st\">&#39;fifa-prog.csv&#39;</span>, <span class=\"dt\">sep =</span> <span class=\"st\">&#39;&#39;</span>),)</code></pre>\n<p>In this post we do not use tables, we only make several visualizations in an ordered way. We use the factor() and order() functions in order to organize the observations.</p>\n<div id=\"clean-sheets\" class=\"section level2\">\n<h2>Clean Sheets</h2>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">cs &lt;-<span class=\"st\"> </span>df[<span class=\"kw\">order</span>(df$CS), <span class=\"kw\">c</span>(<span class=\"st\">&quot;Team&quot;</span>,<span class=\"st\">&quot;CS&quot;</span>)]\ncs &lt;-<span class=\"st\"> </span><span class=\"kw\">subset</span>(cs, CS &gt;<span class=\"dv\">0</span>)\ncs$Team &lt;-<span class=\"st\"> </span><span class=\"kw\">factor</span>(cs$Team, <span class=\"dt\">levels =</span> cs$Team, <span class=\"dt\">ordered =</span> <span class=\"ot\">TRUE</span>)\nq &lt;-<span class=\"st\"> </span><span class=\"kw\">ggplot</span>(cs, <span class=\"kw\">aes</span>(<span class=\"dt\">x =</span> Team, <span class=\"dt\">y =</span> CS)) +<span class=\"st\"> </span><span class=\"kw\">geom_bar</span>(<span class=\"dt\">stat =</span> <span class=\"st\">&#39;identity&#39;</span>, <span class=\"dt\">fill=</span><span class=\"st\">&quot;#56B4E9&quot;</span>, <span class=\"dt\">alpha =</span> <span class=\"st\">&quot;0.7&quot;</span>) +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>() +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">y =</span> <span class=\"st\">&#39;Clean Sheets&#39;</span>)\nq &lt;-<span class=\"st\"> </span>q +<span class=\"st\"> </span><span class=\"kw\">coord_polar</span>()\nq &lt;-<span class=\"st\"> </span>q +<span class=\"st\"> </span><span class=\"kw\">theme</span>(\n              <span class=\"dt\">axis.line=</span><span class=\"kw\">element_blank</span>()\n              ,<span class=\"dt\">axis.text.y=</span><span class=\"kw\">element_blank</span>()\n              ,<span class=\"dt\">axis.ticks=</span><span class=\"kw\">element_blank</span>()\n              ,<span class=\"dt\">axis.title.x=</span><span class=\"kw\">element_blank</span>()\n              ,<span class=\"dt\">axis.title.y=</span><span class=\"kw\">element_blank</span>()\n              ,<span class=\"dt\">panel.border=</span><span class=\"kw\">element_blank</span>()\n  )  \nq</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/clean.png\" alt=\"Clean sheets\" /><p class=\"caption\">Clean sheets</p>\n</div>\n</div>\n<div id=\"goal-difference\" class=\"section level2\">\n<h2>Goal Difference</h2>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">gd &lt;-<span class=\"st\"> </span>df2[<span class=\"kw\">order</span>(df2$GD), ]\ngd$Team &lt;-<span class=\"st\"> </span><span class=\"kw\">factor</span>(gd$Team, <span class=\"dt\">levels =</span> gd$Team, <span class=\"dt\">ordered =</span> <span class=\"ot\">TRUE</span>)\n<span class=\"kw\">ggplot</span>(gd, <span class=\"kw\">aes</span>(<span class=\"dt\">x =</span> Team, <span class=\"dt\">y =</span> GD, <span class=\"dt\">fill =</span> Team)) +<span class=\"st\"> </span><span class=\"kw\">geom_bar</span>(<span class=\"dt\">stat =</span> <span class=\"st\">&#39;identity&#39;</span>, <span class=\"dt\">position =</span> <span class=\"st\">&#39;identity&#39;</span>, <span class=\"dt\">fill=</span><span class=\"st\">&quot;#56B4E9&quot;</span>, <span class=\"dt\">alpha =</span> <span class=\"st\">&quot;0.7&quot;</span>)  +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>() +<span class=\"st\"> </span><span class=\"kw\">theme</span>(<span class=\"dt\">axis.text.x =</span> <span class=\"kw\">element_text</span>(<span class=\"dt\">angle =</span> <span class=\"dv\">90</span>)) +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">y =</span> <span class=\"st\">&#39;Goal Difference&#39;</span>)</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/goalDif.png\" alt=\"Goal Difference\" /><p class=\"caption\">Goal Difference</p>\n</div>\n</div>\n<div id=\"points\" class=\"section level2\">\n<h2>Points</h2>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">pts &lt;-<span class=\"st\"> </span>df2[<span class=\"kw\">order</span>(df2$Pts), ]\npts$Team &lt;-<span class=\"st\"> </span><span class=\"kw\">factor</span>(pts$Team, <span class=\"dt\">levels =</span> pts$Team, <span class=\"dt\">ordered =</span> <span class=\"ot\">TRUE</span>)\n<span class=\"kw\">ggplot</span>(pts, <span class=\"kw\">aes</span>(<span class=\"dt\">x =</span> Team, <span class=\"dt\">y =</span> Pts, <span class=\"dt\">fill =</span> Team)) +<span class=\"st\"> </span><span class=\"kw\">geom_bar</span>(<span class=\"dt\">stat =</span> <span class=\"st\">&#39;identity&#39;</span>, <span class=\"dt\">fill=</span><span class=\"st\">&quot;#56B4E9&quot;</span>, <span class=\"dt\">alpha =</span> <span class=\"st\">&quot;0.7&quot;</span>) +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>() +<span class=\"st\"> </span><span class=\"kw\">theme</span>(<span class=\"dt\">axis.text.x =</span> <span class=\"kw\">element_text</span>(<span class=\"dt\">angle =</span> <span class=\"dv\">90</span>)) +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">y =</span> <span class=\"st\">&#39;Points&#39;</span>)</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/points.png\" alt=\"Points\" /><p class=\"caption\">Points</p>\n</div>\n</div>",
+"datapackage": {
+    "name": "fifa-alter-rank",
+    "title": "We did perform some data scraping and data cleaning over those source. ",
+    "license": "PDDL-1.0",
+    "keywords": ["GDP", "World cup 2014"],
+    "last_updated": "2014-08-09",
+    "last_update_comment": "",
+    "sources": [{
+        "name": "Wikipedia 2014_FIFA_World_Cup_statistics",
+        "web": "http://en.wikipedia.org/wiki/2014_FIFA_World_Cup_statistics"
+        },{
+        "name": "Wikipedia 2014_FIFA_World_Cup",
+        "web": "http://en.wikipedia.org/wiki/2014_FIFA_World_Cup"
+        }
+    ],
+    "resources": [{
+        "name": "Fifa World Cup Brazil 2014 Results",
+        "path": "fifa-prog.csv",
+        "format": "csv",
+        "mediatype": "text/csv",
+        "schema": {
+            "fields": [
+            {
+                "name": "Pos.",
+                "type": "number",
+                "description": "Position in ranking"
+            },{
+                "name": "Team",
+                "type": "string",
+                "description": ""
+            }, {
+                "name": "G",
+                "description": "group",
+                "type": "string"
+            },{
+                "name": "Pld",
+                "description": "",
+                "type": "string"
+            }, {
+                "name": "W",
+                "description": "Wins",
+                "type": "number"
+            }, {
+                "name": "D",
+                "description": "Draw",
+                "type": "number"
+            }, {
+                "name": "L",
+                "description": "Loss",
+                "type": "number"
+            }, {
+                "name": "Pts",
+                "description": "points",
+                "type": "number"
+            }, {
+                "name": "GF",
+                "description": "Goals Favor", 
+                "type": "number"
+            }, {
+                "name": "GA",
+                "description": "Goals against",
+                "type": "number"
+            }, {
+                "name": "GD",
+                "description": "GoalDifference",
+                "type": "number"
+            },  {
+                "name": "CS",
+                "description": "CleanSheets",
+                "type": "number"
+            }]
+        }
+    }]
+}     
+}

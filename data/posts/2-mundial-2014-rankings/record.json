@@ -1,0 +1,98 @@
+{
+ "title": "¿Cuál fue el desempeño final de los equipos en el mundial?",
+"description": "Sabemos que las estadísticas en este deporte son poco importantes, aún así, veamos como les fue a los participantes ahora que se acabó el mundial.",
+"author": "ilanreinstein",
+"thumbnail": "details_files/figure-html/clean.png",
+"language": "es",
+"date": "2014-07-27",
+"tags": [ "deporte", "wikipedia" ],
+"production": "true",
+"inquiries": [
+ {
+ "text": "¿Qué equipo acumuló más puntos?" 
+},
+{
+ "text": "¿Qué equipo tiene la mayor diferencia de goles positiva?" 
+},
+{
+ "text": "¿Qué equipo tiene más partidos sin recibir goles?" 
+} 
+],
+"id": "2-mundial-2014-rankings",
+"story": "<p>En este datapost queremos determinar quién sería el campeón de la copa según las estadísticas que deja el Mundial. En el fútbol no se le da importancia a este tipo de rankings porque los ganadores ya están en casa celebrando y ya no importa si se jugó bien o mal. A diferencia de los deportes en EEUU, donde las estadísticas juegan un papel importante, en el fútbol son irrelevantes. Sin embargo, se puede obtener mucha información a partir de los datos, y en este caso es lo que nos interesa. Queremos ver entonces cómo actuaron los equipos en el Mundial con estas estadísticas.</p>\n<p>Comenzamos por analizar los 'arcos limpios', esto hace referencia a los arqueros, pues son los responsables de mantener el arco en cero. Por ejemplo, si el marcador final es 3-0, el arco limpio le corresponde al equipo ganador, aquel que no permitió goles en su contra.</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/clean.png\" alt=\"Clean sheets\" /><p class=\"caption\">Clean sheets</p>\n</div>\n<p>Como podemos ver, hay un empate entre Alemania, Argentina y Holanda con 4 arcos limpios. O mejor, Neuer, Romero y Cillesen.</p>\n<p>Ahora, veamos la diferencia de goles. Esto está relacionado a los arcos limpios de los equipos, pero se refiere a los goles que anotaron menos los goles que recibieron.</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/goalDif.png\" alt=\"Goal Difference\" /><p class=\"caption\">Goal Difference</p>\n</div>\n<p>La respuesta es clara, el campeón por diferencia de goles es Alemania. Finalmente, contemos los puntos ganados por cada uno de los equipos.</p>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/points.png\" alt=\"Points\" /><p class=\"caption\">Points</p>\n</div>\n<p>Como se puede ver en las últimas gráficas, Alemania es un completo ganador. Merecía ganar, su victoria no fue una coincidencia. Después del Mundial de 2002, en el que Alemania pierde 2-0 contra Brasil, los alemanes deciden cambiar su manera de jugar y comenzar la nueva era de su fútbol. Con grandes cantidades de dinero invertidas en tecnología, el equipo alemán revolucionó el fútbol y la manera como se juega. La liga alemana motiva a los clubes a usar la tecnología para mejorar la precisión de los pases, entre otros aspectos. Ojalá el resto de países inviertan en estos cambios para ver cada vez mejores partidos en los mundiales.</p>",
+"details": "<p>In this post we used the libraries:</p>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\"><span class=\"kw\">library</span>(ggplot2)\n<span class=\"kw\">library</span>(plyr)\n<span class=\"kw\">library</span>(knitr)</code></pre>\n<p>We loaded the following datasets:</p>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">data_path &lt;-<span class=\"st\"> &quot;data/&quot;</span>\ndf &lt;-<span class=\"st\"> </span><span class=\"kw\">read.csv</span>(<span class=\"kw\">paste</span>(data_path, <span class=\"st\">&#39;fifa-rank.csv&#39;</span>, <span class=\"dt\">sep =</span> <span class=\"st\">&#39;&#39;</span>),)\ndf2 &lt;-<span class=\"st\"> </span><span class=\"kw\">read.csv</span>(<span class=\"kw\">paste</span>(data_path, <span class=\"st\">&#39;fifa-prog.csv&#39;</span>, <span class=\"dt\">sep =</span> <span class=\"st\">&#39;&#39;</span>),)</code></pre>\n<p>In this post we do not use tables, we only make several visualizations in an ordered way. We use the factor() and order() functions in order to organize the observations.</p>\n<div id=\"clean-sheets\" class=\"section level2\">\n<h2>Clean Sheets</h2>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">cs &lt;-<span class=\"st\"> </span>df[<span class=\"kw\">order</span>(df$CS), <span class=\"kw\">c</span>(<span class=\"st\">&quot;Team&quot;</span>,<span class=\"st\">&quot;CS&quot;</span>)]\ncs &lt;-<span class=\"st\"> </span><span class=\"kw\">subset</span>(cs, CS &gt;<span class=\"dv\">0</span>)\ncs$Team &lt;-<span class=\"st\"> </span><span class=\"kw\">factor</span>(cs$Team, <span class=\"dt\">levels =</span> cs$Team, <span class=\"dt\">ordered =</span> <span class=\"ot\">TRUE</span>)\nq &lt;-<span class=\"st\"> </span><span class=\"kw\">ggplot</span>(cs, <span class=\"kw\">aes</span>(<span class=\"dt\">x =</span> Team, <span class=\"dt\">y =</span> CS)) +<span class=\"st\"> </span><span class=\"kw\">geom_bar</span>(<span class=\"dt\">stat =</span> <span class=\"st\">&#39;identity&#39;</span>, <span class=\"dt\">fill=</span><span class=\"st\">&quot;#56B4E9&quot;</span>, <span class=\"dt\">alpha =</span> <span class=\"st\">&quot;0.7&quot;</span>) +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>() +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">y =</span> <span class=\"st\">&#39;Clean Sheets&#39;</span>)\nq &lt;-<span class=\"st\"> </span>q +<span class=\"st\"> </span><span class=\"kw\">coord_polar</span>()\nq &lt;-<span class=\"st\"> </span>q +<span class=\"st\"> </span><span class=\"kw\">theme</span>(\n              <span class=\"dt\">axis.line=</span><span class=\"kw\">element_blank</span>()\n              ,<span class=\"dt\">axis.text.y=</span><span class=\"kw\">element_blank</span>()\n              ,<span class=\"dt\">axis.ticks=</span><span class=\"kw\">element_blank</span>()\n              ,<span class=\"dt\">axis.title.x=</span><span class=\"kw\">element_blank</span>()\n              ,<span class=\"dt\">axis.title.y=</span><span class=\"kw\">element_blank</span>()\n              ,<span class=\"dt\">panel.border=</span><span class=\"kw\">element_blank</span>()\n  )  \nq</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/clean.png\" alt=\"Clean sheets\" /><p class=\"caption\">Clean sheets</p>\n</div>\n</div>\n<div id=\"goal-difference\" class=\"section level2\">\n<h2>Goal Difference</h2>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">gd &lt;-<span class=\"st\"> </span>df2[<span class=\"kw\">order</span>(df2$GD), ]\ngd$Team &lt;-<span class=\"st\"> </span><span class=\"kw\">factor</span>(gd$Team, <span class=\"dt\">levels =</span> gd$Team, <span class=\"dt\">ordered =</span> <span class=\"ot\">TRUE</span>)\n<span class=\"kw\">ggplot</span>(gd, <span class=\"kw\">aes</span>(<span class=\"dt\">x =</span> Team, <span class=\"dt\">y =</span> GD, <span class=\"dt\">fill =</span> Team)) +<span class=\"st\"> </span><span class=\"kw\">geom_bar</span>(<span class=\"dt\">stat =</span> <span class=\"st\">&#39;identity&#39;</span>, <span class=\"dt\">position =</span> <span class=\"st\">&#39;identity&#39;</span>, <span class=\"dt\">fill=</span><span class=\"st\">&quot;#56B4E9&quot;</span>, <span class=\"dt\">alpha =</span> <span class=\"st\">&quot;0.7&quot;</span>)  +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>() +<span class=\"st\"> </span><span class=\"kw\">theme</span>(<span class=\"dt\">axis.text.x =</span> <span class=\"kw\">element_text</span>(<span class=\"dt\">angle =</span> <span class=\"dv\">90</span>)) +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">y =</span> <span class=\"st\">&#39;Goal Difference&#39;</span>)</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/goalDif.png\" alt=\"Goal Difference\" /><p class=\"caption\">Goal Difference</p>\n</div>\n</div>\n<div id=\"points\" class=\"section level2\">\n<h2>Points</h2>\n<pre class=\"sourceCode r\"><code class=\"sourceCode r\">pts &lt;-<span class=\"st\"> </span>df2[<span class=\"kw\">order</span>(df2$Pts), ]\npts$Team &lt;-<span class=\"st\"> </span><span class=\"kw\">factor</span>(pts$Team, <span class=\"dt\">levels =</span> pts$Team, <span class=\"dt\">ordered =</span> <span class=\"ot\">TRUE</span>)\n<span class=\"kw\">ggplot</span>(pts, <span class=\"kw\">aes</span>(<span class=\"dt\">x =</span> Team, <span class=\"dt\">y =</span> Pts, <span class=\"dt\">fill =</span> Team)) +<span class=\"st\"> </span><span class=\"kw\">geom_bar</span>(<span class=\"dt\">stat =</span> <span class=\"st\">&#39;identity&#39;</span>, <span class=\"dt\">fill=</span><span class=\"st\">&quot;#56B4E9&quot;</span>, <span class=\"dt\">alpha =</span> <span class=\"st\">&quot;0.7&quot;</span>) +<span class=\"st\"> </span><span class=\"kw\">theme_bw</span>() +<span class=\"st\"> </span><span class=\"kw\">theme</span>(<span class=\"dt\">axis.text.x =</span> <span class=\"kw\">element_text</span>(<span class=\"dt\">angle =</span> <span class=\"dv\">90</span>)) +<span class=\"st\"> </span><span class=\"kw\">labs</span>(<span class=\"dt\">y =</span> <span class=\"st\">&#39;Points&#39;</span>)</code></pre>\n<div class=\"figure\">\n<img src=\"./details_files/figure-html/points.png\" alt=\"Points\" /><p class=\"caption\">Points</p>\n</div>\n</div>",
+"datapackage": {
+    "name": "fifa-alter-rank",
+    "title": "We did perform some data scraping and data cleaning over those source. ",
+    "license": "PDDL-1.0",
+    "keywords": ["GDP", "World cup 2014"],
+    "last_updated": "2014-08-09",
+    "last_update_comment": "",
+    "sources": [{
+        "name": "Wikipedia 2014_FIFA_World_Cup_statistics",
+        "web": "http://en.wikipedia.org/wiki/2014_FIFA_World_Cup_statistics"
+        },{
+        "name": "Wikipedia 2014_FIFA_World_Cup",
+        "web": "http://en.wikipedia.org/wiki/2014_FIFA_World_Cup"
+        }
+    ],
+    "resources": [{
+        "name": "Fifa World Cup Brazil 2014 Results",
+        "path": "fifa-prog.csv",
+        "format": "csv",
+        "mediatype": "text/csv",
+        "schema": {
+            "fields": [
+            {
+                "name": "Pos.",
+                "type": "number",
+                "description": "Position in ranking"
+            },{
+                "name": "Team",
+                "type": "string",
+                "description": ""
+            }, {
+                "name": "G",
+                "description": "group",
+                "type": "string"
+            },{
+                "name": "Pld",
+                "description": "",
+                "type": "string"
+            }, {
+                "name": "W",
+                "description": "Wins",
+                "type": "number"
+            }, {
+                "name": "D",
+                "description": "Draw",
+                "type": "number"
+            }, {
+                "name": "L",
+                "description": "Loss",
+                "type": "number"
+            }, {
+                "name": "Pts",
+                "description": "points",
+                "type": "number"
+            }, {
+                "name": "GF",
+                "description": "Goals Favor", 
+                "type": "number"
+            }, {
+                "name": "GA",
+                "description": "Goals against",
+                "type": "number"
+            }, {
+                "name": "GD",
+                "description": "GoalDifference",
+                "type": "number"
+            },  {
+                "name": "CS",
+                "description": "CleanSheets",
+                "type": "number"
+            }]
+        }
+    }]
+}     
+}

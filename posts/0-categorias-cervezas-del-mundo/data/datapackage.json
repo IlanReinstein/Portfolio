@@ -1,0 +1,92 @@
+{
+    "name": "world-beers",
+    "title": "Data about breweries and beers of the world. Data manipulation can be found here https://gist.github.com/IlanReinstein/2a6684eab329ee60eb74. ",
+    "license": "PDDL-1.0",
+    "keywords": ["Companies", "Beer", "Breweries"],
+    "last_updated": "2014-08-06",
+    "last_update_comment": "",
+    "sources": [{
+        "name": "Open Beer Database",
+        "web": "http://www.openbeerdb.com"
+        }
+    ],
+    "resources": [{
+        "name": "beer",
+        "path": "beers.csv",
+        "format": "csv",
+        "mediatype": "text/csv",
+        "schema": {
+            "fields": [{
+                "name": "id",
+                "description": ""
+            }, {
+                "name": "brewery_id",
+                "description": ""
+            }, {
+                "name": "name",
+                "description": ""
+            }, {
+                "name": "cat_id",
+                "description": "Category"
+            }, {
+                "name": "style_id",
+                "description": "style"
+            }, {
+                "name": "abv",
+                "description": "alcohol volume"
+            }]
+        }
+    },{
+        "name": "breweries",
+        "path": "brew.csv",
+        "format": "csv",
+        "mediatype": "text/csv",
+        "schema": {
+            "fields": [{
+                "name": "id",
+                "description": ""
+            }, {
+                "name": "name",
+                "description": ""
+            }, {
+                "name": "country",
+                "description": ""
+            }]
+        }
+    },{
+        "name": "styles",
+        "path": "styles.csv",
+        "format": "csv",
+        "mediatype": "text/csv",
+        "schema": {
+            "fields": [{
+                "name": "id",
+                "description": ""
+            }, {
+                "name": "cat_id",
+                "description": ""
+            }, {
+                "name": "style_name",
+                "description": ""
+            }]
+        }
+    },{
+        "name": "categories",
+        "path": "cats.csv",
+        "format": "csv",
+        "mediatype": "text/csv",
+        "schema": {
+            "fields": [{
+                "name": "id",
+                "description": ""
+            }, {
+                "name": "cat_name",
+                "description": ""
+            }]
+        }
+    }]
+}
+
+
+
+

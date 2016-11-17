@@ -1,0 +1,21 @@
+{
+    "title": "¿Qué tan estable ha sido la economía de EE.UU. y el Reino Unido en la historia?",
+    "description": "En este post analizamos el patrimonio, el ingreso nacional de estos dos países y otros indicadores.",
+    "author": "ilanreinstein",
+    "thumbnail": "details_files/figure-html/wealth2.png",
+    "language": "es",
+    "date": "2014-08-15",
+    "tags":["US","UK","economic"],
+    "production": "true",
+    "inquiries": [{
+        "text": "¿Cómo ha evolucionado la población?"
+    }, {
+        "text": "¿Cuál ha sido el ingreso nacional en la historia?"
+    }, {
+        "text": "¿Cuál ha sido el patrimonio privado??"
+    }, {
+        "text": "¿Cuál ha sido el ingreso per cápita?"
+    }, {
+        "text": "¿Cuál ha sido el patrimonio per cápita?"
+    }]
+}

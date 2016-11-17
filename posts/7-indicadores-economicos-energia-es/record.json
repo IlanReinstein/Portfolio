@@ -1,0 +1,25 @@
+{
+    "title": "¿Cómo afecta la electricidad a la economía de un país?",
+    "description": "Examinamos distintas variables importantes del sector energético.",
+    "author": "ilanreinstein",
+    "thumbnail": "details_files/figure-html/intensVScons1.png",
+    "language": "es",
+    "date": "2014-09-01",
+    "tags": [
+        "latinamerica",
+        "energy",
+        "economic"
+    ],
+    "production": "true",
+    "inquiries": [
+        {
+            "text": "¿Cuál es la intensidad de energía en Latino Amércia y el Caribe?"
+        },
+        {
+            "text": "¿Cuál es el consumo per capita?"
+        },
+        {
+            "text": "¿Qué relación hay entre el consumo y la intensidad?"
+        }
+    ]
+}

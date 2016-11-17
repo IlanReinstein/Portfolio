@@ -1,0 +1,21 @@
+{
+    "title": "What is the social condition of the  participating countries in the World Cup?",
+    "description": "In this blogpost we will be using socio-economic data to analyze a little bit further each of the competing countries in the WC.",
+    "author": "ilanreinstein",
+    "thumbnail": "details_files/figure-html/GDPvsFIFA.png",
+    "language": "en",
+    "date": "2014-07-30",
+    "tags": ["World cup", "countries", "social"],
+    "production": "true",
+    "inquiries": [{
+        "text": "What is the population in the participating countries?"
+    }, {
+        "text": "What is the income per capita in the participating countries?"
+    }, {
+        "text": "What is the relation between the income rank and the FIFA rank?"
+    }, {
+        "text": "What is the relation between the human development rank and the FIFA rank?"
+    }, {
+        "text": "What is the corruption rank in each country given the stability (violence) and its development?"
+    }]
+}

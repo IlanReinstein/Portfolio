@@ -1,0 +1,150 @@
+{
+    "name": "socialWorldcup",
+    "title": "Data about economic indices for the 32 countries in the World Cup",
+    "license": "PDDL-1.0",
+    "keywords": ["Companies", "Mexico"],
+    "last_updated": "2014-07-01",
+    "last_update_comment": "",
+    "sources": [{
+        "name": "Forbes",
+        "web": "http://www.forbes.com/sites/prishe/2014/06/05/2014-fifa-world-cup-how-connected-is-a-countrys-soccer-and-economic-prominence/"
+    }, {
+        "name": "Freedom House",
+        "web": "http://www.freedomhouse.org/report-types/freedom-press#.U3C26IFdVp0"
+    }, {
+        "name": "CPI",
+        "web": "http://cpi.transparency.org/cpi2013/in_detail/"
+    }, {
+        "name": "Databank",
+        "web": "http://databank.worldbank.org/data/views/reports/tableview.aspx"
+    }, {
+        "name": "Oxfam inequality-world-cup",
+        "web": "http://www.oxfam.org.uk/what-we-do/issues-we-work-on/inequality-world-cup"
+    }, {
+        "name": "income-distribution-database",
+        "web": "www.oecd.org/social/income-distribution-database.htm"
+    }, {
+        "name": "Fifa Rank",
+        "web": "http://www.fifa.com/worldcup/teams/index.html"
+    }, {
+        "name": "Cleveland datacentral",
+        "web": "http://www.cleveland.com/datacentral/index.ssf/2014/06/19_billion_reasons_why_the_201.html"
+    }],
+    "resources": [{
+        "name": "data",
+        "path": "data.csv",
+        "format": "csv",
+        "mediatype": "text/csv",
+        "schema": {
+            "fields": [{
+                "name": "Country",
+                "description": "",
+                "type": "character"
+            }, {
+                "name": "TeamInfo",
+                "description": "",
+                "type": "character"
+            }, {
+                "name": "FIFARank",
+                "description": "",
+                "type": "number"
+            }, {
+                "name": "PALMA",
+                "description": "Palma index",
+                "type": "number"
+            }, {
+                "name": "GDP",
+                "description": "Income per capita",
+                "type": "number"
+            }, {
+                "name": "HDI",
+                "description": "Human development index",
+                "type": "number"
+            }, {
+                "name": "Gender gap",
+                "description": "",
+                "type": "number"
+            }, {
+                "name": "Obesity",
+                "description": "",
+                "type": "number"
+            }, {
+                "name": "Press",
+                "description": "Freedom of press",
+                "type": "number"
+            }, {
+                "name": "Stability",
+                "description": "Stability and violence",
+                "type": "number"
+            }, {
+                "name": "Corruption",
+                "description": "corruption ranking",
+                "type": "number"
+            }]
+        }
+    }, {
+        "name": "GDP",
+        "path": "gdpRank.csv",
+        "format": "csv",
+        "mediatype": "text/csv",
+        "schema": {
+            "fields": [{
+                "name": "Country",
+                "description": "",
+                "type": "character"
+            }, {
+                "name": "FIFARank2014",
+                "description": "",
+                "type": "number"
+            }, {
+                "name": "GDP/cap",
+                "description": "Income per capita",
+                "type": "number"
+            }, {
+                "name": "GDP",
+                "description": "ranking",
+                "type": "number"
+            }, {
+                "name": "Popl",
+                "description": "ranking",
+                "type": "number"
+            }, {
+                "name": "WC Gini",
+                "description": "GINI index",
+                "type": "number"
+            }, {
+                "name": "GDP",
+                "description": "In billions of dollars",
+                "type": "number"
+            }, {
+                "name": "Population",
+                "description": "",
+                "type": "number"
+            }]
+        }
+    }, {
+        "name": "corrup",
+        "path": "corrup.csv",
+        "format": "csv",
+        "mediatype": "text/csv",
+        "schema": {
+            "fields": [{
+                "name": "Country",
+                "description": "",
+                "type": "character"
+            }, {
+                "name": "WB code",
+                "description": "Country code by world bank",
+                "type": "character"
+            }, {
+                "name": "CPI 2013 score",
+                "description": "corruption index",
+                "type": "number"
+            }, {
+                "name": "Country rank",
+                "description": "ranking",
+                "type": "number"
+            }]
+        }
+    }]
+}

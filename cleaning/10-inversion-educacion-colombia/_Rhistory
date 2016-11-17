@@ -1,0 +1,512 @@
+str(Cz)
+index(Cz) <- Cz[,2]
+Cz_approx <- na.approx(Cz)
+Cz[,2]
+Cz <- zoo(C[,4])
+Cz
+Cz_approx <- na.approx(Cz, na.rm = F)
+Cz_approx
+Cz <- zoo(C)
+Cz
+index(Cz) <- Cz[,4]
+Cz_approx <- na.approx(Cz, na.rm = F)
+Cz_approx <- na.approx(Cz)
+str(Cz)
+Cz <- zoo(C[,5])
+str(Cz)
+Cz[,2]
+index(Cz) <- Cz[,1]
+Cz[,1]
+Cz[,2
+Cz[,2]
+Cz[,2]
+Cz
+Cz <- zoo(C)
+Cz
+Cz <- zoo(C[,5])
+Cz_approx <- na.approx(Cz)
+Cz_approx <- na.approx(Cz, na.rm = F)
+Cz_approx
+Cz_approx <- na.approx(Cz, na.rm = F)
+Cz_approx <- na.approx(Cz, na.rm = F)
+Cz_approx <- na.approx(Cz, na.rm = F)
+Cz_approx <- na.approx(Cz, na.rm = F)
+Cz_approx <- na.approx(Cz, na.rm = F)
+Cz_approx
+Cz <- na.approx(C[,4],C[,5], na.rm = F)
+Cz
+Cz <- na.approx(C[,5], C[,4], na.rm = F)
+Cz
+Cz <- na.approx(C[,5], na.rm = F)
+Cz
+x <- 1:30; y <- c(rnorm(25) + 1:25, rep(NA, 5)) #generate data with NAs
+df1 <- data.frame(x, y)                         #combine into data frame
+lmx <- lm(y~x, data=df1)                        #create model to predict from
+ndf <- data.frame(x=1:30)                       #create data to predict to
+df1$fit <- predict(lmx, newdata=ndf)            #get predictions
+df1$y2 <- with(df1, ifelse(is.na(y) == T, fit, y))
+df1 <- data.frame(x, y)                         #combine into data frame
+View(df1)
+lmx <- lm(y~x, data=df1)                        #create model to predict from
+lmx
+ndf <- data.frame(x=1:30)                       #create data to predict to
+ndf
+df1$fit <- predict(lmx, newdata=ndf)            #get predictions
+View(df1)
+df1$y2 <- with(df1, ifelse(is.na(y) == T, fit, y))
+View(df1)
+lmx <- lm(C[,4]~C[,5], data=C)                        #create model to predict from
+ndf <- data.frame(x=1:55)                       #create data to predict to
+C$fit <- predict(lmx, newdata=ndf)            #get predictions
+C$y2 <- with(C, ifelse(is.na(C[,4]) == T, fit, C[,4]))
+View(C)
+C$y2 <- with(C, ifelse(is.na(C[,5]) == T, fit, C[,5]))
+lmx <- lm(C[,5]~C[,4], data=C)                        #create model to predict from
+ndf <- data.frame(x=1:55)                       #create data to predict to
+C$fit <- predict(lmx, newdata=ndf)            #get predictions
+C$y2 <- with(C, ifelse(is.na(C[,5]) == T, fit, C[,5]))
+View(C)
+lmx <- lm(C[,4]~C[,5], data=C)                        #create model to predict from
+ndf <- data.frame(x=1:55)                       #create data to predict to
+C$fit1 <- predict(lmx, newdata=ndf)            #get predictions
+C$y3 <- with(C, ifelse(is.na(C[,4]) == T, fit, C[,4]))
+View(C)
+str(C)
+source('~/.active-rstudio-document', echo=TRUE)
+View(C)
+C <- C[21:nrow(C),]
+Cz <- na.approx(C[,5])
+Cz
+C[,5] <- na.approx(C[,5])
+C <- C[21:53,]
+C[,5] <- na.approx(C[,5])
+C <- rbind(d,d2)
+C <- dcast(C, ...~indicator)
+C <- C[21:53,]
+C[,5] <- na.approx(C[,5])
+View(C)
+dp <- newDatapkg(d = list(C, d1))
+writeDatapackage(dp, path = 'data/')
+source('~/.active-rstudio-document', echo=TRUE)
+df <- read.csv('data/table1.csv', header = T)
+df2 <- read.csv('data/table2.csv', header = T)
+library(reshape2)
+library(knitr)
+library(plyr)
+library(ggplot2)
+library(scales)
+options(scipen = 10)
+df <- read.csv('data/table1.csv', header = T)
+df2 <- read.csv('data/table2.csv', header = T)
+View(df)
+View(df2)
+d <- read.csv('data/original/ny.gdp.mktp.cd_Indicator_en_csv_v2.csv', header = T)
+d1 <- read.csv('data/original/education.csv', header = T)
+d1 <- d1[379:nrow(d1),]
+dp <- newDatapkg(d1)
+writeDatapackage(dp, path = 'data/')
+df <- read.csv('data/table1.csv', header = T)
+View(df)
+d1 <- d1[380:nrow(d1),]
+dp <- newDatapkg(d = d1)
+writeDatapackage(dp, path = 'data/')
+df <- read.csv('data/table1.csv', header = T)
+df2 <- read.csv('data/table2.csv', header = T)
+View(df)
+View(df2)
+View(df)
+source('~/Documents/aeRepos/datablog/content/sandbox/ilanreinstein/educacion-colombia/ext/script.R', echo=TRUE)
+source('~/Documents/aeRepos/datablog/content/sandbox/ilanreinstein/educacion-colombia/ext/script2.R', echo=TRUE)
+library(reshape2)
+library(knitr)
+library(plyr)
+library(ggplot2)
+library(scales)
+options(scipen = 10)
+df <- read.csv('data/table1.csv', header = T)
+df2 <- read.csv('data/table2.csv', header = T)
+View(df)
+View(df2)
+View(df)
+View(df2)
+View(df)
+View(df2)
+A <- dcast(df2,...~indicator)
+ggplot(df, aes(year, eduPerc, colour = president)) + geom_line() + theme_bw() + scale_colour_brewer(palette = 'Set1') + labs(y = 'Inversion en Educacion, US$')
+ggplot(df, aes(year, eduPerc, colour = presidents)) + geom_line() + theme_bw() + scale_colour_brewer(palette = 'Set1') + labs(y = 'Inversion en Educacion, US$')
+View(df)
+ggplot(df, aes(year, eduPerc, colour = presidents)) + geom_path() + theme_bw() + scale_colour_brewer(palette = 'Set1') + labs(y = 'Inversion en Educacion, US$')
+ggplot(df, aes(year, eduPerc)) + geom_path() + theme_bw() + scale_colour_brewer(palette = 'Set1') + labs(y = 'Inversion en Educacion, US$')
+```
+levels(df2$Indicator)
+levels(df2$Indicator) <- c('Primary', 'PrimaryGDP','Secondary','SecondaryGDP','Tertiary','TertiaryGDP')
+ggplot(df, aes(year, value, fill = Indicator)) + geom_area() + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(df, aes(year, Value, fill = Indicator)) + geom_area() + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(df2, aes(year, Value, fill = Indicator)) + geom_area() + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_area() + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+View(df2)
+df2 <- df2[1:37,]
+View(df2)
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_area() + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_line() + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(df2, aes(Time, Value, colour = Indicator)) + geom_line() + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(df2, aes(Time, Value, colour = Indicator)) + geom_ribbon() + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(df2, aes(Time, Value, colour = Indicator)) + geom_linerange() + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(df2, aes(Time, Value, colour = Indicator)) + geom_area() + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(df2, aes(Time, Value, colour = Indicator)) + geom_polygon() + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(df2, aes(Time, Value, colour = Indicator)) + geom_area() + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(df2, aes(Time, Value, colour = Indicator)) + geom_density() + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(df, aes(year, eduPerc, group = presidents)) + geom_path() + theme_bw() + scale_colour_brewer(palette = 'Set1') + labs(y = 'Inversion en Educacion, US$')
+ggplot(df, aes(year, eduPerc, group = 1, colour = presdeints)) + geom_path() + theme_bw() + scale_colour_brewer(palette = 'Set1') + labs(y = 'Inversion en Educacion, US$')
+ggplot(df, aes(year, eduPerc, group = 1, colour = presidents)) + geom_path() + theme_bw() + scale_colour_brewer(palette = 'Set1') + labs(y = 'Inversion en Educacion, US$')
+ggplot(df, aes(year, eduPerc, group = 1, colour = presidents)) + geom_path() + theme_bw() + scale_colour_brewer(palette = 'Spectral') + labs(y = 'Inversion en Educacion, US$')
+ggplot(df, aes(year, eduPerc, group = 1, colour = presidents)) + geom_path() + theme_bw() + scale_colour_brewer(palette = 'Spet1') + labs(y = 'Inversion en Educacion, US$')
+ggplot(df, aes(year, eduPerc, group = 1, colour = presidents)) + geom_path() + theme_bw() + scale_colour_brewer(palette = 'Set1') + labs(y = 'Inversion en Educacion, US$')
+ggplot(df2, aes(Time, Value, colour = Indicator)) + geom_density() + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$') + scale_x_discrete(breaks = seq(1999,2012,3))
+ggplot(df2, aes(Time, Value, colour = Indicator)) + geom_area() + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$') + scale_x_discrete(breaks = seq(1999,2012,3))
+ggplot(df2, aes(Time, Value, colour = Indicator)) + geom_area() + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$') + scale_x_discrete()
+ggplot(df2, aes(Time, Value, colour = Indicator)) + geom_area() + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$') + scale_x_continuous()
+ggplot(df2, aes(Time, Value, colour = Indicator)) + geom_area() + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$') + scale_x_continuous(breaks = seq(1999,2012,3))
+ggplot(df2, aes(Time, Value, colour = Indicator)) + geom_area(position = 'dodge') + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$') + scale_x_continuous(breaks = seq(1999,2012,3))
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_area(position = 'dodge') + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$') + scale_x_continuous(breaks = seq(1999,2012,3))
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_area(position = 'dodge',alpha = 0.5) + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$') + scale_x_continuous(breaks = seq(1999,2012,3))
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_area(position = 'dodge',alpha = 0.5) + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_area(position = position_stack(), alpha = 0.5) + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_area(position = position_fill(), alpha = 0.5) + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_area(position = position_dodge(), alpha = 0.5) + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_area(position = position_identity(), alpha = 0.5) + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_area(position = position_identity(), alpha = 0) + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_area(position = position_identity(), alpha = 1) + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_area(position = position_identity(), alpha = 0.6) + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+df2$Indicator <- factor(df2$Indicator,levels = df2$Indicator,ordered = T)
+df2$Indicator <- factor(df2$Indicator,levels = df2$Indicator,ordered = T)
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_area(position = position_stack(), alpha = 0.6) + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+leveles(df2$Indicator)
+levels(df2$Indicator)
+df2$Indicator <- factor(df2$Indicator)
+str(df2)
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_area(position = position_stack(), alpha = 0.6) + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_area(position = position_indentity(), alpha = 0.6) + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_area(position = position_dodge(), alpha = 0.6) + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+reorder(df2$Indicator)
+reorder(df2$Indicator, df2$Value)
+df2$Indicator <- reorder(df2$Indicator, df2$Value)
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_area(position = position_dodge(), alpha = 0.6) + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_area(position = position_dodge(), alpha = 1) + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+View(df2)
+df2$Indicator <- factor(df2$Indicator,as.character(df2$Indicator))
+df2$Indicator <- ordered(df2$Indicator, levels = c('PrimaryGDP','SecondaryGDP','TertiaryGDP'))
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_area(position = position_dodge(), alpha = 1) + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+df2$Indicator <- ordered(df2$Indicator, levels = c('TertiaryGDP','PrimaryGDP','SecondaryGDP'))
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_area(position = position_dodge(), alpha = 1) + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_area(position = position_dodge(), alpha = 0.7) + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+df2$Indicator <- ordered(df2$Indicator, levels = c('TertiaryGDP','SecondaryGDP','PrimaryGDP'))
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_area(position = position_dodge(), alpha = 0.7) + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+'SecondaryGDP'
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_area(position = position_dodge(), alpha = 0.7) + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+df2$Indicator <- ordered(df2$Indicator, levels = c('TertiaryGDP','PrimaryGDP','SecondaryGDP'))
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_area(position = position_dodge(), alpha = 0.7) + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_area(position = position_dodge(), alpha = 0.6) + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_area(position = position_dodge(), alpha = 0.6) + scale_fill_brewer(palette = 'Set2', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_area(position = position_dodge(), alpha = 0.6) + scale_fill_brewer(palette = 'Spectral', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_area(position = position_dodge(), alpha = 0.6) + scale_fill_brewer(palette = 'Spectral', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_area(position = position_dodge(), alpha = 0.6) + scale_fill_brewer(palette = 'Set2', name = 'Nivel Educativo', labels = c('Primaria', 'Secundaria', 'Terciario')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_area(position = position_dodge(), alpha = 0.6) + scale_fill_brewer(palette = 'Set2', name = 'Nivel Educativo', labels = c('Terciaria', 'Primaria', 'Secundaria')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_area(position = 'stack', alpha = 0.6) + scale_fill_brewer(palette = 'Set2', name = 'Nivel Educativo', labels = c('Terciaria', 'Primaria', 'Secundaria')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_area(position = 'stack', alpha = 1) + scale_fill_brewer(palette = 'Set2', name = 'Nivel Educativo', labels = c('Terciaria', 'Primaria', 'Secundaria')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(df2, aes(Time, Value, fill = Indicator, group = 1)) + geom_area(position = 'stack', alpha = 1) + scale_fill_brewer(palette = 'Set2', name = 'Nivel Educativo', labels = c('Terciaria', 'Primaria', 'Secundaria')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(df2, aes(Time, Value, fill = Indicator, group = 3)) + geom_area(position = 'stack', alpha = 1) + scale_fill_brewer(palette = 'Set2', name = 'Nivel Educativo', labels = c('Terciaria', 'Primaria', 'Secundaria')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(df2, aes(Time, Value, fill = Indicator) + geom_ribbon(position = 'stack', alpha = 1) + scale_fill_brewer(palette = 'Set2', name = 'Nivel Educativo', labels = c('Terciaria', 'Primaria', 'Secundaria')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_ribbon(position = 'stack', alpha = 1) + scale_fill_brewer(palette = 'Set2', name = 'Nivel Educativo', labels = c('Terciaria', 'Primaria', 'Secundaria')) + theme_bw() + labs(y = 'Inversion por estudiante, % de PIB en US$')
+A <- dcast(df2,...~Indicator)
+df2 <- df2[,-5]
+A <- dcast(df2,...~Indicator)
+View(A)
+library(zoo)
+A$TertiaryGDP <- na.approx(A$TertiaryGDP)
+A$SecondaryGDP <- na.approx(A$SecondaryGDP)
+View(A)
+ggplot(df2, aes(Time)) + geom_area(aes(TertiaryGDP),position = 'stack', alpha = 1) + geom_area(aes(SecondaryGDP),position = 'stack', alpha = 1) + geom_area(aes(PrimaryGDP),position = 'stack', alpha = 1) + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(A, aes(Time)) + geom_area(aes(TertiaryGDP),position = 'stack', alpha = 1) + geom_area(aes(SecondaryGDP),position = 'stack', alpha = 1) + geom_area(aes(PrimaryGDP),position = 'stack', alpha = 1) + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(A, aes(Time)) + geom_area(aes(y = TertiaryGDP),position = 'stack', alpha = 1) + geom_area(aes(y = SecondaryGDP),position = 'stack', alpha = 1) + geom_area(aes(y = PrimaryGDP),position = 'stack', alpha = 1) + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(A, aes(Time)) + geom_area(aes(y = TertiaryGDP),position = 'stack', alpha = 1, colour = '#3399FF') + geom_area(aes(y = SecondaryGDP),position = 'stack', alpha = 1) + geom_area(aes(y = PrimaryGDP),position = 'stack', alpha = 1) + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(A, aes(Time)) + geom_area(aes(y = TertiaryGDP),position = 'stack', alpha = 1, fill = '#3399FF') + geom_area(aes(y = SecondaryGDP),position = 'stack', alpha = 1, fill = '#0033FF') + geom_area(aes(y = PrimaryGDP),position = 'stack', alpha = 1) + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(A, aes(Time)) + geom_area(aes(y = TertiaryGDP),position = 'stack', alpha = 1, fill = '#3399FF') + geom_area(aes(y = SecondaryGDP),position = 'stack', alpha = 1, fill = '#FF33FF') + geom_area(aes(y = PrimaryGDP),position = 'stack', alpha = 1) + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(A, aes(Time)) + geom_area(aes(y = TertiaryGDP),position = 'stack', alpha = 1, fill = '#3399FF') + geom_area(aes(y = SecondaryGDP),position = 'stack', alpha = 1, fill = '#FF3300') + geom_area(aes(y = PrimaryGDP),position = 'stack', alpha = 1) + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(A, aes(Time)) + geom_area(aes(y = TertiaryGDP),position = 'stack', alpha = 1, fill = '#3399FF') + geom_area(aes(y = SecondaryGDP),position = 'stack', alpha = 1, fill = '#FF3300') + geom_area(aes(y = PrimaryGDP),position = 'stack', alpha = 1, fill = '#00CC66') + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(A, aes(Time)) + geom_area(aes(y = TertiaryGDP),position = 'stack', alpha = 1, fill = '#3399FF') + geom_area(aes(y = SecondaryGDP),position = 'stack', alpha = 1, fill = '#FF3300') + geom_area(aes(y = PrimaryGDP),position = 'stack', alpha = 0.8, fill = '#00CC66') + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(A, aes(Time)) + geom_area(aes(y = TertiaryGDP),position = 'stack', alpha = 1, fill = '#3399FF') + geom_area(aes(y = SecondaryGDP),position = 'stack', alpha = 0.8, fill = '#FF3300') + geom_area(aes(y = PrimaryGDP),position = 'stack', alpha = 0.8, fill = '#00CC66') + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(A, aes(Time)) + geom_area(aes(y = TertiaryGDP),position = 'jitter', alpha = 1, fill = '#3399FF') + geom_area(aes(y = SecondaryGDP),position = 'jitter', alpha = 0.8, fill = '#FF3300') + geom_area(aes(y = PrimaryGDP),position = 'jitter', alpha = 0.8, fill = '#00CC66') + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(A, aes(Time)) + geom_area(aes(y = TertiaryGDP),position = 'dodge', alpha = 1, fill = '#3399FF') + geom_area(aes(y = SecondaryGDP),position = 'dodge', alpha = 0.8, fill = '#FF3300') + geom_area(aes(y = PrimaryGDP),position = 'dodge', alpha = 0.8, fill = '#00CC66') + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(A, aes(Time)) + geom_area(aes(y = TertiaryGDP),position = position_stack(), alpha = 1, fill = '#3399FF') + geom_area(aes(y = SecondaryGDP),position = posistion_stack(), alpha = 0.8, fill = '#FF3300') + geom_area(aes(y = PrimaryGDP),position = position_stack(), alpha = 0.8, fill = '#00CC66') + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(A, aes(Time)) + geom_area(aes(y = TertiaryGDP),position = position_stack(), alpha = 1, fill = '#3399FF') + geom_area(aes(y = SecondaryGDP),position = position_stack(), alpha = 0.8, fill = '#FF3300') + geom_area(aes(y = PrimaryGDP),position = position_stack(), alpha = 0.8, fill = '#00CC66') + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(A, aes(Time)) + geom_area(aes(y = TertiaryGDP),position = position_stack(), alpha = 1, fill = '#3399FF') + geom_area(aes(y = SecondaryGDP),position = position_stack(), alpha = 0.8, fill = '#FF3300') + geom_area(aes(y = PrimaryGDP),position = position_stack(), alpha = 0.8, fill = '#00CC66') + labs(y = 'Inversion por estudiante, % de PIB en US$') + scale_y_log10()
+ggplot(A, aes(Time)) + geom_area(aes(y = TertiaryGDP),position = position_stack(), alpha = 1, fill = '#3399FF',stat = 'ribbon') + geom_area(aes(y = SecondaryGDP),position = position_stack(), alpha = 0.8, fill = '#FF3300') + geom_area(aes(y = PrimaryGDP),position = position_stack(), alpha = 0.8, fill = '#00CC66') + labs(y = 'Inversion por estudiante, % de PIB en US$') + scale_y_log10()
+ggplot(A, aes(Time)) + geom_area(aes(y = TertiaryGDP),position = position_stack(), alpha = 1, fill = '#3399FF',stat = 'stack') + geom_area(aes(y = SecondaryGDP),position = position_stack(), alpha = 0.8, fill = '#FF3300') + geom_area(aes(y = PrimaryGDP),position = position_stack(), alpha = 0.8, fill = '#00CC66') + labs(y = 'Inversion por estudiante, % de PIB en US$') + scale_y_log10()
+df2 <- ddply(df2, .(Indicator), transform, DomAreaByCat = order(Value))
+ggplot(B, aes(Time, Value, fill = Indicator)) + geom_area(position = 'stack')
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_area(position = 'stack')
+View(df2)
+ggplot(df2, aes(DomAreaByCat, Value, fill = Indicator)) + geom_area(position = 'stack')
+ggplot(df2, aes(Time, Value, fill = Indicator)) + geom_area(position = 'stack')
+df <- read.csv('data/table1.csv', header = T)
+df2 <- read.csv('data/table2.csv', header = T)
+df2 <- df2[,-5]
+levels(df2$Indicator) <- c('Primary', 'PrimaryGDP','Secondary','SecondaryGDP','Tertiary','TertiaryGDP')
+View(df2)
+df2 <- df2[38:nrow(df2),]
+A <- dcast(df2,...~Indicator)
+View(A)
+A$Tertiary <- na.approx(A$Tertiary)
+A$Secondary <- na.approx(A$Secondary)
+ggplot(A, aes(Time)) + geom_area(aes(y = TertiaryGDP),position = position_stack(), alpha = 1, fill = '#3399FF',stat = ) + geom_area(aes(y = SecondaryGDP),position = position_stack(), alpha = 0.8, fill = '#FF3300') + geom_area(aes(y = PrimaryGDP),position = position_stack(), alpha = 0.8, fill = '#00CC66') + labs(y = 'Inversion por estudiante, % de PIB en US$') + scale_y_log10()
+ggplot(A, aes(Time)) + geom_area(aes(y = Tertiary),position = position_stack(), alpha = 1, fill = '#3399FF',stat = ) + geom_area(aes(y = Secondary),position = position_stack(), alpha = 0.8, fill = '#FF3300') + geom_area(aes(y = Primary),position = position_stack(), alpha = 0.8, fill = '#00CC66') + labs(y = 'Inversion por estudiante, % de PIB en US$') + scale_y_log10()
+View(A)
+ggplot(A, aes(Time)) + geom_area(aes(y = Tertiary),position = position_stack(), alpha = 1, fill = '#3399FF',stat = ) + geom_area(aes(y = Secondary),position = position_stack(), alpha = 0.8, fill = '#FF3300') + geom_area(aes(y = Primary),position = position_stack(), alpha = 0.8, fill = '#00CC66') + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(A, aes(Time)) + geom_area(aes(y = Tertiary),position = position_stack(), alpha = 1, fill = '#3399FF',stat = )+ geom_area(aes(y = Primary),position = position_stack(), alpha = 0.8, fill = '#00CC66') + geom_area(aes(y = Secondary),position = position_stack(), alpha = 0.8, fill = '#FF3300')  + labs(y = 'Inversion por estudiante, % de PIB en US$')
+ggplot(A, aes(Time)) + geom_line(aes(y = Tertiary),position = position_stack(), alpha = 1, fill = '#3399FF',stat = )+ geom_line(aes(y = Primary),position = position_stack(), alpha = 0.8, fill = '#00CC66') + geom_line(aes(y = Secondary),position = position_stack(), alpha = 0.8, fill = '#FF3300')  + labs(y = 'Inversion por estudiante, % de PIB en US$')
+df <- read.csv('data/table1.csv', header = T)
+df2 <- read.csv('data/table2.csv', header = T)
+View(df)
+View(df2)
+df2 <- df2[,-5]
+levels(df2$Indicator) <- c('Primary', 'PrimaryGDP','Secondary','SecondaryGDP','Tertiary','TertiaryGDP')
+df2 <- df2[38:nrow(df2),]
+A <- dcast(df2,...~Indicator)
+View(A)
+df <- read.csv('data/table1.csv', header = T)
+df2 <- read.csv('data/table2.csv', header = T)
+df2 <- df2[,-5]
+levels(df2$Indicator) <- c('Primary', 'PrimaryGDP','Secondary','SecondaryGDP','Tertiary','TertiaryGDP')
+df2 <- df2[1:37,]
+A <- dcast(df2,...~Indicator)
+View(A)
+newRow <- c('Colombia',2003, NA,NA, NA)
+rbind(A,newRow)
+A <- A[order(A$Time),]
+View(A)
+View(A)
+str(A)
+A <- A[order(A$Time),]
+df <- read.csv('data/table1.csv', header = T)
+df2 <- read.csv('data/table2.csv', header = T)
+df2 <- df2[,-5]
+levels(df2$Indicator) <- c('Primary', 'PrimaryGDP','Secondary','SecondaryGDP','Tertiary','TertiaryGDP')
+df2 <- df2[1:37,]
+A <- dcast(df2,...~Indicator)
+newRow <- c('Colombia',2003, NA,NA, NA)
+rbind(A,newRow)
+A <- rbind(A,newRow)
+A <- A[order(A$Time),]
+View(A)
+A$PrimaryGDP <- na.approx(A$PrimaryGDP)
+A$TertiaryGDP <- na.approx(A$TertiaryGDP)
+A$SecondaryGDP <- na.approx(A$SecondaryGDP)
+View(A)
+df3 <- melt(A, id = ('Country','Time'))
+df3 <- melt(A, id = c('Country','Time'))
+View(df3)
+ggplot(df3, aes(Time,value,fill=variable)) + geom_line(position = position_stack(), alpha = 1)+ labs(y = 'Inversion por estudiante, % de PIB en US$') + scale_fill_brewer(palette = 'Set1')
+ggplot(df3, aes(Time, value, fill=variable)) + geom_area(position = position_stack(), alpha = 1) + labs(y = 'Inversion por estudiante, % de PIB en US$') + scale_fill_brewer(palette = 'Set1')
+ggplot(df3, aes(Time, value, fill=variable)) + geom_area(position = position_stack(), alpha = 1) + labs(y = 'Inversion por estudiante, % de PIB en US$') + scale_fill_brewer(palette = 'Set1') + theme_bw()
+ggplot(df3, aes(Time, value, fill=variable)) + geom_area(position = 'stack', alpha = 1) + labs(y = 'Inversion por estudiante, % de PIB en US$') + scale_fill_brewer(palette = 'Set1') + theme_bw
+ggplot(df3, aes(Time, value, fill=variable)) + geom_area(position = 'stack', alpha = 1) + labs(y = 'Inversion por estudiante, % de PIB en US$') + scale_fill_brewer(palette = 'Set1') + theme_bw()
+ggplot(df3, aes(Time, value, fill=variable)) + geom_area(alpha = 1) + labs(y = 'Inversion por estudiante, % de PIB en US$') + scale_fill_brewer(palette = 'Set1') + theme_bw()
+str(df3)
+df3$Time <- as.integer(df3$Time)
+ggplot(df3, aes(Time, value, fill=variable)) + geom_area(position = 'stack',alpha = 1) + labs(y = 'Inversion por estudiante, % de PIB en US$') + scale_fill_brewer(palette = 'Set1') + theme_bw()
+ggplot(df3, aes(Time, value, fill=variable)) + geom_area(position = 'stack') + labs(y = 'Inversion por estudiante, % de PIB en US$') + scale_fill_brewer(palette = 'Set1', ymax = 40) + theme_bw()
+ggplot(df3, aes(Time, value, fill=variable)) + geom_area(position = 'stack') + labs(y = 'Inversion por estudiante, % de PIB en US$') + scale_fill_brewer(palette = 'Set1') + theme_bw() + scale_y_log10()
+ggplot(df3, aes(Time, value, fill=variable)) + geom_area(position = 'stack') + labs(y = 'Inversion por estudiante, % de PIB en US$') + scale_fill_brewer(palette = 'Set1') + theme_bw() + scale_y_log2()
+ggplot(df3, aes(Time, value, fill=variable)) + geom_area(position = 'stack') + labs(y = 'Inversion por estudiante, % de PIB en US$') + scale_fill_brewer(palette = 'Set1') + theme_bw() + scale_y_discrete()
+ggplot(df3, aes(Time, value, fill=variable)) + geom_area(position = 'stack') + labs(y = 'Inversion por estudiante, % de PIB en US$') + scale_fill_brewer(palette = 'Set1') + theme_bw() + scale_y_continuous(ylim = 40)
+ggplot(df3, aes(Time, value, fill=variable)) + geom_area(position = 'stack') + labs(y = 'Inversion por estudiante, % de PIB en US$') + scale_fill_brewer(palette = 'Set1') + theme_bw() + scale_y_continuous(ymax = 40)
+ggplot(df3, aes(Time, value, fill=variable)) + geom_area(position = 'stack') + labs(y = 'Inversion por estudiante, % de PIB en US$') + scale_fill_brewer(palette = 'Set1') + theme_bw()
+ggplot(df3, aes(Time, value, fill=variable)) + geom_area(aes(y = ..count../sum(..count..)),position = 'stack') + labs(y = 'Inversion por estudiante, % de PIB en US$') + scale_fill_brewer(palette = 'Set1') + theme_bw()
+ggplot(df3, aes(Time, value, fill=variable)) + geom_area(position = 'stack') + labs(y = 'Inversion por estudiante, % de PIB en US$') + scale_fill_brewer(palette = 'Set1') + theme_bw() + scale_y_continuous(breaks = seq(0,100,10))
+ggplot(df3, aes(Time, (value/sum(value))*100, fill=variable)) + geom_area(position = 'stack') + labs(y = 'Inversion por estudiante, % de PIB en US$') + scale_fill_brewer(palette = 'Set1') + theme_bw() + scale_y_continuous(breaks = seq(0,100,10))
+ggplot(df3, aes(Time, (value/sum(value))*100, fill=variable)) + geom_area(position = 'stack') + labs(y = 'Inversion por estudiante, % de PIB en US$') + scale_fill_brewer(palette = 'Set1') + theme_bw()
+ggplot(df3, aes(Time, (value/sum(value))*1000, fill=variable)) + geom_area(position = 'stack') + labs(y = 'Inversion por estudiante, % de PIB en US$') + scale_fill_brewer(palette = 'Set1') + theme_bw()
+df2 <- read.csv('data/table2.csv', header = T)
+levels(df2$Indicator)
+View(A)
+A$PrimaryGDP <- (A$PrimaryGDP/sum(A$PrimaryGDP,A$SecondaryGDP,A$TertiaryGDP)*100)
+View(A)
+um(A$PrimaryGDP,A$SecondaryGDP,A$TertiaryGDP)
+sum(A$PrimaryGDP,A$SecondaryGDP,A$TertiaryGDP)
+A$PrimaryGDP <- (A$PrimaryGDP/sum(A$PrimaryGDP,A$SecondaryGDP,A$TertiaryGDP))*100
+View(A)
+A$PrimaryGDP <- (A$PrimaryGDP/sum(A$PrimaryGDP,A$SecondaryGDP,A$TertiaryGDP))*100
+A$SecondaryGDP <- (A$SecondaryGDP/sum(A$PrimaryGDP,A$SecondaryGDP,A$TertiaryGDP))*100
+A$TertiaryGDP <- (A$TertiaryGDP/sum(A$PrimaryGDP,A$SecondaryGDP,A$TertiaryGDP))*100
+View(A)
+A$PrimaryGDP <- (A$PrimaryGDP/sum(A$PrimaryGDP,A$SecondaryGDP,A$TertiaryGDP))*100
+A$SecondaryGDP <- (A$SecondaryGDP/sum(A$PrimaryGDP,A$SecondaryGDP,A$TertiaryGDP))*100
+A$TertiaryGDP <- (A$TertiaryGDP/sum(A$PrimaryGDP,A$SecondaryGDP,A$TertiaryGDP))*100
+View(A)
+source.with.encoding('~/.active-rstudio-document', encoding='UTF-8', echo=TRUE)
+View(A)
+for(i in nrow(A)){
+A$PrimaryGDP[i] <- (A$PrimaryGDP[i]/sum(A$PrimaryGDP[i],A$SecondaryGDP[i],A$TertiaryGDP[i]))*100
+A$SecondaryGDP[i] <- (A$SecondaryGDP[i]/sum(A$PrimaryGDP[i],A$SecondaryGDP[i],A$TertiaryGDP[i]))*100
+A$TertiaryGDP[ ] <- (A$TertiaryGDP[i]/sum(A$PrimaryGDP[i],A$SecondaryGDP[i],A$TertiaryGDP[ ]))*100
+}
+for(i in nrow(A)){
+A$PrimaryGDP[i] <- (A$PrimaryGDP[i]/sum(A$PrimaryGDP[i],A$SecondaryGDP[i],A$TertiaryGDP[i]))*100
+A$SecondaryGDP[i] <- (A$SecondaryGDP[i]/sum(A$PrimaryGDP[i],A$SecondaryGDP[i],A$TertiaryGDP[i]))*100
+A$TertiaryGDP[i] <- (A$TertiaryGDP[i]/sum(A$PrimaryGDP[i],A$SecondaryGDP[i],A$TertiaryGDP[i]))*100
+}
+View(A)
+for(i in nrow(A)){
+A$PrimaryGDP[i] <- (A$PrimaryGDP[i]/sum(A$PrimaryGDP[i],A$SecondaryGDP[i],A$TertiaryGDP[i]))*100;
+A$SecondaryGDP[i] <- (A$SecondaryGDP[i]/sum(A$PrimaryGDP[i],A$SecondaryGDP[i],A$TertiaryGDP[i]))*100;
+A$TertiaryGDP[i] <- (A$TertiaryGDP[i]/sum(A$PrimaryGDP[i],A$SecondaryGDP[i],A$TertiaryGDP[i]))*100
+}
+View(A)
+df <- read.csv('data/table1.csv', header = T)
+df2 <- read.csv('data/table2.csv', header = T)
+df2 <- df2[,-5]
+levels(df2$Indicator) <- c('Primary', 'PrimaryGDP','Secondary','SecondaryGDP','Tertiary','TertiaryGDP')
+df2 <- df2[1:37,]
+A <- dcast(df2,...~Indicator)
+newRow <- c('Colombia',2003, NA,NA, NA)
+A <- rbind(A,newRow)
+A <- A[order(A$Time),]
+A$PrimaryGDP <- na.approx(A$PrimaryGDP)
+A$TertiaryGDP <- na.approx(A$TertiaryGDP)
+A$SecondaryGDP <- na.approx(A$SecondaryGDP)
+for(i in nrow(A)){
+A$PrimaryGDP[i] <- (A$PrimaryGDP[i]/sum(A$PrimaryGDP[i],A$SecondaryGDP[i],A$TertiaryGDP[i]))*100;
+A$SecondaryGDP[i] <- (A$SecondaryGDP[i]/sum(A$PrimaryGDP[i],A$SecondaryGDP[i],A$TertiaryGDP[i]))*100;
+A$TertiaryGDP[i] <- (A$TertiaryGDP[i]/sum(A$PrimaryGDP[i],A$SecondaryGDP[i],A$TertiaryGDP[i]))*100
+}
+View(A)
+for(i in nrow(A)){
+A$PrimaryGDP[i] <- (A$PrimaryGDP[i]/sum(A$PrimaryGDP[i],A$SecondaryGDP[i],A$TertiaryGDP[i]))*100;
+A$SecondaryGDP[i] <- (A$SecondaryGDP[i]/sum(A$PrimaryGDP[i],A$SecondaryGDP[i],A$TertiaryGDP[i]))*100;
+A$TertiaryGDP[i] <- (A$TertiaryGDP[i]/sum(A$PrimaryGDP[i],A$SecondaryGDP[i],A$TertiaryGDP[i]))*100
+}
+View(A)
+d1 <- read.csv('data/original/education3.csv', header = T)
+View(`d1`)
+d1 <- d1[,-5]
+d1 <- read.csv('data/original/education3.csv', header = T)
+d1 <- d1[-40:53,-5]
+d1 <- d1[-c(40:53),-5]
+View(`d1`)
+d1 <- dcast(d1, ...~Indicator)
+View(`d1`)
+library(reshape2)
+library(plyr)
+newRow <- c('Colombia',2003, NA,NA,NA,NA,NA)
+rbind(d1,newRow)
+A <- A[order(A$Time),]
+A <- rbind(d1,newRow)
+A <- A[order(A$Time),]
+names(A)
+names(A) <- c('country','year','preprimary','primary','secondary','tertiary')
+View(A)
+A$preprimary <- na.approx(A$preprimary)
+A$primary <- na.approx(A$primary)
+A$secondary <- na.approx(A$secondary)
+A$tertiary <- na.approx(A$tertiary)
+View(A)
+dp <- newDatapkg(d = list(A))
+writeDatapackage(dp,'data/')
+source('~/Documents/aeRepos/datablog/content/sandbox/ilanreinstein/educacion-colombia/ext/script.R', echo=TRUE)
+source('~/.active-rstudio-document', echo=TRUE)
+source('~/Documents/aeRepos/datablog/content/sandbox/ilanreinstein/educacion-colombia/ext/script.R', echo=TRUE)
+d <- read.csv('data/niveles.csv',header = T)
+d1 <- read.csv('data/presidentes.csv',header = T)
+library(datapackager)
+dp <- newDatapkg(d = list(d,d1))
+writeDatapackage(dp,'data/')
+df <- read.csv('data/table1.csv', header = T)
+df2 <- read.csv('data/table2.csv', header = T)
+df3 <- melt(A, id = c('Country','Time'))
+df3$Time <- as.integer(df3$Time)
+df3 <- melt(A, id = c('country','year'))
+df3$Time <- as.integer(df3$Time)
+df3$year <- as.integer(df3$year)
+ggplot(df, aes(year, eduPerc, group = 1, colour = presidents)) + geom_path() + theme_bw() + scale_colour_brewer(palette = 'Set1') + labs(y = 'Inversion en Educacion, US$')
+ggplot(df, aes(year, eduExp, group = 1, colour = presidents)) + geom_path() + theme_bw() + scale_colour_brewer(palette = 'Set1') + labs(y = 'Inversion en Educacion, US$')
+View(df)
+View(df2)
+df2 <- read.csv('data/table1.csv', header = T)
+df <- read.csv('data/table2.csv', header = T)
+df2 <- read.csv('data/table1.csv', header = T)
+df <- read.csv('data/table2.csv', header = T)
+df3 <- melt(A, id = c('country','year'))
+df3$year <- as.integer(df3$year)
+df2 <- read.csv('data/table1.csv', header = T)
+df <- read.csv('data/table2.csv', header = T)
+library(reshape2)
+library(knitr)
+library(plyr)
+library(ggplot2)
+library(scales)
+library(zoo)
+options(scipen = 10)
+df2 <- read.csv('data/table1.csv', header = T)
+df <- read.csv('data/table2.csv', header = T)
+View(df)
+View(df2)
+ggplot(df, aes(year, eduPerc, group = 1, colour = presidents)) + geom_path() + theme_bw() + scale_colour_brewer(palette = 'Set1') + labs(y = 'Inversion en Educacion, US$')
+View(df2)
+z <- sum(df2$preprimary,df2$primary,df2$secondary,df2$tertiary)
+z <- rowsum(df2$preprimary,df2$primary,df2$secondary,df2$tertiary)
+View(z)
+View(df2)
+z <- rowsum(x = df2)
+z <- rowsum(list(df2$preprimary,df2$primary,df2$secondary,df2$tertiary))
+for(i in nrow(df2)){
+z[i] <- sum(df2$preprimary[i],df2$primary[i],df2$secondary[i],df2$tertiary[i])
+}
+View(z)
+z[1] <- sum(df2$preprimary[1],df2$primary[1],df2$secondary[1],df2$tertiary[1]
+z[1]
+z[1]
+View(df2)
+df2$preprimary[1
+df2$preprimary[1]
+df2$preprimary[1]
+df2$primary[1]
+df2$secondary[1]
+df2$tertiary[1]
+sum(df2$preprimary[1],df2$primary[1],df2$secondary[1],df2$tertiary[1])
+sum(df2$preprimary[1:nrow(df2)],df2$primary[1:nrow(df2)],df2$secondary[1:nrow(df2)],df2$tertiary[1:nrow(df2)])
+for(i in nrow(df2)){
+a[i] <- sum(df2$preprimary[i],df2$primary[i],df2$secondary[i],df2$tertiary[i])
+}
+a <- rep(NA,15)
+for(i in nrow(df2)){
+a[i] <- sum(df2$preprimary[i],df2$primary[i],df2$secondary[i],df2$tertiary[i])
+}
+View(z)
+for(i in nrow(df2)){
+a[i] <- rowSums(df2$preprimary[i],df2$primary[i],df2$secondary[i],df2$tertiary[i])
+}
+a[i] <- rowSums(df2$preprimary,df2$primary,df2$secondary,df2$tertiary)
+a[i] <- rowSums(c(df2$preprimary,df2$primary,df2$secondary,df2$tertiary))
+for(i in nrow(df2)){
+a[i] <- rowSums(df2[i,c(3:6)])
+}
+View(z)
+rowSums(df2[,3:6])
+a <- rowSums(df2[,3:6])
+df2$preprimary <- df2$preprimary/a
+df2$primary <- df2$primary/a
+df2$secondary <- df2$secondary/a
+df2$tertiary <- df2$tertiary/a
+View(df2)
+df2 <- read.csv('data/table1.csv', header = T)
+a <- rowSums(df2[,3:6])
+df2$preprimary <- (df2$preprimary/a)*100
+df2$primary <- (df2$primary/a)*100
+df2$secondary <- (df2$secondary/a)*100
+df2$tertiary <- (df2$tertiary/a)*100
+View(df2)
+df3 <- melt(df2, id = c('country','year'),varnames = 'indicator')
+View(df3)
+ggplot(df3, aes(year,value, fill=variable)) + geom_area(position = 'stack') + labs(y = 'Inversion por estudiante, % de PIB en US$') + scale_fill_brewer(palette = 'Set1') + theme_bw()
+ggplot(df3, aes(year,value, fill=variable)) + geom_area(position = 'stack') + labs(y = 'Inversion por nivel educativo % de PIB') + scale_fill_brewer(palette = 'Set1', name = 'Nivel Educativo', labels = c('Preescolar', 'Primaria', 'Secundaria', 'Terciaria')) + theme_bw()

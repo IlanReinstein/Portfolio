@@ -1,0 +1,149 @@
+{
+    "name": "list(d, d1)Datapackage",
+    "resources": [
+        {
+            "name": "table1",
+            "path": "table1.csv",
+            "ae_resource_info": {
+                "id": "table1",
+                "public": "true",
+                "resource_type": "tbl"
+            },
+            "mediatype": "text/csv",
+            "format": "csv",
+            "dialect": {
+                "delimiter": ","
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "country",
+                        "type": "factor",
+                        "ae_field_info": {
+                            "id": "a",
+                            "data_type": "C",
+                            "label": "country"
+                        }
+                    },
+                    {
+                        "name": "year",
+                        "type": "integer",
+                        "ae_field_info": {
+                            "id": "b",
+                            "data_type": "N",
+                            "label": "year"
+                        }
+                    },
+                    {
+                        "name": "preprimary",
+                        "type": "numeric",
+                        "ae_field_info": {
+                            "id": "c",
+                            "data_type": "N",
+                            "label": "preprimary"
+                        }
+                    },
+                    {
+                        "name": "primary",
+                        "type": "numeric",
+                        "ae_field_info": {
+                            "id": "d",
+                            "data_type": "N",
+                            "label": "primary"
+                        }
+                    },
+                    {
+                        "name": "secondary",
+                        "type": "numeric",
+                        "ae_field_info": {
+                            "id": "e",
+                            "data_type": "N",
+                            "label": "secondary"
+                        }
+                    },
+                    {
+                        "name": "tertiary",
+                        "type": "numeric",
+                        "ae_field_info": {
+                            "id": "f",
+                            "data_type": "N",
+                            "label": "tertiary"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "table2",
+            "path": "table2.csv",
+            "ae_resource_info": {
+                "id": "table2",
+                "public": "true",
+                "resource_type": "tbl"
+            },
+            "mediatype": "text/csv",
+            "format": "csv",
+            "dialect": {
+                "delimiter": ","
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "country",
+                        "type": "factor",
+                        "ae_field_info": {
+                            "id": "a",
+                            "data_type": "C",
+                            "label": "country"
+                        }
+                    },
+                    {
+                        "name": "code",
+                        "type": "factor",
+                        "ae_field_info": {
+                            "id": "b",
+                            "data_type": "C",
+                            "label": "code"
+                        }
+                    },
+                    {
+                        "name": "year",
+                        "type": "integer",
+                        "ae_field_info": {
+                            "id": "c",
+                            "data_type": "N",
+                            "label": "year"
+                        }
+                    },
+                    {
+                        "name": "GDP",
+                        "type": "numeric",
+                        "ae_field_info": {
+                            "id": "d",
+                            "data_type": "N",
+                            "label": "GDP"
+                        }
+                    },
+                    {
+                        "name": "eduPerc",
+                        "type": "numeric",
+                        "ae_field_info": {
+                            "id": "e",
+                            "data_type": "N",
+                            "label": "eduPerc"
+                        }
+                    },
+                    {
+                        "name": "presidents",
+                        "type": "factor",
+                        "ae_field_info": {
+                            "id": "f",
+                            "data_type": "C",
+                            "label": "presidents"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

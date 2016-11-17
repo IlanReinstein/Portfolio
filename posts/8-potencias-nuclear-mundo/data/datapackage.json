@@ -1,0 +1,280 @@
+
+{
+"name": "list(d, d1, d2, d3)Datapackage",
+"resources": 
+[ 
+{
+"name": "table1",
+"path": "table1.csv",
+"ae_resource_info": 
+{
+"id": "table1",
+"public": "true",
+"resource_type": "tbl"
+}
+,
+"mediatype": "text/csv",
+"format": "csv",
+"dialect": 
+{
+"delimiter": ","
+}
+,
+"schema": 
+{
+"fields": 
+[ 
+{
+"name": "country",
+"type": "factor",
+"ae_field_info": 
+{
+"id": "a",
+"data_type": "C",
+"label": "country"
+}
+
+}
+, 
+{
+"name": "operNum",
+"type": "integer",
+"ae_field_info": 
+{
+"id": "b",
+"data_type": "N",
+"label": "operNum"
+}
+
+}
+, 
+{
+"name": "operEnr_MW",
+"type": "integer",
+"ae_field_info": 
+{
+"id": "c",
+"data_type": "N",
+"label": "operEnr_MW"
+}
+
+}
+, 
+{
+"name": "consNum",
+"type": "numeric",
+"ae_field_info": 
+{
+"id": "d",
+"data_type": "N",
+"label": "consNum"
+}
+
+}
+, 
+{
+"name": "consEnr_MW",
+"type": "numeric",
+"ae_field_info": 
+{
+"id": "e",
+"data_type": "N",
+"label": "consEnr_MW"
+}
+
+}
+]
+
+}
+
+}
+, 
+{
+"name": "table2",
+"path": "table2.csv",
+"ae_resource_info": 
+{
+"id": "table2",
+"public": "true",
+"resource_type": "tbl"
+}
+,
+"mediatype": "text/csv",
+"format": "csv",
+"dialect": 
+{
+"delimiter": ","
+}
+,
+"schema": 
+{
+"fields": 
+[ 
+{
+"name": "year",
+"type": "integer",
+"ae_field_info": 
+{
+"id": "a",
+"data_type": "N",
+"label": "year"
+}
+
+}
+, 
+{
+"name": "country",
+"type": "factor",
+"ae_field_info": 
+{
+"id": "b",
+"data_type": "C",
+"label": "country"
+}
+
+}
+, 
+{
+"name": "value",
+"type": "integer",
+"ae_field_info": 
+{
+"id": "c",
+"data_type": "N",
+"label": "value"
+}
+
+}
+]
+
+}
+
+}
+, 
+{
+"name": "table3",
+"path": "table3.csv",
+"ae_resource_info": 
+{
+"id": "table3",
+"public": "true",
+"resource_type": "tbl"
+}
+,
+"mediatype": "text/csv",
+"format": "csv",
+"dialect": 
+{
+"delimiter": ","
+}
+,
+"schema": 
+{
+"fields": 
+[ 
+{
+"name": "rank",
+"type": "integer",
+"ae_field_info": 
+{
+"id": "a",
+"data_type": "N",
+"label": "rank"
+}
+
+}
+, 
+{
+"name": "country",
+"type": "factor",
+"ae_field_info": 
+{
+"id": "b",
+"data_type": "C",
+"label": "country"
+}
+
+}
+, 
+{
+"name": "capacity_MW_2012",
+"type": "factor",
+"ae_field_info": 
+{
+"id": "c",
+"data_type": "C",
+"label": "capacity_MW_2012"
+}
+
+}
+, 
+{
+"name": "nuclearPercEnr_2011",
+"type": "numeric",
+"ae_field_info": 
+{
+"id": "d",
+"data_type": "N",
+"label": "nuclearPercEnr_2011"
+}
+
+}
+]
+
+}
+
+}
+, 
+{
+"name": "table4",
+"path": "table4.csv",
+"ae_resource_info": 
+{
+"id": "table4",
+"public": "true",
+"resource_type": "tbl"
+}
+,
+"mediatype": "text/csv",
+"format": "csv",
+"dialect": 
+{
+"delimiter": ","
+}
+,
+"schema": 
+{
+"fields": 
+[ 
+{
+"name": "country",
+"type": "ordered",
+"ae_field_info": 
+{
+"id": "a",
+"data_type": "C",
+"label": "country"
+}
+
+}
+, 
+{
+"name": "nuclear_weapons",
+"type": "factor",
+"ae_field_info": 
+{
+"id": "b",
+"data_type": "C",
+"label": "nuclear_weapons"
+}
+
+}
+]
+
+}
+
+}
+]
+
+}
+

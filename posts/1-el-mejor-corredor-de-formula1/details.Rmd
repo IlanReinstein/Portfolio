@@ -1,0 +1,94 @@
+---
+output: 
+  html_document:
+    keep_md: true
+---
+
+In this post we will use the following libraries:
+
+```{r}
+library(ggplot2)
+library(reshape2)
+library(plyr)
+library(knitr)
+```
+
+The data is now loaded
+
+```{r}
+data_path <- 'data/'
+df <- data.frame(read.csv(paste(data_path, 'f1_seasons.csv', sep = ''),))
+```
+
+We will use several visualization tools, such as tables and plots. To print a table in an organized way we use the function kable() from the knitr library. The table itself is created using ddply() from the reshape2 library.
+
+```{r kable, results='asis'}
+w <- ddply(df, .(Driver), summarize, Wins = sum(Wins))
+w <- w[order(w$Wins),]
+w$Driver <- factor(w$Driver, levels = w$Driver, ordered = TRUE)
+kable(w)
+```
+
+Now the visual form of the last table is created using ggplot2. It is a simple barplot that account for the number of wins by driver. 
+
+```{r driver, fig.cap = 'Driver with most wins'}
+ggplot(w, aes(Driver, Wins)) + geom_bar(stat = 'identity', fill="#56B4E9", alpha = "0.7") + theme_bw() + theme(axis.text.x = element_text(angle = 90))
+```
+
+We repeat the previous process of creating a table with ddply() and then plotting it using again the ggplot2 library tools.
+
+```{r kable1, results='asis'}
+p <- ddply(df, .(Driver), summarize, Poles = sum(Poles))
+p <- p[order(p$Poles),]
+p$Driver <- factor(p$Driver, levels = p$Driver, ordered = TRUE)
+kable(p)
+```
+
+```{r poles, fig.cap = 'Driver with most poles'}
+ggplot(p, aes(Driver, Poles)) + geom_bar(stat = 'identity', fill="#56B4E9", alpha = "0.7") + theme_bw() + theme(axis.text.x = element_text(angle = 90))
+```
+
+For this next couple of tables we make something different. We first find the total of wins and poles:
+
+```{r kable2, results='asis'}
+A <- ddply(df, .(Driver), summarize, Wins = sum(Wins), Poles = sum(Poles))
+
+kable(A)
+```
+
+Now we determine a proportion of wins and poles in order to determine a significant relation between these two variables.
+
+```{r kable3, results='asis'}
+B <- ddply(A, .(Driver), summarize, Proportion = (Wins/Poles))
+B <- B[order(B$Proportion, decreasing = T), ]
+
+kable(B)
+
+```
+
+```{r kable4, results='asis'}
+#Median Proportion
+median(B$Proportion)
+```
+
+As you can see the proportion seems to stabilize as the number of races increases, this means that the proportion actually does not informsus about the effectivity of a particular driver. However the proportion of each driver actually gets closer and closer to the median as the number of races increases, so one might infer that as the number of races increases and the porportion gets close to the median, the driver can be considered effective.
+
+Finally we make a scatter plot in order the find (visually) a correlation between wins and poles.
+
+```{r winpole, fig.cap = 'Wins vs poles', fig.height=10}
+ggplot(A, aes(Wins, Poles, colour = Driver)) + geom_jitter() + theme_bw()
+```
+
+These last tables and plots are made in the same way as the previous ones.
+
+```{r kable5, results='asis'}
+driv <- ddply(df, .(Driver), summarize, FastestLaps = sum(Fastest.Laps))
+driv <- driv[order(driv$FastestLaps), ]
+driv$Driver <- factor(driv$Driver, levels = driv$Driver, ordered = T)
+kable(driv)
+```
+
+```{r fastdriver, fig.cap = 'Fastest driver'}
+ggplot(driv, aes(Driver, FastestLaps)) + geom_histogram(stat = 'identity', fill="#56B4E9", alpha = "0.7") + theme_bw() + theme(axis.text.x = element_text(angle = 90))
+```
+

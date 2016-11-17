@@ -1,0 +1,58 @@
+---
+output: 
+  html_document: 
+    keep_md: true 
+---
+
+```{r}
+library(ggplot2)
+library(knitr)
+library(scales)
+```
+
+
+```{r}
+data_path <- 'data/'
+df <- read.csv(paste(data_path, 'data.csv', sep = ''),)
+hdi <- read.csv(paste(data_path, 'hdi.csv', sep = ''),)
+gdp <- read.csv(paste(data_path, 'gdpRank.csv', sep = ''),)
+```
+
+### ¿Cuál es la población de los países del mundial? ###
+
+```{r population,fig.cap='World Population'}
+pop <- gdp[order(gdp$Population), ]
+data <- merge(pop, hdi, by.x = 'Country', by.y = 'Name')
+data <- merge(data, df, by.x = 'Country', by.y = 'COUNTRY')
+pop$Country <- factor(pop$Country, levels = pop$Country, ordered = TRUE)
+ggplot(pop, aes(x = Country, y = Population)) + geom_bar(stat = 'identity', fill="#56B4E9", alpha = "0.7") + theme_bw() + theme(axis.text.x = element_text(angle = 90)) + scale_y_continuous(name="Poblacion", labels = comma) + xlab('Pais')
+```
+
+### ¿Cuál es el ingreso per cápita? ###
+
+```{r gdp, fig.cap = 'GDP by country'}
+gdp <- df[order(df$'INCOME.PER.CAPITA'), ]
+gdp$COUNTRY <- factor(gdp$COUNTRY, levels = gdp$COUNTRY, ordered = TRUE)
+ggplot(gdp, aes(x = COUNTRY, y = INCOME.PER.CAPITA, fill = pop$FIFA.Rank.2014)) + geom_bar(stat = 'identity') + theme_bw() + theme(axis.text.x = element_text(angle = 90)) + labs(x = 'Pais', y = 'PIB per capita en USD') + scale_fill_continuous(name = 'Posicion final en el Mundial', guide = guide_colorbar(reverse = T))
+```
+
+### ¿Cuál es la relación entre la posición mundial segun PIB y el ranking final de la FIFA? ###
+
+```{r GDPvsFIFA, fig.cap='GDP vs FIFA'}
+ggplot(data, aes(x = FIFA.Rank.2014, y = GDP.cap, size = INCOME.PER.CAPITA, label = Country.Code, colour = Country)) + geom_point(alpha = 0.8) + geom_text(hjust=0.5, vjust=1.7, size = 4) + theme_bw() + labs(x = 'Posicion final del Mundial', y = 'Posicion segun PIB') + scale_size_continuous(name = 'PIB (USD)', guide = guide_legend(reverse=TRUE)) + scale_y_continuous(trans = "reverse", breaks=seq(1, 170, 50)) + scale_x_continuous(trans = "reverse", breaks=seq(1, 32, 2)) + guides(colour=FALSE)
+```
+
+### ¿Cuál es la relación entre la posición mundial segun el desarrollo humano y el ranking final de la FIFA?###
+
+```{r HDIvsFIFA, fig.cap='HDI vs FIFA'}
+ggplot(data, aes(x = FIFA.Rank.2014, y = X2012.HDI.Rank, size = HUMAN.DEVELOPMENT.INDEX, label = Country.Code, colour = Country)) + geom_point(alpha = 0.8) + geom_text(hjust=0.7, vjust=-1, size = 4) + theme_bw() + labs(x = 'Posicion final en el Mundial', y = 'Ranking de Desarrollo') + scale_size_continuous(name = 'Indice DH', guide = guide_legend(reverse=TRUE)) + scale_y_continuous(trans = "reverse", breaks=seq(1, 160, 40)) + scale_x_continuous(trans = "reverse", breaks=seq(1, 32, 2)) + guides(colour=FALSE)
+```
+
+### ¿Cúal es el rankingde corrupcion dada la estabilidad y el desarollo humano? ###
+
+```{r corruption, fig.cap='Corruption given HDI and violence'}
+ggplot(data, aes(STABILITY.VIOLENCE, HUMAN.DEVELOPMENT.INDEX, colour = CORRUPTION)) + theme_bw() + geom_text(aes(label = Country.Code), size = 3.5, font = 'bold', alpha = 0.85) + labs(y = 'Indice Desarrollo Humano', x = 'Indice de establidad y Violencia') + scale_colour_continuous(name = 'Corrupcion')
+```
+
+
+

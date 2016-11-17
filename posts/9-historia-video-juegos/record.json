@@ -1,0 +1,24 @@
+{
+    "title": "¿Cómo están los video juegos en la historia?",
+    "description": "Analizamos qué juegos de video han sido los más exitosos y vemos qué consola es la más popular.",
+    "author": "ilanreinstein",
+    "thumbnail": "details_files/figure-html/PSvsXBOX.png",
+    "language": "es",
+    "date": "2014-09-08",
+    "tags": [
+        "games",
+        "sales"
+    ],
+    "production": "true",
+    "inquiries": [
+        {
+            "text": "¿Qué juego ha vendido más copias?"
+        },
+        {
+            "text": "¿Qué consola tiene el mayor número de unidades vendidas?"
+        },
+        {
+            "text": "¿Qué consola es más popular entre PS3 y XBOX 360?"
+        }
+    ]
+}

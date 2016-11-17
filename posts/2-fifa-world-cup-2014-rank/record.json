@@ -1,0 +1,17 @@
+{
+    "title": "How the teams performed in the World Cup?",
+    "description": "In soccer there is not much importance in this rankings because the winners already took the trophy home and nobody cares whether they played a flawless tournament or if they had several difficulties.",
+    "author": "ilanreinstein",
+    "thumbnail": "details_files/figure-html/clean.png",
+    "language": "en",
+    "date": "2014-07-27",
+    "tags": ["sports", "wikipedia"],
+    "production": "true",
+    "inquiries": [{
+        "text": "What team is the champion by points?"
+    }, {
+        "text": "What team is the champion by goal difference?"
+    }, {
+        "text": "What team is the champion by clean sheet?"
+    }]
+}

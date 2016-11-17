@@ -1,0 +1,15 @@
+{
+    "title": "¿Qué tanto invierten los países en investigación?",
+    "description": "En este blogpost mostramos la evolución en el tiempo de la investigación científica en un determinado grupo de países.",
+    "author": "ilanreinstein",
+    "thumbnail": "details_files/figure-html/thumbnail.png",
+    "language": "es",
+    "date": "2014-08-22",
+    "tags": ["World", "Science", "economic"],
+    "production": "true",
+    "inquiries": [{
+        "text": "¿Cuál es el producto interno bruto de cada país?"
+    }, {
+        "text": "¿Cuánto es el presupuesto dirigido a I&D?"
+    }]
+}

@@ -1,0 +1,15 @@
+{
+    "title": "¿How much do countries invest in R&D?",
+    "description": "In this blogpost we show the investment in science in a small set of countries.",
+    "author": "ilanreinstein",
+    "thumbnail": "details_files/figure-html/thumbnail.png",
+    "language": "en",
+    "date": "2014-08-22",
+    "tags":["World","Science","economic"],
+    "production": "true",
+    "inquiries": [{
+        "text": "What is the GDP of each country?"
+    }, {
+        "text": "What is the R&D budget?"
+    }]
+}

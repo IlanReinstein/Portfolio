@@ -1,0 +1,86 @@
+{
+    "name": "dDatapackage",
+    "resources": [
+        {
+            "name": "table1",
+            "path": "table1.csv",
+            "ae_resource_info": {
+                "id": "table1",
+                "public": "true",
+                "resource_type": "tbl"
+            },
+            "mediatype": "text/csv",
+            "format": "csv",
+            "dialect": {
+                "delimiter": ","
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "Name",
+                        "type": "factor",
+                        "ae_field_info": {
+                            "id": "a",
+                            "data_type": "C",
+                            "label": "Name"
+                        }
+                    },
+                    {
+                        "name": "Location",
+                        "type": "factor",
+                        "ae_field_info": {
+                            "id": "b",
+                            "data_type": "C",
+                            "label": "Location"
+                        }
+                    },
+                    {
+                        "name": "MillNumItems",
+                        "type": "numeric",
+                        "ae_field_info": {
+                            "id": "c",
+                            "data_type": "N",
+                            "label": "MillNumItems"
+                        }
+                    },
+                    {
+                        "name": "visitorYearMill",
+                        "type": "numeric",
+                        "ae_field_info": {
+                            "id": "d",
+                            "data_type": "N",
+                            "label": "visitorYearMill"
+                        }
+                    },
+                    {
+                        "name": "BudgetMillUSD",
+                        "type": "numeric",
+                        "ae_field_info": {
+                            "id": "e",
+                            "data_type": "N",
+                            "label": "BudgetMillUSD"
+                        }
+                    },
+                    {
+                        "name": "Staff",
+                        "type": "integer",
+                        "ae_field_info": {
+                            "id": "f",
+                            "data_type": "N",
+                            "label": "Staff"
+                        }
+                    },
+                    {
+                        "name": "City",
+                        "type": "factor",
+                        "ae_field_info": {
+                            "id": "g",
+                            "data_type": "C",
+                            "label": "City"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

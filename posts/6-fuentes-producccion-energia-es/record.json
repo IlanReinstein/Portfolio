@@ -1,0 +1,25 @@
+{
+    "title": "¿Qué fuentes de energía se utilizan en Latinoamérica?",
+    "description": "Examinamos las distintas maneras de generar electricidad en América Latina y en el Caribe.",
+    "author": "ilanreinstein",
+    "thumbnail": "details_files/figure-html/fosil.png",
+    "language": "es",
+    "date": "2014-08-29",
+    "tags": [
+        "latinamerica",
+        "energy",
+        "economic"
+    ],
+    "production": "true",
+    "inquiries": [
+        {
+            "text": "¿Qué porcentaje del consumo proviene de recursos fósiles?"
+        },
+        {
+            "text": "¿Qué porcentaje del consumo proviene de recursos alternativos?"
+        },
+        {
+            "text": "¿Qué porcentaje del consumo proviene de recursos renovables?"
+        }
+    ]
+}

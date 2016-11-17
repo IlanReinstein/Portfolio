@@ -1,0 +1,22 @@
+{
+    "title": "¿Hácia dónde va la educación en Colombia?",
+    "description": "Debido al debate que se lleva a cabo en el congreso, queremos exponer alguna informcaion relacionada a la educaiocn en Colombia.",
+    "author": "ilanreinstein",
+    "thumbnail": "details_files/figure-html/inversion.png",
+    "language": "es",
+    "date": "2014-09-12",
+    "tags": [
+        "economía",
+        "colombia",
+        "educación"
+    ],
+    "production": "true",
+    "inquiries": [
+        {
+            "text": "¿Cómo ha cambiado en Colombia la inversión en educación desde 1980?"
+        },
+        {
+            "text": "¿Cuánto invierte Colombia en los distintos niveles de educación?"
+        }
+    ]
+}

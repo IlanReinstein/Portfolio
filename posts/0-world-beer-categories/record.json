@@ -1,0 +1,17 @@
+{
+    "title": "What are the different types of beers in the World?",
+    "description": "In this post we summarize the different categories and styles of beer.",
+    "author": "ilanreinstein",
+    "thumbnail": "details_files/figure-html/category.png",
+    "language": "en",
+    "date": "2014-07-25",
+    "tags": ["Beer", "countries"],
+    "production": "true",
+    "inquiries": [{
+        "text": "What is the most common category?"
+    }, {
+        "text": "What is the mean alchohol volume by category?"
+    }, {
+        "text": "How many styles are in each category?"
+    }]
+}

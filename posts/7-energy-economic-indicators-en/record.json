@@ -1,0 +1,25 @@
+{
+    "title": "What role does electricity plays in the economy?",
+    "description": "We explore variables that relate energy consumption to a country's economy",
+    "author": "ilanreinstein",
+    "thumbnail": "details_files/figure-html/intensVScons1.png",
+    "language": "en",
+    "date": "2014-09-01",
+    "tags": [
+        "World",
+        "energy",
+        "economic"
+    ],
+    "production": "true",
+    "inquiries": [
+        {
+            "text": "What is the energy intensity?"
+        },
+        {
+            "text": "What is the consumption per capita?"
+        },
+        {
+            "text": "What is the relation between the consumption and the intensity?"
+        }
+    ]
+}

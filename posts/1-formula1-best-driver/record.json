@@ -1,0 +1,19 @@
+{
+    "title": "Who is the greatest driver in the Formula One history?",
+    "description": "In the end it all comes to the driver of the car, who is responsible for pushing the car to its limits in order to give a nice show, let's see how this holds with some data",
+    "author": "ilanreinstein",
+    "thumbnail": "details_files/figure-html/fastdriver.png",
+    "language": "en",
+    "date": "2014-07-22",
+    "tags": ["sports", "f1"],
+    "production": "true",
+    "inquiries": [{
+        "text": "Who is the driver with most poles?"
+    }, {
+        "text": "Who is the driver with most wins?"
+    }, {
+        "text": "What is the correlation between poles and wins by driver?"
+    }, {
+        "text": "Who is the best driver by fastest laps?"
+    }]
+}

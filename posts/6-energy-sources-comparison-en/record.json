@@ -1,0 +1,25 @@
+{
+    "title": "What are the main energy sources used in Latin America?",
+    "description": "We explore the different ways of generating electricity in South America and the Caribbean.",
+    "author": "ilanreinstein",
+    "thumbnail": "details_files/figure-html/fosil.png",
+    "language": "en",
+    "date": "2014-08-29",
+    "tags": [
+        "World",
+        "Science",
+        "economic"
+    ],
+    "production": "true",
+    "inquiries": [
+        {
+            "text": "What percentage of the total energy consumption comes from fossil resources?"
+        },
+        {
+            "text": "What percentage of the total energy consumption comes from alternative resources?"
+        },
+        {
+            "text": "What percentage of the total energy consumption comes from renewable resources?"
+        }
+    ]
+}

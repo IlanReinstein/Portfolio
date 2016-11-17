@@ -1,0 +1,21 @@
+{
+    "title": "How stable has been the economy in the US and the UK?",
+    "description": "In this blogpost we compare the income and wealth of these two countries over time.",
+    "author": "ilanreinstein",
+    "thumbnail": "details_files/figure-html/wealth2.png",
+    "language": "en",
+    "date": "2014-08-15",
+    "tags":["US","UK","economic"],
+    "production": "true",
+    "inquiries": [{
+        "text": "What has been the change in population over the years?"
+    }, {
+        "text": "What has been the national income? "
+    }, {
+        "text": "What has been the private wealth?"
+    }, {
+        "text": "What has been the income per capita?"
+    }, {
+        "text": "What has been the private wealth per capita?"
+    }]
+}

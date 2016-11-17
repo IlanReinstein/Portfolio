@@ -1,0 +1,69 @@
+{
+    "name": "formula 1 winners",
+    "title": "Data of historical winners of Formula 1 from wikipedia. The R scripts used to create the clean data can be found [here](https://gist.github.com/ilanreinstein/XXXXXXXXXX). The clean data set is attached to this datapackage",
+    "license": "PDDL-1.0",
+    "keywords": ["Wikipedia", "Formula 1"],
+    "last_updated": "2011-09-21",
+    "last_update_comment": "",
+    "sources": [{
+        "name": "Wikipedia, 2014-07-07",
+        "web": "http://en.wikipedia.org/wiki/List_of_Formula_One_World_Drivers%27_Champions"
+    }],
+    "resources": [{
+        "name": "F1 Historical Seasons",
+        "path": "f1_seasons.csv",
+        "format": "csv",
+        "mediatype": "text/csv",
+        "schema": {
+            "fields": [{
+                "name": "Season",
+                "description": "",
+                "type": "date format"
+            }, {
+                "name": "Driver",
+                "description": "",
+                "type": "character"
+            }, {
+                "name": "Team",
+                "description": "",
+                "type": "character"
+            }, {
+                "name": "Engine",
+                "description": "",
+                "type": "character"
+            }, {
+                "name": "Tyres",
+                "description": "Tyre type",
+                "type": "character"
+            }, {
+                "name": "Poles",
+                "description": "Number of poles won",
+                "type": "number"
+            }, {
+                "name": "Wins",
+                "description": "Number of races won",
+                "type": "number"
+            }, {
+                "name": "Podiums",
+                "description": "Number of times in podium",
+                "type": "number"
+            }, {
+                "name": "Fastest Laps",
+                "description": "",
+                "type": "number"
+            }, {
+                "name": "Points",
+                "description": "Total points in season",
+                "type": "number"
+            }, {
+                "name": "Clinched",
+                "description": "winning championship race",
+                "type": "character"
+            }, {
+                "name": "Point Margin",
+                "description": "",
+                "type": "number"
+            }]
+        }
+    }]
+}

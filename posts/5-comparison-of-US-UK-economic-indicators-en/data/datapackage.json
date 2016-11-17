@@ -1,0 +1,103 @@
+{
+    "name": "US/UK",
+    "title": "Data of income and wealth for the US and the UK. The variables are the same for both the files, the only difference in the currency in which each appears. Dollars and punds for US and UK respectively.",
+    "license": "PDDL-1.0",
+    "keywords": ["UK", "USA", "economy"],
+    "last_updated": "2014-08-14",
+    "last_update_comment": "",
+    "sources": [{
+        "name": "Piketty",
+        "web": "http://piketty.pse.ens.fr/fr/capitalisback"
+    }],
+    "resources": [{
+        "name": "US/UK",
+        "path": "data/US.csv",
+        "format": "csv",
+        "mediatype": "text/csv",
+        "schema": {
+            "fields": [{
+                "name": "year",
+                "description": "",
+                "type": "date"
+            }, {
+                "name": "natIncome_bill",
+                "description": "given year currency value",
+                "type": "number"
+            }, {
+                "name": "privWealth_bill",
+                "description": "given year's currency value",
+                "type": "number"
+            }, {
+                "name": "natIncome2010bill",
+                "description": "2010 currency value",
+                "type": "number"
+            }, {
+                "name": "privWealth2010bill",
+                "description": "2010 currency value",
+                "type": "number"
+            }, {
+                "name": "perCapitaNatIncome",
+                "description": "given year currency value",
+                "type": "number"
+            }, {
+                "name": "perCapitaPrivWealth",
+                "description": "given year currency value",
+                "type": "number"
+            }, {
+                "name": "perAdultNatIncome",
+                "description": "given year currency value",
+                "type": "number"
+            }, {
+                "name": "perAdultPrivWealth",
+                "description": "given year currency value",
+                "type": "number"
+            }, {
+                "name": "perCapitaNatIncome2010gbp",
+                "description": "2010 currency value",
+                "type": "number"
+            }, {
+                "name": "perCapitaPrivWealth2010gbp",
+                "description": "2010 currency value",
+                "type": "number"
+            }, {
+                "name": "perAdultNatIncome2010gbp",
+                "description": "2010 currency value",
+                "type": "number"
+            }, {
+                "name": "perAdultPrivWealth2010gbp",
+                "description": "2010 currency value",
+                "type": "number"
+            }, {
+                "name": "ratioPrivWealthNatIncome",
+                "description": "Ratio",
+                "type": "percentage"
+            }, {
+                "name": "ratioDisposIncomeNatIncome",
+                "description": "Ratio",
+                "type": "percentage"
+            }, {
+                "name": "perAdultDisposIncome_2010gbp",
+                "description": "2010 currency value",
+                "type": "number"
+            }, {
+                "name": "ratioPrivWealthDisposIncome",
+                "description": "Ratio",
+                "type": "percentage"
+            }, {
+                "name": "population_thousands",
+                "description": "",
+                "type": "number"
+            }, {
+                "name": "adultPopulation_20_yr",
+                "description": "population over 20 years old",
+                "type": "number"
+            }, {
+                "name": "employedPopulation",
+                "description": "",
+                "type": "number"
+            }]
+        }
+    }]
+}
+
+

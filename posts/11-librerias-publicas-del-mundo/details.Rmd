@@ -1,0 +1,58 @@
+---
+output:
+  html_document:
+    keep_md: true
+---
+
+```{r libraries, message=FALSE}
+library(dplyr)
+library(knitr)
+library(ggplot2)
+```
+
+```{r}
+df <- read.csv('data/table1.csv',header = T)
+```
+
+### ¿En qué países están las bibliotecas mas grandes?
+
+```{r countries, fig.cap = 'Countries Largest Libraries'}
+B <- df %>% group_by(Location) %>% summarise(count = n()) %>% arrange(desc(count))
+B$Location <- factor(B$Location, levels = B$Location, ordered = T)
+ggplot(B, aes(Location,count, fill = Location)) + geom_bar(stat = 'identity') + theme_bw() + scale_fill_brewer(palette = 'Paired') + theme(axis.text.x = element_text(angle = 90), legend.position = 'none') + labs(x = 'Pais', y = 'No. de Bibliotecas')
+```
+
+### ¿Cuáles son las ciudades en éstos países?
+
+```{r kable, results='asis'}
+D <- df %>% select(Location,City,Name) %>% arrange(Location)
+
+kable(D)
+
+```
+
+### ¿Que biblioteca tiene más ejemplares en sus bibiotecas?
+
+```{r items, fig.cap='Number of items'}
+A <- df %>% select(Location, Name, MillNumItems) %>% arrange(MillNumItems)
+A$Name <- factor(A$Name, levels = A$Name, ordered = T)
+ggplot(A, aes(Name, MillNumItems)) + geom_bar(stat = 'identity', fill = '#0066CC') + theme_bw() + theme(legend.position = 'none') + labs(x = 'Biblioteca', y = 'Millones de items') + coord_flip()
+```
+
+### ¿Cuál es el presupuesto dirigido a las bibliotecas?
+
+```{r budget, fig.cap = 'Budget Million USD'}
+C <- df %>% group_by(Location) %>% summarise(Budget = sum(BudgetMillUSD,na.rm = T)) %>% arrange(desc(Budget))
+C$Location <- factor(C$Location, levels = C$Location, ordered = T)
+ggplot(C, aes(Location, Budget, fill = Location)) + geom_bar(stat = 'identity') + theme_bw() + scale_fill_brewer(palette = 'Paired') + theme(axis.text.x = element_text(angle = 90), legend.position = 'none') + labs(x = 'Pais', y = 'Presupuesto, millones USD')
+```
+
+### ¿Cuál es la biblioteca más visitada al año?
+
+```{r visit, fig.cap='Visitas anuales'}
+E <- df %>% select(Name, visitorYearMill) %>% arrange(visitorYearMill)
+E <- na.omit(E)
+E$Name <- factor(E$Name, levels = E$Name, ordered = T)
+ggplot(E, aes(Name, visitorYearMill)) + geom_bar(stat = 'identity', fill = '#0066CC') + theme_bw() + theme(legend.position = 'none') + labs(x = 'Biblioteca', y = 'Millones de visitas anuales') + coord_flip()
+```
+

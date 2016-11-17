@@ -1,0 +1,166 @@
+
+{
+"name": "dfDatapackage",
+"resources": 
+[ 
+{
+"name": "table1",
+"path": "table1.csv",
+"ae_resource_info": 
+{
+"id": "table1",
+"public": "true",
+"resource_type": "tbl"
+}
+,
+"mediatype": "text/csv",
+"format": "csv",
+"dialect": 
+{
+"delimiter": ","
+}
+,
+"schema": 
+{
+"fields": 
+[ 
+{
+"name": "country",
+"type": "factor",
+"ae_field_info": 
+{
+"id": "a",
+"data_type": "C",
+"label": "country"
+}
+
+}
+, 
+{
+"name": "code",
+"type": "factor",
+"ae_field_info": 
+{
+"id": "b",
+"data_type": "C",
+"label": "code"
+}
+
+}
+, 
+{
+"name": "year",
+"type": "factor",
+"ae_field_info": 
+{
+"id": "c",
+"data_type": "C",
+"label": "year"
+}
+
+}
+, 
+{
+"name": "prod_ktOil",
+"type": "numeric",
+"ae_field_info": 
+{
+"id": "d",
+"data_type": "N",
+"label": "prod_ktOil"
+}
+
+}
+, 
+{
+"name": "use_ktOil",
+"type": "numeric",
+"ae_field_info": 
+{
+"id": "e",
+"data_type": "N",
+"label": "use_ktOil"
+}
+
+}
+, 
+{
+"name": "alterPerc",
+"type": "numeric",
+"ae_field_info": 
+{
+"id": "f",
+"data_type": "N",
+"label": "alterPerc"
+}
+
+}
+, 
+{
+"name": "importPerc",
+"type": "numeric",
+"ae_field_info": 
+{
+"id": "g",
+"data_type": "N",
+"label": "importPerc"
+}
+
+}
+, 
+{
+"name": "renewPerc",
+"type": "numeric",
+"ae_field_info": 
+{
+"id": "h",
+"data_type": "N",
+"label": "renewPerc"
+}
+
+}
+, 
+{
+"name": "fosilPerc",
+"type": "numeric",
+"ae_field_info": 
+{
+"id": "i",
+"data_type": "N",
+"label": "fosilPerc"
+}
+
+}
+, 
+{
+"name": "GDP",
+"type": "numeric",
+"ae_field_info": 
+{
+"id": "j",
+"data_type": "N",
+"label": "GDP"
+}
+
+}
+, 
+{
+"name": "population",
+"type": "numeric",
+"ae_field_info": 
+{
+"id": "k",
+"data_type": "N",
+"label": "population"
+}
+
+}
+]
+
+}
+
+}
+]
+
+}
+

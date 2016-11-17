@@ -1,0 +1,28 @@
+---
+output: 
+  html_document:
+    keep_md: true
+---
+
+```{r setOptions, message=FALSE}
+library(googleVis)
+library(knitr)
+library(markdown)
+
+op <- options(gvis.plot.tag='chart')
+#Return options to the original setting
+#options(op)
+```
+
+```{r}
+data_path <- 'data/'
+df <- read.csv(paste0(data_path,'newRD.csv'), header = T)
+world <- df[which(df$region != ""),]
+```
+
+```{r motionChart, results='asis',eval=TRUE}
+Motion <- gvisMotionChart(world,idvar="country",timevar="year")
+shiny::HTML(Motion$html$chart)
+```
+
+

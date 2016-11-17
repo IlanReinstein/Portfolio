@@ -1,0 +1,53 @@
+---
+output: 
+  html_document:
+    keep_md: true
+---
+
+```{r}
+library(ggplot2)
+library(scales)
+library(googleVis)
+```
+
+```{r}
+data_path <- 'data/'
+df <- read.csv(paste0(data_path,'clean.csv'), header = T)
+```
+
+### What has been the change in population over the years? ###
+
+```{r population, fig.cap='Population', warning=FALSE}
+ggplot(df, aes(x = year, colour = country)) + geom_line(aes(y = df$population)) + theme_bw() + guides(colour = guide_legend(title = NULL)) + labs(y = 'Population in millions') + scale_colour_manual(values = c('#FF3333','#3399FF')) + scale_y_continuous(labels = comma)
+```
+
+### What has been the national income? ###
+
+```{r income, fig.cap='National income over time', warning=FALSE}
+ggplot(df, aes(x = year, colour = country)) + geom_line(aes(y = df$natIncome2010bill)) + theme_bw() + guides(colour = guide_legend(title = NULL)) + labs(y = 'Income in billions USD') + scale_colour_manual(values = c('#FF3333','#3399FF'))
+```
+
+### What has been the private wealth? ###
+
+```{r wealth, fig.cap='Private Wealth'}
+ggplot(df, aes(x = year, colour = country)) + geom_line(aes(y = df$privWealth2010bill)) + theme_bw() + guides(colour = guide_legend(title = NULL)) + labs(y = 'Wealth in billions USD') + scale_colour_manual(values = c('#FF3333','#3399FF'))
+```
+
+### What has been the income per capita? ###
+
+```{r income2, fig.cap='Income per capita', warning=FALSE}
+ggplot(df, aes(x = year, colour = country)) + geom_line(aes(y = df$perCapitaNatIncome2010)) + theme_bw() + guides(colour = guide_legend(title = NULL)) + labs(y = 'Income in USD') + scale_colour_manual(values = c('#FF3333','#3399FF'))
+```
+
+### What has been the private wealth per capita? ###
+
+```{r wealth2, fig.cap='Wealth per capita', warning=FALSE}
+ggplot(df, aes(x = year, colour = country)) + geom_line(aes(y = df$perCapitaPrivWealth2010)) + theme_bw() + guides(colour = guide_legend(title = NULL)) + labs(y = 'Private Wealth in USD') + scale_colour_manual(values = c('#FF3333','#3399FF'))
+```
+
+### What has been the evolution of employment in the US and UK? ###
+
+```{r employment, fig.cap='Employment over time', warning=FALSE}
+ggplot(df, aes(x = year, colour = country)) + geom_line(aes(y = df$employedPopulation)) + theme_bw() + guides(colour = guide_legend(title = NULL)) + labs(y = 'Employed Population in millions') + scale_colour_manual(values = c('#FF3333','#3399FF'))
+```
+

@@ -1,0 +1,30 @@
+{
+    "title": "¿Cuál es la distribución de poder nuclear en el mundo?",
+    "description": "Estudiamos los arsenales nucleares en el mundo y su relación con el sector energético.",
+    "author": "ilanreinstein",
+    "thumbnail": "details_files/figure-html/warheads.png",
+    "language": "es",
+    "date": "2014-09-08",
+    "tags": [
+        "games",
+        "sales"
+    ],
+    "production": "true",
+    "inquiries": [
+        {
+            "text": "¿Cómo ha evolucinado el número de ojivas nucleares en el mundo?"
+        },
+        {
+            "text": "¿Qué países tienen armas nucleares actualmente?"
+        },
+        {
+            "text": "¿Qué países tienen plantas nucleares operando?"
+        },
+        {
+            "text": "¿Cuál es la relación entre la posesión de plantas nucleares activas y el número de ojivas?"
+        },
+        {
+            "text": "¿Qué relación existe entre la capacidad de producción de energía nuclear y el número de ojivas?"
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+---
+output: 
+  html_document:
+    keep_md: true
+---
+
+```{r setOptions, message=FALSE}
+library(googleVis)
+library(knitr)
+library(markdown)
+
+op <- options(gvis.plot.tag='chart')
+#Return options to the original setting
+#options(op)
+```
+
+```{r}
+data_path <- 'data/'
+df <- read.csv(paste0(data_path,'newRD.csv'), header = T)
+latam <- df[which(df$region == 'Latin America & Caribbean'),]
+```
+
+```{r motionChart, results='asis',eval=TRUE}
+Motion <- gvisMotionChart(latam,idvar="country",timevar="year")
+shiny::HTML(Motion$html$chart)
+```
+
+

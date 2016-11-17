@@ -1,0 +1,280 @@
+
+{
+"name": "list(consoles, games, ps, xb)Datapackage",
+"resources": 
+[ 
+{
+"name": "consoles",
+"path": "consoles.csv",
+"ae_resource_info": 
+{
+"id": "table1",
+"public": "true",
+"resource_type": "tbl"
+}
+,
+"mediatype": "text/csv",
+"format": "csv",
+"dialect": 
+{
+"delimiter": ","
+}
+,
+"schema": 
+{
+"fields": 
+[ 
+{
+"name": "Platform",
+"type": "ordered",
+"ae_field_info": 
+{
+"id": "a",
+"data_type": "C",
+"label": "Platform"
+}
+
+}
+, 
+{
+"name": "company",
+"type": "factor",
+"ae_field_info": 
+{
+"id": "b",
+"data_type": "C",
+"label": "company"
+}
+
+}
+, 
+{
+"name": "year",
+"type": "factor",
+"ae_field_info": 
+{
+"id": "c",
+"data_type": "C",
+"label": "year"
+}
+
+}
+, 
+{
+"name": "mlnUnits",
+"type": "integer",
+"ae_field_info": 
+{
+"id": "d",
+"data_type": "N",
+"label": "mlnUnits"
+}
+
+}
+]
+
+}
+
+}
+, 
+{
+"name": "games",
+"path": "games.csv",
+"ae_resource_info": 
+{
+"id": "table2",
+"public": "true",
+"resource_type": "tbl"
+}
+,
+"mediatype": "text/csv",
+"format": "csv",
+"dialect": 
+{
+"delimiter": ","
+}
+,
+"schema": 
+{
+"fields": 
+[ 
+{
+"name": "rank",
+"type": "integer",
+"ae_field_info": 
+{
+"id": "a",
+"data_type": "N",
+"label": "rank"
+}
+
+}
+, 
+{
+"name": "game",
+"type": "factor",
+"ae_field_info": 
+{
+"id": "b",
+"data_type": "C",
+"label": "game"
+}
+
+}
+, 
+{
+"name": "year",
+"type": "integer",
+"ae_field_info": 
+{
+"id": "c",
+"data_type": "N",
+"label": "year"
+}
+
+}
+, 
+{
+"name": "millionCopies",
+"type": "numeric",
+"ae_field_info": 
+{
+"id": "d",
+"data_type": "N",
+"label": "millionCopies"
+}
+
+}
+]
+
+}
+
+}
+, 
+{
+"name": "ps3",
+"path": "ps3.csv",
+"ae_resource_info": 
+{
+"id": "table3",
+"public": "true",
+"resource_type": "tbl"
+}
+,
+"mediatype": "text/csv",
+"format": "csv",
+"dialect": 
+{
+"delimiter": ","
+}
+,
+"schema": 
+{
+"fields": 
+[ 
+{
+"name": "game",
+"type": "factor",
+"ae_field_info": 
+{
+"id": "a",
+"data_type": "C",
+"label": "game"
+}
+
+}
+, 
+{
+"name": "mlnCopies",
+"type": "numeric",
+"ae_field_info": 
+{
+"id": "b",
+"data_type": "N",
+"label": "mlnCopies"
+}
+
+}
+, 
+{
+"name": "console",
+"type": "character",
+"ae_field_info": 
+{
+"id": "c",
+"data_type": "C",
+"label": "console"
+}
+
+}
+]
+
+}
+
+}
+, 
+{
+"name": "xb",
+"path": "xbox360.csv",
+"ae_resource_info": 
+{
+"id": "table4",
+"public": "true",
+"resource_type": "tbl"
+}
+,
+"mediatype": "text/csv",
+"format": "csv",
+"dialect": 
+{
+"delimiter": ","
+}
+,
+"schema": 
+{
+"fields": 
+[ 
+{
+"name": "game",
+"type": "factor",
+"ae_field_info": 
+{
+"id": "a",
+"data_type": "C",
+"label": "game"
+}
+
+}
+, 
+{
+"name": "mlnCopies",
+"type": "numeric",
+"ae_field_info": 
+{
+"id": "b",
+"data_type": "N",
+"label": "mlnCopies"
+}
+
+}
+, 
+{
+"name": "console",
+"type": "character",
+"ae_field_info": 
+{
+"id": "c",
+"data_type": "C",
+"label": "console"
+}
+
+}
+]
+
+}
+
+}
+]
+
+}
+

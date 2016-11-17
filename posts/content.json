@@ -1,0 +1,12 @@
+{
+"label": "My Datablog",
+"layout": "datablog",
+"type": "datablog",
+"recordName": "post",
+"options": {
+	"properties":{},
+	"contentLocation":"eachContentUnit",
+	"searchable":"true",
+	"format": "html"
+}
+}

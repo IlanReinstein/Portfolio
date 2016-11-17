@@ -1,0 +1,31 @@
+{
+    "title": "¿Cuáles son las bibliotecas públicas más importantes del mundo?",
+    "description": "Las bibliotecas públicas son más que un sitio para guardar libros.",
+    "author": "ilanreinstein",
+    "thumbnail": "details_files/figure-html/countries.png",
+    "language": "es",
+    "date": "2014-09-16",
+    "tags": [
+        "cultura",
+        "Mundo",
+        "educación"
+    ],
+    "production": "true",
+    "inquiries": [
+        {
+            "text": "¿En qué países están las bibliotecas mas grandes?"
+        },
+        {
+            "text": "¿Cuáles son las ciudades en éstos países?"
+        },
+        {
+            "text": "¿Qué biblioteca tiene más ejemplares en sus bibiotecas?"
+        },
+        {
+            "text": "¿Cuál es el presupuesto dirigido a las bibliotecas?"
+        },
+        {
+            "text": "¿Cuál es la biblioteca más visitada al año?"
+        }
+    ]
+}

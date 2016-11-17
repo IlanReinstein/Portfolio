@@ -1,0 +1,17 @@
+{
+    "title": "¿Cuál fue el desempeño final de los equipos en el mundial?",
+    "description": "Sabemos que las estadísticas en este deporte son poco importantes, aún así, veamos como les fue a los participantes ahora que se acabó el mundial.",
+    "author": "ilanreinstein",
+    "thumbnail": "details_files/figure-html/clean.png",
+    "language": "es",
+    "date": "2014-07-27",
+    "tags": ["deporte", "wikipedia"],
+    "production": "true",
+    "inquiries": [{
+        "text": "¿Qué equipo acumuló más puntos?"
+    }, {
+        "text": "¿Qué equipo tiene la mayor diferencia de goles positiva?"
+    }, {
+        "text": "¿Qué equipo tiene más partidos sin recibir goles?"
+    }]
+}

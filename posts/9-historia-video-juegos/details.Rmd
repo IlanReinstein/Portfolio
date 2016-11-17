@@ -1,0 +1,54 @@
+---
+output: 
+  html_document:
+    keep_md: true
+---
+
+```{r libraries}
+library(ggplot2)
+library(reshape)
+library(plyr)
+library(knitr)
+```
+
+
+```{r dataloading}
+datapath <- 'data/'
+consoles <- read.csv(paste0(datapath,'consoles.csv'), header = T)
+ps <- read.csv(paste0(datapath,'ps3.csv'), header = T)
+xb <- read.csv(paste0(datapath,'xbox360.csv'), header = T)
+games <- read.csv(paste0(datapath,'games.csv'), header = T)
+
+names(consoles)[3] <- 'year'
+```
+
+### ¿Qué juego ha vendido más copias? ###
+
+```{r games, results='asis', fig.cap='Games'}
+kable(games)
+```
+
+### ¿Qué consola tiene el mayor número de unidades vendidas? ###
+
+```{r conosoles, fig.cap='Top Consoles'}
+consoles <- consoles[order(consoles$mlnUnits, decreasing = T),]
+consoles$Platform <- factor(consoles$Platform, levels = consoles$Platform, ordered = T)
+
+ggplot(consoles, aes(Platform, mlnUnits, label = year)) + geom_bar(stat = 'identity', fill = '#0066CC') + theme_bw() + theme(axis.text.x = element_text(angle = 90)) + geom_text(size = 4, alpha = 0.8, angle = 70, position = 'dodge') + labs(y = 'Millones de copias', x = 'Consola')
+```
+
+### ¿Qué consola es más popular entre el PS3 y XBOX 360? ###
+
+```{r PSvsXBOX, fig.cap='PS3 vs Xbox'}
+ps$console <- rep('PS3', nrow(ps))
+xb$console <- rep('XBOX360', nrow(xb))
+names(ps)[2] <- 'mlnCopies'
+
+A <- rbind(ps,xb)
+
+A <- ddply(A, .(console), summarize, TotalCopies = sum(mlnCopies))
+
+ggplot(A, aes(console, TotalCopies)) + geom_bar(stat = 'identity', fill = '#3399FF') + theme_bw() + labs(x = 'Consola', y = 'Total de juegos vendidos')
+```
+
+

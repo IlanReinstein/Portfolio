@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Datablog</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="http://aentropi.co">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <!-- styles -->
+    <!-- Bootstrap core CSS bootswrap -->
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+
+
+
+    <!-- Load Jquery from CDN  for easy DOM manipulations -->
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <!-- Bootstrap JS: compiled and minified -->
+    <script src="/assets/js/bootstrap.min.js"></script>
+
+    <!-- Load handlerbars.js  -->
+    <script src="/lib/handlebars.js"></script>
+    <script src="/lib/jquery-handlebars-1.1.4.min.js"></script>
+    <script src="/lib/borges-handlebars.js">
+    </script>
+
+</head>
+
+
+<body>
+
+
+    
+    <div id="header" ></div>
+    <script type="text/javascript">
+    renderInclude("header", "#header")
+    </script>
+   
+    <div id="navigation" ></div>
+    <script type="text/javascript">
+    renderInclude("navigation", "#navigation")
+    </script>
+  
+
+    <div class="container post">
+        <!-- <div style="margin-left:50px;margin-bottom:50px"> -->
+        <div style="margin:50px">
+            
+    <div id="post"></div>
+    <script type="text/javascript">
+     renderJSON("post", "#post", "/data/posts/7-energy-economic-indicators-en/record.json")
+    </script>
+    
+        </div>
+
+    </div>
+
+    
+    <div id="footer" ></div>
+    <script type="text/javascript">
+    renderInclude("footer", "#footer")
+    </script>
+  
+
+
+
+    <!-- BEGIN Add datatable -->
+    <script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.0/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" language="javascript" src="//cdn.datatables.net/plug-ins/be7019ee387/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+
+    <script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+        setTimeout(function() {
+            $('table').addClass('table table-striped table-bordered datatable');
+            $('.datatable').dataTable();
+        }, 500);
+    });
+    </script>
+    <!-- END datatable -->
+
+
+
+
+
+</body>
+
+</html>

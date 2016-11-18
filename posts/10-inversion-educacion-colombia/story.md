@@ -4,13 +4,13 @@ Muchos se preguntan cómo mejorar la sociedad en la que vivimos, es muy fuerte l
 
 En estos momentos se discute el futuro de la educación en nuestro país, comienza un nuevo período presidencial y la expectativa del cambio nunca ha estado tan alta como ahora. Mientras en el congreso se debate y se analizan las propuestas, nosotros mencionaremos algunas cosas sobre la inversión en educación en Colombia a través de los años. 
 
-![Inverstment Education](./details_files/figure-html/inversion.png) 
+![Inversión](./details_files/figure-html/inversion.png) 
 
 En la anterior gráfica, vemos como ha evolucionado la inversión en educación a lo largo de los años, quiénes han sido los presidentes en cada período. Vemos que el único período estable es entre 1990 y 2000, bajo el mandato de César Gaviria y Ernesto Samper. El punto más alto sin embargo, fue alcanzado por Alvaro Uribe, luego de una caída muy pronunciada desde que subió a la presidencia. El mismo comportamiento se observa en el período de Andrés Pastrana, comenzó bien, bajo y luego mejoró de nuevo. Solo debemos esperar que Juan Manuel Santos recupere la inversión en educación y la deje en un mejor nivel que cuando recibio el cargo.
 
 Ahora queremos ver la inversión por niveles educativos. Es importante conocer estas cifras debido a que la distribucion no es equitativa, se invierte más en algunos niveles que en otros.
 
-![Educational levels](./details_files/figure-html/levels.png) 
+![Niveles de educación](./details_files/figure-html/levels.png) 
 
 Los niveles que reciben mayor financiación son la primaria y la secundaria/bachillerato. Esto es un buen indicador, sin embargo, se puede mejorar la etapa preescolar, e idealmente el nivel terciario o universitario. Es importante reforzar estos últimos dos sectores, dado que significan la preparación básica para estudiar y la formación profesional respectivamente. El aumento en el número de profesionales financiados por el gobierno sería una excelente iniciativa para mejorar la economía del país, siempre y cuando éstos puedan conseguir empleo fácilmente.
 

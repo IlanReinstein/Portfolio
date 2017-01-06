@@ -5,6 +5,6 @@ These posts were part of the company's Datablog, an attempt to promote reproduci
 
 The repo holds the data, the cleaning for each of the databases and a descriptive, visual analysis, followed by a datastory.
 
-The story.md holds the completed post with the data story. The details.md consists of the code chunks for the cleaning and visualization. 
+The story.md holds the completed post with the data story. The details.md consists of the code chunks for the cleaning and visualization. You may find the HTML version of each of the posts here: http://rpubs.com/ireinstein
 
 Further improvement and growth will be done to implement more analytical tools.

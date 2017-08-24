@@ -2,7 +2,7 @@
 
 This repo shows a bit of the work I did as an intern for Aentropico as well as my submissions to the introductory Kaggle competitions. 
 
-## Aentorpico
+## Aentropico
 Aentropico's blog posts are published under authorization of the company.
 These posts were part of the company's Datablog, an attempt to promote reproducible research in diverse subjects to make data-driven experiments. Each report consist of data cleaning and visualization code, as well as the raw and "tidy" data used. The posts were developed in R with ggplot2, dplyr and RMarkdown among others.
 
